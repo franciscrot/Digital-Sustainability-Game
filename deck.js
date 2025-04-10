@@ -81,7 +81,7 @@ Play this card to review your website, and only load what you really need!
     type: "action",
     description: `* Moving data over a network uses energy -- probably. Caching is here to help!
 * When a user visits your website, some data such as images, CSS, and JavaScript files can be stored (“cached”) on the user’s device, or on a Content Delivery Network (CDN). 
-* If they return, the browser can load these resources from the user’s device or a nearby CDN datacentre, instead of fetching them from the server again.  
+* If they return, the browser can load these resources from the user’s device or a nearby CDN datacentre, instead of fetching them from the server again.
 `,
     tooltip: "Action: Mark this card as played.",
     imagePath: "images/5.jpg",
@@ -108,10 +108,10 @@ Play this card to review your website, and only load what you really need!
     id: 7,
     name: "7: Optimise videoconferencing",
     type: "action",
-    description: `* Check for recent comparison of the sustainability of different videoconferencing softwares, and choose one that work for you.
-* Functions like “turn off incoming video” can save bandwidth.
-* It’s important to see one another’s faces sometimes. But at other times, it’s OK just to hear each other’s voices.
-.`,
+    description: `* Check for recent comparisons of the sustainability of different videoconferencing softwares, and choose one that works for you.
+* Features like “turn off incoming video” can save bandwidth.
+* While it's important to see each other sometimes, sometimes it's best to just rely on audio.
+`,
     tooltip: "If you like, describe how your attitudes and habits to videoconferencing shift.",
     imagePath: "images/7.jpg",
     effect: function (player, AI1, AI2) {
@@ -122,8 +122,7 @@ Play this card to review your website, and only load what you really need!
     id: 8,
     name: "8: Know which everyday activities are fine",
     type: "action",
-    description: `Know which everyday activities are fine
-`,
+    description: `Identify which everyday activities on your site or in your processes are low impact.`,
     tooltip: "Action: Mark this card as played.",
     imagePath: "images/8.jpg",
     effect: function (player, AI1, AI2) {
@@ -134,7 +133,7 @@ Play this card to review your website, and only load what you really need!
     id: 9,
     name: "9: Use efficient internet connections",
     type: "action",
-    description: ``,
+    description: `Use efficient internet connections that consume less energy and improve performance.`,
     tooltip: "Action: Mark this card as played.",
     imagePath: "images/9.jpg",
     effect: function (player, AI1, AI2) {
@@ -145,7 +144,7 @@ Play this card to review your website, and only load what you really need!
     id: 10,
     name: "10: Optimise our WiFi network",
     type: "action",
-    description: `Optimise our WiFi network.`,
+    description: `Optimise our WiFi network for better speed and energy efficiency.`,
     tooltip: "Action: Mark this card as played.",
     imagePath: "images/10.jpg",
     effect: function (player, AI1, AI2) {
@@ -156,7 +155,7 @@ Play this card to review your website, and only load what you really need!
     id: 11,
     name: "11: Don't store data we don't need",
     type: "action",
-    description: `Don't store data we don't need.`,
+    description: `Avoid storing redundant data to reduce energy and storage costs.`,
     tooltip: "Action: Mark this card as played.",
     imagePath: "images/11.jpg",
     effect: function (player, AI1, AI2) {
@@ -167,7 +166,7 @@ Play this card to review your website, and only load what you really need!
     id: 12,
     name: "12: Use near-line and off-line storage",
     type: "action",
-    description: `Use near-line and off-line storage.`,
+    description: `Utilise near-line and off-line storage solutions for data that doesn't need instant access.`,
     tooltip: "Action: Mark this card as played.",
     imagePath: "images/12.jpg",
     effect: function (player, AI1, AI2) {
@@ -178,201 +177,200 @@ Play this card to review your website, and only load what you really need!
     id: 13,
     name: "13: Benchmark our digital activities",
     type: "action",
-    description: `Description.`,
+    description: `Benchmark our digital activities by measuring key performance metrics and identifying areas for improvement.`,
     tooltip: "Set a benchmark so we can improve in the future",
     imagePath: "images/13.jpg",
     effect: function (player, AI1, AI2) {
       player.actionsPlayed.add(this.id);
     }
   },
-{
+  {
     id: 14,
     name: "14: Extend our devices' life spans",
     type: "action",
-    description: `Description.`,
+    description: `Extend our devices' life spans through repair, maintenance, and upgrades to reduce waste and cost.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/14.jpg",
     effect: function (player, AI1, AI2) {
       player.actionsPlayed.add(this.id);
     }
   },
-{
+  {
     id: 15,
     name: "15: Use Life Cycle Analysis (LCA)",
     type: "action",
-    description: `Description.`,
+    description: `Apply Life Cycle Analysis (LCA) to understand the environmental impact of your digital operations from start to finish.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/15.jpg",
     effect: function (player, AI1, AI2) {
       player.actionsPlayed.add(this.id);
     }
   },
-{
+  {
     id: 16,
     name: "16: Advocate for right to repair",
     type: "action",
-    description: `Description.`,
+    description: `Advocate for the right to repair by supporting policies and practices that allow consumers to fix and extend the life of their devices.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/16.jpg",
     effect: function (player, AI1, AI2) {
       player.actionsPlayed.add(this.id);
     }
   },
-{
+  {
     id: 17,
     name: "17: Improve our e-waste recycling",
     type: "action",
-    description: `Description.`,
+    description: `Implement improved e-waste recycling processes to ensure responsible disposal and reuse of electronic components.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/17.jpg",
     effect: function (player, AI1, AI2) {
       player.actionsPlayed.add(this.id);
     }
   },
-{
+  {
     id: 18,
     name: "18: Design for humans, not angels",
     type: "action",
-    description: `Description.`,
+    description: `Design interfaces and experiences that are optimised for human use—efficient, intuitive, and user-friendly.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/18.jpg",
     effect: function (player, AI1, AI2) {
       player.actionsPlayed.add(this.id);
     }
   },
-{
+  {
     id: 19,
     name: "19: Check suppliers for greenwashing",
     type: "action",
-    description: `Description.`,
+    description: `Evaluate and verify suppliers to ensure they truly adhere to sustainable and environmentally friendly practices.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/19.jpg",
     effect: function (player, AI1, AI2) {
       player.actionsPlayed.add(this.id);
     }
   },
-{
+  {
     id: 20,
     name: "20: Pivot to policy",
     type: "action",
-    description: `Description.`,
+    description: `Shift your focus to policy advocacy, using this card to drive change in regulatory frameworks for sustainability.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/20.jpg",
     effect: function (player, AI1, AI2) {
       player.actionsPlayed.add(this.id);
     }
   },
-{
+  {
     id: 21,
     name: "21: Pivot to protest",
     type: "action",
-    description: `Description.`,
+    description: `Mobilise public and stakeholder support with protest actions that highlight unsustainable practices.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/21.jpg",
     effect: function (player, AI1, AI2) {
       player.actionsPlayed.add(this.id);
     }
   },
-{
+  {
     id: 22,
     name: "22: Understand green energy procurement",
     type: "action",
-    description: `Description.`,
+    description: `Learn how to procure green energy effectively and integrate renewable sources into your operations.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/22.jpg",
     effect: function (player, AI1, AI2) {
       player.actionsPlayed.add(this.id);
     }
   },
-{
+  {
     id: 23,
     name: "23: Measure our carbon for AI and the cloud",
     type: "action",
-    description: `Description.`,
+    description: `Measure the carbon footprint of your digital activities, especially those related to AI workloads and cloud services.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/23.jpg",
     effect: function (player, AI1, AI2) {
       player.actionsPlayed.add(this.id);
     }
   },
-{
+  {
     id: 24,
     name: "24: Use grid-aware demand management",
     type: "action",
-    description: `Description.`,
+    description: `Implement grid-aware demand management strategies to optimise energy usage in accordance with peak times and grid conditions.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/24.jpg",
     effect: function (player, AI1, AI2) {
       player.actionsPlayed.add(this.id);
     }
   },
-{
+  {
     id: 25,
     name: "25: Know when not to use AI",
     type: "action",
-    description: `Description.`,
+    description: `Identify scenarios where manual processes are more energy-efficient than relying on AI-based solutions.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/25.jpg",
     effect: function (player, AI1, AI2) {
       player.actionsPlayed.add(this.id);
     }
   },
-{
+  {
     id: 26,
     name: "26: Understand different kinds of AI",
     type: "action",
-    description: `Description.`,
+    description: `Examine the various types of AI technologies and evaluate their respective environmental impacts.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/26.jpg",
     effect: function (player, AI1, AI2) {
       player.actionsPlayed.add(this.id);
     }
   },
-{
+  {
     id: 27,
     name: "27: Align measurement to maturity",
     type: "action",
-    description: `Description.`,
+    description: `Tailor your sustainability metrics and measurements to the current maturity level of your organisation.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/27.jpg",
     effect: function (player, AI1, AI2) {
       player.actionsPlayed.add(this.id);
     }
   },
-{
+  {
     id: 28,
     name: "28: Get ready for more carbon tax",
     type: "action",
-    description: `Description.`,
+    description: `Prepare your organisation for rising carbon costs by adjusting strategies and operational priorities.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/28.jpg",
     effect: function (player, AI1, AI2) {
       player.actionsPlayed.add(this.id);
     }
   },
-{
+  {
     id: 29,
     name: "29: Understand our place in the energy transition",
     type: "action",
-    description: `Description.`,
+    description: `Strategically evaluate and position your organisation within the evolving energy transition landscape.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/29.jpg",
     effect: function (player, AI1, AI2) {
       player.actionsPlayed.add(this.id);
     }
   },
-{
+  {
     id: 30,
     name: "30: Update our procurement policies",
     type: "action",
-    description: `Description.`,
+    description: `Review and revise procurement policies to prioritise sustainability and responsible sourcing.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/30.jpg",
     effect: function (player, AI1, AI2) {
       player.actionsPlayed.add(this.id);
     }
   },
-
 
   // ================================
   // 30 EVENT CARDS
@@ -381,11 +379,10 @@ Play this card to review your website, and only load what you really need!
     id: 31,
     name: "31: Web traffic increases",
     type: "event",
-    description: `Description`,
+    description: `Web traffic increases: Your website experiences a surge in visitors, highlighting both increased engagement and energy usage.`,
     tooltip: "Event: Awards progress if certain actions have been played.",
     imagePath: "images/31.jpg",
     effect: function (player, AI1, AI2) {
-      // Award +1 progress for each of these played: #1, #2, #3
       [player, AI1, AI2].forEach(p => {
         let bonus = 0;
         if (p.actionsPlayed.has(1)) bonus += 1;
@@ -399,474 +396,8 @@ Play this card to review your website, and only load what you really need!
     id: 32,
     name: "32: Search engine results favour green web design",
     type: "event",
-    description: `Description`,
+    description: `Search engine results favour green web design: Sustainable practices improve your site's rankings, rewarding your green efforts.`,
     tooltip: "Event: Players with no actions played lose sustainability.",
     imagePath: "images/32.jpg",
     effect: function (player, AI1, AI2) {
-      // If a player hasn't played any actions, -3 sustainability
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.size === 0) {
-          p.sustainability -= 3;
-        }
-      });
-    }
-  },
-  {
-    id: 33,
-    name: "33: Subsidies support digital sustainability",
-    type: "event",
-    description: `Description`,
-    tooltip: "Event: Rewards those with multiple specific actions completed.",
-    imagePath: "images/33.jpg",
-    effect: function (player, AI1, AI2) {
-      // If a player has at least 2 of these (#1, #4, #6, #7), they gain +3 progress
-      [player, AI1, AI2].forEach(p => {
-        let count = 0;
-        [1, 4, 6, 7].forEach(id => {
-          if (p.actionsPlayed.has(id)) count++;
-        });
-        if (count >= 2) {
-          p.progress += 3;
-        }
-      });
-    }
-  },
-  {
-    id: 34,
-    name: "34: Digital sustainability leadership is attracting and retaining the best talent",
-    type: "event",
-    description: `Description`,
-    tooltip: "Event: Boosts sustainability if players did relevant actions.",
-    imagePath: "images/34.jpg",
-    effect: function (player, AI1, AI2) {
-      // +2 sustainability for each of #5, #6, #7 if played
-      [player, AI1, AI2].forEach(p => {
-        let bonus = 0;
-        if (p.actionsPlayed.has(5)) bonus += 2;
-        if (p.actionsPlayed.has(6)) bonus += 2;
-        if (p.actionsPlayed.has(7)) bonus += 2;
-        p.sustainability += bonus;
-      });
-    }
-  },
-  {
-    id: 35,
-    name: "35: Attitudes shift",
-    type: "event",
-    description: `Attitudes are shifting. More people are getting into solarpunk, wabi sabi digital design, permacomputing, slow media, digital minimalism, decomputing, and unplugging.`,
-    tooltip: "Event: Awards or deducts sustainability based on certain actions.",
-    imagePath: "images/35.jpg",
-    effect: function (player, AI1, AI2) {
-      // For each player: +2 sustainability if #2 or #4 is played, else -1
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(2) || p.actionsPlayed.has(4)) {
-          p.sustainability += 2;
-        } else {
-          p.sustainability -= 1;
-        }
-      });
-    }
-  },
-  {
-    id: 36,
-    name: "36: Climate activism is making an impact",
-    type: "event",
-    description: `Climate activists are getting really good at disrupting polluters`,
-    tooltip: "Event: Rewards alternative energy actions or penalizes unprepared.",
-    imagePath: "images/36.jpg",
-    effect: function (player, AI1, AI2) {
-      // If #4 (EV push) or #10 (solar program) is played, +2 progress. Otherwise, -1.
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(4) || p.actionsPlayed.has(10)) {
-          p.progress += 2;
-        } else {
-          p.progress -= 1;
-        }
-      });
-    }
-  },
-  {
-    id: 37,
-    name: "37: Listing rules change",
-    type: "event",
-    description: `Description`,
-    tooltip: "Event: Stock markets stop listing unsustainable companies.",
-    imagePath: "images/37.jpg",
-    effect: function (player, AI1, AI2) {
-      // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
-    }
-  },
-  {
-    id: 38,
-    name: "38: Boycott",
-    type: "event",
-    description: `An NGO leads a successful boycotting campaign targetting digital sustainability`,
-    tooltip: "Event: Penalizes those who disrupt corporate interests.",
-    imagePath: "images/38.jpg",
-    effect: function (player, AI1, AI2) {
-      // If #8 (Eco Blog) or #12 (Rainwater Harvesting) is played, lose 2 sustainability
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(8) || p.actionsPlayed.has(12)) {
-          p.sustainability -= 2;
-        }
-      });
-    }
-  },
-  {
-    id: 39,
-    name: "39: Water scarcity",
-    type: "event",
-    description: `Description`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/39.jpg",
-    effect: function (player, AI1, AI2) {
-      // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
-    }
-  },
-  {
-    id: 40,
-    name: "40: Price of carbon rises",
-    type: "event",
-    description: `Policymakers can put a 'price' on carbon emissions in various ways, including carbon taxes.`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/40.jpg",
-    effect: function (player, AI1, AI2) {
-      // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
-    }
-  },
-  {
-    id: 41,
-    name: "41: New data storage medium",
-    type: "event",
-    description: `Description`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/41.jpg",
-    effect: function (player, AI1, AI2) {
-      // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
-    }
-  },
-  {
-    id: 42,
-    name: "42: New e-waste laws",
-    type: "event",
-    description: `A new law shares the responsibility for e-waste between producers, retailers, and corporate customers`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/42.jpg",
-    effect: function (player, AI1, AI2) {
-      // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
-    }
-  },
-  {
-    id: 43,
-    name: "43: Shareholder activism",
-    type: "event",
-    description: `Shareholders are using their voices, their votes, their power to disinvest, and even launching lawsuits`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/43.jpg",
-    effect: function (player, AI1, AI2) {
-      // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
-    }
-  },
-  {
-    id: 44,
-    name: "44: ESG gets a make-over",
-    type: "event",
-    description: `Event .`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/44.jpg",
-    effect: function (player, AI1, AI2) {
-      // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
-    }
-  },
-  {
-    id: 45,
-    name: "45: Low carbon tech disruptions",
-    type: "event",
-    description: `Event .`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/45.jpg",
-    effect: function (player, AI1, AI2) {
-      // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
-    }
-  },
-  {
-    id: 46,
-    name: "46: Reporting requirements tighten",
-    type: "event",
-    description: `Event: Your kind of organisation is now legally mandated to provide real-time reports on climate-related risks and opportunities`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/46.jpg",
-    effect: function (player, AI1, AI2) {
-      // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
-    }
-  },
-  {
-    id: 47,
-    name: "47: Impairment law gets a reboot",
-    type: "event",
-    description: `Event: Organisations must now reveal when an asset becomes stranded (loses value) in a much more timely and accurate way`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/47.jpg",
-    effect: function (player, AI1, AI2) {
-      // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
-    }
-  },
-  {
-    id: 48,
-    name: "48: Climate impacts disrupt supply chains",
-    type: "event",
-    description: `Event .`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/48.jpg",
-    effect: function (player, AI1, AI2) {
-      // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
-    }
-  },
-  {
-    id: 49,
-    name: "49: Global carbon price",
-    type: "event",
-    description: `Event .`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/49.jpg",
-    effect: function (player, AI1, AI2) {
-      // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
-    }
-  },
-  {
-    id: 50,
-    name: "50: Digital divide closes",
-    type: "event",
-    description: `Event .`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/50.jpg",
-    effect: function (player, AI1, AI2) {
-      // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
-    }
-  },
-  {
-    id: 51,
-    name: "51: Technological breakthrough",
-    type: "event",
-    description: `Event .`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/51.jpg",
-    effect: function (player, AI1, AI2) {
-      // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
-    }
-  },
-  {
-    id: 52,
-    name: "52: Geopolitical disruption",
-    type: "event",
-    description: `Event .`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/52.jpg",
-    effect: function (player, AI1, AI2) {
-      // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
-    }
-  },
-  {
-    id: 53,
-    name: "53: Vaporware",
-    type: "event",
-    description: `Event: xSpice's data center on the Moon is a flop`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/53.jpg",
-    effect: function (player, AI1, AI2) {
-      // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
-    }
-  },
-  {
-    id: 54,
-    name: "54: Global South Green New Deal",
-    type: "event",
-    description: `Event .`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/54.jpg",
-    effect: function (player, AI1, AI2) {
-      // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
-    }
-  },
-  {
-    id: 55,
-    name: "55: Tech giant fails to deliver",
-    type: "event",
-    description: `Event: Tech giant Giggle fails to meet its decarbonisation pledges`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/55.jpg",
-    effect: function (player, AI1, AI2) {
-      // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
-    }
-  },
-  {
-    id: 56,
-    name: "56: Negative emissions technologies are not scaling up",
-    type: "event",
-    description: `Event .`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/56.jpg",
-    effect: function (player, AI1, AI2) {
-      // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
-    }
-  },
-  {
-    id: 57,
-    name: "57: Geoengineering efforts are deferring carbon reduction",
-    type: "event",
-    description: `Event .`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/57.jpg",
-    effect: function (player, AI1, AI2) {
-      // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
-    }
-  },
-  {
-    id: 58,
-    name: "58: Carbon leakage",
-    type: "event",
-    description: `Event .`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/58.jpg",
-    effect: function (player, AI1, AI2) {
-      // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
-    }
-  },
-  {
-    id: 59,
-    name: "59: Major climate impact",
-    type: "event",
-    description: `Event .`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/59.jpg",
-    effect: function (player, AI1, AI2) {
-      // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
-    }
-  },
-  {
-    id: 60,
-    name: "60: Big policy shift",
-    type: "event",
-    description: `Event .`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/60.jpg",
-    effect: function (player, AI1, AI2) {
-      // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
-    }
-  },
-];
+      [player, AI1, AI2].forEach
