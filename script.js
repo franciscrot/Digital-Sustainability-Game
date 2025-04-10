@@ -35,29 +35,32 @@ function renderPlayerHand() {
   const handDiv = document.getElementById("playerHand");
   handDiv.innerHTML = "";
 
+  // Get a reference to the description title and box
+  const descriptionTitle = document.getElementById("descriptionTitle");
   const descriptionDiv = document.getElementById("descriptionBox");
 
   player.hand.forEach((card, index) => {
     const img = document.createElement("img");
     img.src = card.imagePath;
     img.alt = card.name;
-    img.title = card.tooltip;  
+    img.title = card.tooltip;
 
     img.style.width = "200px";
     img.style.height = "auto";
     img.style.marginRight = "10px";
 
-    // Description displayed
+    // When mouse is over the card, update both the title and the description box
     img.addEventListener("mouseover", () => {
+      cardTitle.textContent = card.name;
       descriptionDiv.textContent = card.description;
     });
 
+    // Clicking the card plays it
     img.addEventListener("click", () => playPlayerCard(index));
 
     handDiv.appendChild(img);
   });
 }
-
 
 
 // 5) Function to play a card
