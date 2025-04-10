@@ -133,9 +133,9 @@ Play this card to review your website, and only load what you really need!
   },
   {
     id: 9,
-    name: "9: Protect Wetlands",
+    name: "9: ",
     type: "action",
-    description: `Raise funds and awareness to safeguard local wetlands.`,
+    description: ``,
     tooltip: "Action: Mark this card as played.",
     imagePath: "images/9.jpg",
     effect: function (player, AI1, AI2) {
