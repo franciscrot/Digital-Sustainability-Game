@@ -133,7 +133,7 @@ Play this card to review your website, and only load what you really need!
   },
   {
     id: 9,
-    name: "9: ",
+    name: "9: Use efficient internet connections",
     type: "action",
     description: ``,
     tooltip: "Action: Mark this card as played.",
@@ -144,9 +144,9 @@ Play this card to review your website, and only load what you really need!
   },
   {
     id: 10,
-    name: "10: Community Solar Program",
+    name: "10: Optimise our WiFi network",
     type: "action",
-    description: `Invest in shared solar panels for the neighborhood.`,
+    description: `Optimise our WiFi network.`,
     tooltip: "Action: Mark this card as played.",
     imagePath: "images/10.jpg",
     effect: function (player, AI1, AI2) {
@@ -155,9 +155,9 @@ Play this card to review your website, and only load what you really need!
   },
   {
     id: 11,
-    name: "11: Urban Garden Initiative",
+    name: "11: Don't store data we don't need",
     type: "action",
-    description: `Turn unused urban spaces into communal vegetable gardens.`,
+    description: `Don't store data we don't need.`,
     tooltip: "Action: Mark this card as played.",
     imagePath: "images/11.jpg",
     effect: function (player, AI1, AI2) {
@@ -166,9 +166,9 @@ Play this card to review your website, and only load what you really need!
   },
   {
     id: 12,
-    name: "12: Rainwater Harvesting",
+    name: "12: Use near-line and off-line storage",
     type: "action",
-    description: `Set up rain barrels and systems to collect runoff.`,
+    description: `Use near-line and off-line storage.`,
     tooltip: "Action: Mark this card as played.",
     imagePath: "images/12.jpg",
     effect: function (player, AI1, AI2) {
@@ -177,10 +177,10 @@ Play this card to review your website, and only load what you really need!
   },
   {
     id: 13,
-    name: "13: ",
+    name: "13: Benchmark our digital activities",
     type: "action",
     description: `Description.`,
-    tooltip: "Discuss this action. How does it apply to your organisation?",
+    tooltip: "Set a benchmark so we can improve in the future",
     imagePath: "images/13.jpg",
     effect: function (player, AI1, AI2) {
       player.actionsPlayed.add(this.id);
@@ -188,7 +188,7 @@ Play this card to review your website, and only load what you really need!
   },
 {
     id: 14,
-    name: "14: ",
+    name: "14: Extend our devices' life spans",
     type: "action",
     description: `Description.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
@@ -199,7 +199,7 @@ Play this card to review your website, and only load what you really need!
   },
 {
     id: 15,
-    name: "15: ",
+    name: "15: Use Life Cycle Analysis (LCA)",
     type: "action",
     description: `Description.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
@@ -210,7 +210,7 @@ Play this card to review your website, and only load what you really need!
   },
 {
     id: 16,
-    name: "16: ",
+    name: "16: Advocate for right to repair",
     type: "action",
     description: `Description.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
@@ -221,7 +221,7 @@ Play this card to review your website, and only load what you really need!
   },
 {
     id: 17,
-    name: "17: ",
+    name: "17: Improve our e-waste recycling",
     type: "action",
     description: `Description.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
@@ -232,7 +232,7 @@ Play this card to review your website, and only load what you really need!
   },
 {
     id: 18,
-    name: "18: ",
+    name: "18: Design for humans, not angels",
     type: "action",
     description: `Description.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
@@ -243,7 +243,7 @@ Play this card to review your website, and only load what you really need!
   },
 {
     id: 19,
-    name: "19: ",
+    name: "19: Check suppliers for greenwashing",
     type: "action",
     description: `Description.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
@@ -254,7 +254,7 @@ Play this card to review your website, and only load what you really need!
   },
 {
     id: 20,
-    name: "xx: ",
+    name: "20: Pivot to policy",
     type: "action",
     description: `Description.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
@@ -265,7 +265,7 @@ Play this card to review your website, and only load what you really need!
   },
 {
     id: 21,
-    name: "xx: ",
+    name: "21: Pivot to protest",
     type: "action",
     description: `Description.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
@@ -276,7 +276,7 @@ Play this card to review your website, and only load what you really need!
   },
 {
     id: 22,
-    name: "xx: ",
+    name: "22: Understand green energy procurement",
     type: "action",
     description: `Description.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
@@ -287,7 +287,7 @@ Play this card to review your website, and only load what you really need!
   },
 {
     id: 23,
-    name: "xx: ",
+    name: "23: Measure our carbon for AI and the cloud",
     type: "action",
     description: `Description.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
@@ -298,7 +298,7 @@ Play this card to review your website, and only load what you really need!
   },
 {
     id: 24,
-    name: "xx: ",
+    name: "24: Use grid-aware demand management",
     type: "action",
     description: `Description.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
@@ -309,7 +309,7 @@ Play this card to review your website, and only load what you really need!
   },
 {
     id: 25,
-    name: "xx: ",
+    name: "25: Know when not to use AI",
     type: "action",
     description: `Description.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
@@ -320,7 +320,7 @@ Play this card to review your website, and only load what you really need!
   },
 {
     id: 26,
-    name: "xx: ",
+    name: "26: Understand different kinds of AI",
     type: "action",
     description: `Description.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
@@ -331,7 +331,7 @@ Play this card to review your website, and only load what you really need!
   },
 {
     id: 27,
-    name: "xx: ",
+    name: "27: Align measurement to maturity",
     type: "action",
     description: `Description.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
@@ -342,7 +342,7 @@ Play this card to review your website, and only load what you really need!
   },
 {
     id: 28,
-    name: "xx: ",
+    name: "28: Get ready for more carbon tax",
     type: "action",
     description: `Description.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
@@ -353,7 +353,7 @@ Play this card to review your website, and only load what you really need!
   },
 {
     id: 29,
-    name: "xx: ",
+    name: "29: Understand our place in the energy transition",
     type: "action",
     description: `Description.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
@@ -364,7 +364,7 @@ Play this card to review your website, and only load what you really need!
   },
 {
     id: 30,
-    name: "xx: ",
+    name: "30: Update our procurement policies",
     type: "action",
     description: `Description.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
@@ -380,25 +380,25 @@ Play this card to review your website, and only load what you really need!
   // ================================
   {
     id: 31,
-    name: "31: Green Audit",
+    name: "31: Web traffic increases",
     type: "event",
     description: `Description`,
     tooltip: "Event: Awards progress if certain actions have been played.",
     imagePath: "images/31.jpg",
     effect: function (player, AI1, AI2) {
-      // Award +2 progress for each of these played: #1, #2, #3
+      // Award +1 progress for each of these played: #1, #2, #3
       [player, AI1, AI2].forEach(p => {
         let bonus = 0;
-        if (p.actionsPlayed.has(1)) bonus += 2;
-        if (p.actionsPlayed.has(2)) bonus += 2;
-        if (p.actionsPlayed.has(3)) bonus += 2;
+        if (p.actionsPlayed.has(1)) bonus += 1;
+        if (p.actionsPlayed.has(2)) bonus += 1;
+        if (p.actionsPlayed.has(3)) bonus += 1;
         p.progress += bonus;
       });
     }
   },
   {
     id: 32,
-    name: "32: Pollution Scandal",
+    name: "32: Search engine results favour green web design",
     type: "event",
     description: `Description`,
     tooltip: "Event: Players with no actions played lose sustainability.",
@@ -414,7 +414,7 @@ Play this card to review your website, and only load what you really need!
   },
   {
     id: 33,
-    name: "33: Community Vote",
+    name: "33: Subsidies support digital sustainability",
     type: "event",
     description: `Description`,
     tooltip: "Event: Rewards those with multiple specific actions completed.",
@@ -434,7 +434,7 @@ Play this card to review your website, and only load what you really need!
   },
   {
     id: 34,
-    name: "34: Sustainability Expo",
+    name: "34: Digital sustainability leadership is attracting and retaining the best talent",
     type: "event",
     description: `Description`,
     tooltip: "Event: Boosts sustainability if players did relevant actions.",
@@ -452,9 +452,9 @@ Play this card to review your website, and only load what you really need!
   },
   {
     id: 35,
-    name: "35: Emissions Report",
+    name: "35: Attitudes shift",
     type: "event",
-    description: `Description`,
+    description: `Attitudes are shifting. More people are getting into solarpunk, wabi sabi digital design, permacomputing, slow media, digital minimalism, decomputing, and unplugging.`,
     tooltip: "Event: Awards or deducts sustainability based on certain actions.",
     imagePath: "images/17.jpg",
     effect: function (player, AI1, AI2) {
@@ -470,9 +470,9 @@ Play this card to review your website, and only load what you really need!
   },
   {
     id: 36,
-    name: "36: Energy Crisis",
+    name: "36: Climate activism is making an impact",
     type: "event",
-    description: `Description`,
+    description: `Climate activists are getting really good at disrupting polluters`,
     tooltip: "Event: Rewards alternative energy actions or penalizes unprepared.",
     imagePath: "images/18.jpg",
     effect: function (player, AI1, AI2) {
@@ -488,10 +488,10 @@ Play this card to review your website, and only load what you really need!
   },
   {
     id: 37,
-    name: "19: Climate Summit",
+    name: "37: Listing rules change",
     type: "event",
     description: `Description`,
-    tooltip: "Event: Grants extra progress for certain high-impact actions.",
+    tooltip: "Event: Stock markets stop listing unsustainable companies.",
     imagePath: "images/19.jpg",
     effect: function (player, AI1, AI2) {
       // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
@@ -504,9 +504,9 @@ Play this card to review your website, and only load what you really need!
   },
   {
     id: 38,
-    name: "20: Corporate Backlash",
+    name: "38: Boycott",
     type: "event",
-    description: `Description`,
+    description: `An NGO leads a successful boycotting campaign targetting digital sustainability`,
     tooltip: "Event: Penalizes those who disrupt corporate interests.",
     imagePath: "images/20.jpg",
     effect: function (player, AI1, AI2) {
@@ -520,7 +520,7 @@ Play this card to review your website, and only load what you really need!
   },
   {
     id: 39,
-    name: "39: ",
+    name: "39: Water scarcity",
     type: "event",
     description: `Description`,
     tooltip: "Play this event card now?",
@@ -536,9 +536,9 @@ Play this card to review your website, and only load what you really need!
   },
   {
     id: 40,
-    name: "40: ",
+    name: "40: Price of carbon rises",
     type: "event",
-    description: `Description`,
+    description: `Policymakers can put a 'price' on carbon emissions in various ways, including carbon taxes.`,
     tooltip: "Play this event card now?",
     imagePath: "images/1.jpg",
     effect: function (player, AI1, AI2) {
@@ -552,7 +552,7 @@ Play this card to review your website, and only load what you really need!
   },
   {
     id: 41,
-    name: "41: ",
+    name: "41: New data storage medium",
     type: "event",
     description: `Description`,
     tooltip: "Play this event card now?",
@@ -568,9 +568,9 @@ Play this card to review your website, and only load what you really need!
   },
   {
     id: 42,
-    name: "42: ",
+    name: "42: New e-waste laws",
     type: "event",
-    description: `Description`,
+    description: `A new law shares the responsibility for e-waste between producers, retailers, and corporate customers`,
     tooltip: "Play this event card now?",
     imagePath: "images/1.jpg",
     effect: function (player, AI1, AI2) {
@@ -584,9 +584,9 @@ Play this card to review your website, and only load what you really need!
   },
   {
     id: 43,
-    name: "43: ",
+    name: "43: Shareholder activism",
     type: "event",
-    description: `Description`,
+    description: `Shareholders are using their voices, their votes, their power to disinvest, and even launching lawsuits`,
     tooltip: "Play this event card now?",
     imagePath: "images/1.jpg",
     effect: function (player, AI1, AI2) {
@@ -600,7 +600,7 @@ Play this card to review your website, and only load what you really need!
   },
   {
     id: 44,
-    name: "44: ",
+    name: "44: ESG gets a make-over",
     type: "event",
     description: `Event .`,
     tooltip: "Play this event card now?",
@@ -616,7 +616,7 @@ Play this card to review your website, and only load what you really need!
   },
   {
     id: 45,
-    name: "45: ",
+    name: "45: Low carbon tech disruptions",
     type: "event",
     description: `Event .`,
     tooltip: "Play this event card now?",
@@ -632,9 +632,9 @@ Play this card to review your website, and only load what you really need!
   },
   {
     id: 46,
-    name: "46: ",
+    name: "46: Reporting requirements tighten",
     type: "event",
-    description: `Event .`,
+    description: `Event: Your kind of organisation is now legally mandated to provide real-time reports on climate-related risks and opportunities`,
     tooltip: "Play this event card now?",
     imagePath: "images/1.jpg",
     effect: function (player, AI1, AI2) {
@@ -648,9 +648,9 @@ Play this card to review your website, and only load what you really need!
   },
   {
     id: 47,
-    name: "47: ",
+    name: "47: Impairment law gets a reboot",
     type: "event",
-    description: `Event .`,
+    description: `Event: Organisations must now reveal when an asset becomes stranded (loses value) in a much more timely and accurate way`,
     tooltip: "Play this event card now?",
     imagePath: "images/1.jpg",
     effect: function (player, AI1, AI2) {
@@ -664,7 +664,7 @@ Play this card to review your website, and only load what you really need!
   },
   {
     id: 48,
-    name: "48: ",
+    name: "48: Climate impacts disrupt supply chains",
     type: "event",
     description: `Event .`,
     tooltip: "Play this event card now?",
@@ -680,7 +680,7 @@ Play this card to review your website, and only load what you really need!
   },
   {
     id: 49,
-    name: "49: ",
+    name: "49: Global carbon price",
     type: "event",
     description: `Event .`,
     tooltip: "Play this event card now?",
@@ -696,7 +696,7 @@ Play this card to review your website, and only load what you really need!
   },
   {
     id: 50,
-    name: "50: ",
+    name: "50: Digital divide closes",
     type: "event",
     description: `Event .`,
     tooltip: "Play this event card now?",
@@ -712,7 +712,7 @@ Play this card to review your website, and only load what you really need!
   },
   {
     id: 51,
-    name: "51: ",
+    name: "51: Technological breakthrough",
     type: "event",
     description: `Event .`,
     tooltip: "Play this event card now?",
@@ -728,7 +728,7 @@ Play this card to review your website, and only load what you really need!
   },
   {
     id: 52,
-    name: "52: ",
+    name: "52: Geopolitical disruption",
     type: "event",
     description: `Event .`,
     tooltip: "Play this event card now?",
@@ -744,9 +744,9 @@ Play this card to review your website, and only load what you really need!
   },
   {
     id: 53,
-    name: "53: ",
+    name: "53: Vaporware",
     type: "event",
-    description: `Event .`,
+    description: `Event: xSpice's data center on the Moon is a flop`,
     tooltip: "Play this event card now?",
     imagePath: "images/1.jpg",
     effect: function (player, AI1, AI2) {
@@ -760,7 +760,7 @@ Play this card to review your website, and only load what you really need!
   },
   {
     id: 54,
-    name: "54: ",
+    name: "54: Global South Green New Deal",
     type: "event",
     description: `Event .`,
     tooltip: "Play this event card now?",
@@ -776,9 +776,9 @@ Play this card to review your website, and only load what you really need!
   },
   {
     id: 55,
-    name: "55: ",
+    name: "55: Tech giant fails to deliver",
     type: "event",
-    description: `Event .`,
+    description: `Event: Tech giant Giggle fails to meet its decarbonisation pledges`,
     tooltip: "Play this event card now?",
     imagePath: "images/1.jpg",
     effect: function (player, AI1, AI2) {
@@ -792,7 +792,7 @@ Play this card to review your website, and only load what you really need!
   },
   {
     id: 56,
-    name: "56: ",
+    name: "56: Negative emissions technologies are not scaling up",
     type: "event",
     description: `Event .`,
     tooltip: "Play this event card now?",
@@ -808,7 +808,7 @@ Play this card to review your website, and only load what you really need!
   },
   {
     id: 57,
-    name: "57: ",
+    name: "57: Geoengineering efforts are deferring carbon reduction",
     type: "event",
     description: `Event .`,
     tooltip: "Play this event card now?",
@@ -824,7 +824,7 @@ Play this card to review your website, and only load what you really need!
   },
   {
     id: 58,
-    name: "58: ",
+    name: "58: Carbon leakage",
     type: "event",
     description: `Event .`,
     tooltip: "Play this event card now?",
@@ -840,7 +840,7 @@ Play this card to review your website, and only load what you really need!
   },
   {
     id: 59,
-    name: "59: ",
+    name: "59: Major climate impact",
     type: "event",
     description: `Event .`,
     tooltip: "Play this event card now?",
@@ -856,7 +856,7 @@ Play this card to review your website, and only load what you really need!
   },
   {
     id: 60,
-    name: "60: ",
+    name: "60: Big policy shift",
     type: "event",
     description: `Event .`,
     tooltip: "Play this event card now?",
