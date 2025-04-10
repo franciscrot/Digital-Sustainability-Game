@@ -16,10 +16,13 @@ const deck = [
 * Perfect your image alt text.
 * Try tools like Shortpixel, TinyPNG, ImageOptim, and ImageAlpha to minimise image file sizes.
 * Use video sparingly if at all. Compress video with tools like Handbrake.fr.
-* YouTube or Vimeo embeds might not be optimal. Try platforms like Mave.io.
+* YouTube or Vimeo embeds might not be optimal. Search for greener platforms.
 * WebM and MP4 formats sometimes have the edge on MOV and AVI. But it really all depends on resolution and compression.
 `,
-    tooltip: "Action: Mark this card as played.",
+    tooltip: "Action: Optimise!",
+    links: `* To minimise image file sizes on your website, try tools like Shortpixel, TinyPNG, ImageOptim, and ImageAlpha.
+* Use video sparingly on your website (if at all). Compress video with tools like Handbrake.fr.
+* YouTube or Vimeo embeds might not be optimal. Try platforms like Mave.io.`,
     imagePath: "images/1.jpg",
     effect: function (player, AI1, AI2) {
       player.actionsPlayed.add(this.id);
@@ -32,7 +35,7 @@ const deck = [
     description: `‘Minifying’ is a process of removing unnecessary whitespace and line breaks in HTML, CSS and JavaScript to reduce the file size.
 Many text editors have plug-ins or packages to minify code.
 `,
-    tooltip: "Action: Mark this card as played.",
+    tooltip: "Action: Minify!",
     imagePath: "images/2.jpg",
     effect: function (player, AI1, AI2) {
       player.actionsPlayed.add(this.id);
