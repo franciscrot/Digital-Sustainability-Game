@@ -20,7 +20,8 @@ const deck = [
 * WebM and MP4 formats sometimes have the edge on MOV and AVI. But it really all depends on resolution and compression.
 `,
     tooltip: "Action: Optimise!",
-    links: `* <a href="https://sas-dhrh.github.io/dhcc-toolkit/toolkit/minimal-computing.html#tips">Tips for sustainable websites</a> in the DHCC toolkit. 
+    links:  "<a href="https://sas-dhrh.github.io/dhcc-toolkit/toolkit/minimal-computing.html#tips">",
+    additionalLinks: `* <a href="https://sas-dhrh.github.io/dhcc-toolkit/toolkit/minimal-computing.html#tips">Tips for sustainable websites</a> in the DHCC toolkit. 
 * To minimise image file sizes on your website, try tools like Shortpixel, TinyPNG, ImageOptim, and ImageAlpha.
 * Use video sparingly on your website (if at all). Compress video with tools like Handbrake.fr.
 * YouTube or Vimeo embeds might not be optimal. Try platforms like Mave.io.`,
