@@ -401,7 +401,7 @@ Play this card to review your website, and only load what you really need!
     type: "event",
     description: `Description`,
     tooltip: "Event: Players with no actions played lose sustainability.",
-    imagePath: "images/14.jpg",
+    imagePath: "images/32.jpg",
     effect: function (player, AI1, AI2) {
       // If a player hasn't played any actions, -3 sustainability
       [player, AI1, AI2].forEach(p => {
@@ -417,7 +417,7 @@ Play this card to review your website, and only load what you really need!
     type: "event",
     description: `Description`,
     tooltip: "Event: Rewards those with multiple specific actions completed.",
-    imagePath: "images/15.jpg",
+    imagePath: "images/33.jpg",
     effect: function (player, AI1, AI2) {
       // If a player has at least 2 of these (#1, #4, #6, #7), they gain +3 progress
       [player, AI1, AI2].forEach(p => {
@@ -437,7 +437,7 @@ Play this card to review your website, and only load what you really need!
     type: "event",
     description: `Description`,
     tooltip: "Event: Boosts sustainability if players did relevant actions.",
-    imagePath: "images/16.jpg",
+    imagePath: "images/34.jpg",
     effect: function (player, AI1, AI2) {
       // +2 sustainability for each of #5, #6, #7 if played
       [player, AI1, AI2].forEach(p => {
@@ -455,7 +455,7 @@ Play this card to review your website, and only load what you really need!
     type: "event",
     description: `Attitudes are shifting. More people are getting into solarpunk, wabi sabi digital design, permacomputing, slow media, digital minimalism, decomputing, and unplugging.`,
     tooltip: "Event: Awards or deducts sustainability based on certain actions.",
-    imagePath: "images/17.jpg",
+    imagePath: "images/35.jpg",
     effect: function (player, AI1, AI2) {
       // For each player: +2 sustainability if #2 or #4 is played, else -1
       [player, AI1, AI2].forEach(p => {
@@ -473,7 +473,7 @@ Play this card to review your website, and only load what you really need!
     type: "event",
     description: `Climate activists are getting really good at disrupting polluters`,
     tooltip: "Event: Rewards alternative energy actions or penalizes unprepared.",
-    imagePath: "images/18.jpg",
+    imagePath: "images/36.jpg",
     effect: function (player, AI1, AI2) {
       // If #4 (EV push) or #10 (solar program) is played, +2 progress. Otherwise, -1.
       [player, AI1, AI2].forEach(p => {
@@ -491,7 +491,7 @@ Play this card to review your website, and only load what you really need!
     type: "event",
     description: `Description`,
     tooltip: "Event: Stock markets stop listing unsustainable companies.",
-    imagePath: "images/19.jpg",
+    imagePath: "images/37.jpg",
     effect: function (player, AI1, AI2) {
       // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
       [player, AI1, AI2].forEach(p => {
@@ -507,7 +507,7 @@ Play this card to review your website, and only load what you really need!
     type: "event",
     description: `An NGO leads a successful boycotting campaign targetting digital sustainability`,
     tooltip: "Event: Penalizes those who disrupt corporate interests.",
-    imagePath: "images/20.jpg",
+    imagePath: "images/38.jpg",
     effect: function (player, AI1, AI2) {
       // If #8 (Eco Blog) or #12 (Rainwater Harvesting) is played, lose 2 sustainability
       [player, AI1, AI2].forEach(p => {
@@ -523,7 +523,7 @@ Play this card to review your website, and only load what you really need!
     type: "event",
     description: `Description`,
     tooltip: "Play this event card now?",
-    imagePath: "images/1.jpg",
+    imagePath: "images/39.jpg",
     effect: function (player, AI1, AI2) {
       // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
       [player, AI1, AI2].forEach(p => {
@@ -539,7 +539,7 @@ Play this card to review your website, and only load what you really need!
     type: "event",
     description: `Policymakers can put a 'price' on carbon emissions in various ways, including carbon taxes.`,
     tooltip: "Play this event card now?",
-    imagePath: "images/1.jpg",
+    imagePath: "images/40.jpg",
     effect: function (player, AI1, AI2) {
       // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
       [player, AI1, AI2].forEach(p => {
@@ -555,7 +555,7 @@ Play this card to review your website, and only load what you really need!
     type: "event",
     description: `Description`,
     tooltip: "Play this event card now?",
-    imagePath: "images/1.jpg",
+    imagePath: "images/41.jpg",
     effect: function (player, AI1, AI2) {
       // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
       [player, AI1, AI2].forEach(p => {
@@ -571,7 +571,7 @@ Play this card to review your website, and only load what you really need!
     type: "event",
     description: `A new law shares the responsibility for e-waste between producers, retailers, and corporate customers`,
     tooltip: "Play this event card now?",
-    imagePath: "images/1.jpg",
+    imagePath: "images/42.jpg",
     effect: function (player, AI1, AI2) {
       // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
       [player, AI1, AI2].forEach(p => {
@@ -587,7 +587,7 @@ Play this card to review your website, and only load what you really need!
     type: "event",
     description: `Shareholders are using their voices, their votes, their power to disinvest, and even launching lawsuits`,
     tooltip: "Play this event card now?",
-    imagePath: "images/1.jpg",
+    imagePath: "images/43.jpg",
     effect: function (player, AI1, AI2) {
       // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
       [player, AI1, AI2].forEach(p => {
@@ -603,7 +603,7 @@ Play this card to review your website, and only load what you really need!
     type: "event",
     description: `Event .`,
     tooltip: "Play this event card now?",
-    imagePath: "images/1.jpg",
+    imagePath: "images/44.jpg",
     effect: function (player, AI1, AI2) {
       // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
       [player, AI1, AI2].forEach(p => {
@@ -619,7 +619,7 @@ Play this card to review your website, and only load what you really need!
     type: "event",
     description: `Event .`,
     tooltip: "Play this event card now?",
-    imagePath: "images/1.jpg",
+    imagePath: "images/45.jpg",
     effect: function (player, AI1, AI2) {
       // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
       [player, AI1, AI2].forEach(p => {
@@ -635,7 +635,7 @@ Play this card to review your website, and only load what you really need!
     type: "event",
     description: `Event: Your kind of organisation is now legally mandated to provide real-time reports on climate-related risks and opportunities`,
     tooltip: "Play this event card now?",
-    imagePath: "images/1.jpg",
+    imagePath: "images/46.jpg",
     effect: function (player, AI1, AI2) {
       // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
       [player, AI1, AI2].forEach(p => {
@@ -651,7 +651,7 @@ Play this card to review your website, and only load what you really need!
     type: "event",
     description: `Event: Organisations must now reveal when an asset becomes stranded (loses value) in a much more timely and accurate way`,
     tooltip: "Play this event card now?",
-    imagePath: "images/1.jpg",
+    imagePath: "images/47.jpg",
     effect: function (player, AI1, AI2) {
       // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
       [player, AI1, AI2].forEach(p => {
@@ -667,7 +667,7 @@ Play this card to review your website, and only load what you really need!
     type: "event",
     description: `Event .`,
     tooltip: "Play this event card now?",
-    imagePath: "images/1.jpg",
+    imagePath: "images/48.jpg",
     effect: function (player, AI1, AI2) {
       // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
       [player, AI1, AI2].forEach(p => {
@@ -683,7 +683,7 @@ Play this card to review your website, and only load what you really need!
     type: "event",
     description: `Event .`,
     tooltip: "Play this event card now?",
-    imagePath: "images/1.jpg",
+    imagePath: "images/49.jpg",
     effect: function (player, AI1, AI2) {
       // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
       [player, AI1, AI2].forEach(p => {
@@ -699,7 +699,7 @@ Play this card to review your website, and only load what you really need!
     type: "event",
     description: `Event .`,
     tooltip: "Play this event card now?",
-    imagePath: "images/1.jpg",
+    imagePath: "images/50.jpg",
     effect: function (player, AI1, AI2) {
       // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
       [player, AI1, AI2].forEach(p => {
@@ -715,7 +715,7 @@ Play this card to review your website, and only load what you really need!
     type: "event",
     description: `Event .`,
     tooltip: "Play this event card now?",
-    imagePath: "images/1.jpg",
+    imagePath: "images/51.jpg",
     effect: function (player, AI1, AI2) {
       // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
       [player, AI1, AI2].forEach(p => {
@@ -731,7 +731,7 @@ Play this card to review your website, and only load what you really need!
     type: "event",
     description: `Event .`,
     tooltip: "Play this event card now?",
-    imagePath: "images/1.jpg",
+    imagePath: "images/52.jpg",
     effect: function (player, AI1, AI2) {
       // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
       [player, AI1, AI2].forEach(p => {
@@ -747,7 +747,7 @@ Play this card to review your website, and only load what you really need!
     type: "event",
     description: `Event: xSpice's data center on the Moon is a flop`,
     tooltip: "Play this event card now?",
-    imagePath: "images/1.jpg",
+    imagePath: "images/53.jpg",
     effect: function (player, AI1, AI2) {
       // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
       [player, AI1, AI2].forEach(p => {
@@ -763,7 +763,7 @@ Play this card to review your website, and only load what you really need!
     type: "event",
     description: `Event .`,
     tooltip: "Play this event card now?",
-    imagePath: "images/1.jpg",
+    imagePath: "images/54.jpg",
     effect: function (player, AI1, AI2) {
       // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
       [player, AI1, AI2].forEach(p => {
@@ -779,7 +779,7 @@ Play this card to review your website, and only load what you really need!
     type: "event",
     description: `Event: Tech giant Giggle fails to meet its decarbonisation pledges`,
     tooltip: "Play this event card now?",
-    imagePath: "images/1.jpg",
+    imagePath: "images/55.jpg",
     effect: function (player, AI1, AI2) {
       // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
       [player, AI1, AI2].forEach(p => {
@@ -795,7 +795,7 @@ Play this card to review your website, and only load what you really need!
     type: "event",
     description: `Event .`,
     tooltip: "Play this event card now?",
-    imagePath: "images/1.jpg",
+    imagePath: "images/56.jpg",
     effect: function (player, AI1, AI2) {
       // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
       [player, AI1, AI2].forEach(p => {
@@ -811,7 +811,7 @@ Play this card to review your website, and only load what you really need!
     type: "event",
     description: `Event .`,
     tooltip: "Play this event card now?",
-    imagePath: "images/1.jpg",
+    imagePath: "images/57.jpg",
     effect: function (player, AI1, AI2) {
       // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
       [player, AI1, AI2].forEach(p => {
@@ -827,7 +827,7 @@ Play this card to review your website, and only load what you really need!
     type: "event",
     description: `Event .`,
     tooltip: "Play this event card now?",
-    imagePath: "images/1.jpg",
+    imagePath: "images/58.jpg",
     effect: function (player, AI1, AI2) {
       // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
       [player, AI1, AI2].forEach(p => {
@@ -843,7 +843,7 @@ Play this card to review your website, and only load what you really need!
     type: "event",
     description: `Event .`,
     tooltip: "Play this event card now?",
-    imagePath: "images/1.jpg",
+    imagePath: "images/59.jpg",
     effect: function (player, AI1, AI2) {
       // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
       [player, AI1, AI2].forEach(p => {
@@ -859,7 +859,7 @@ Play this card to review your website, and only load what you really need!
     type: "event",
     description: `Event .`,
     tooltip: "Play this event card now?",
-    imagePath: "images/1.jpg",
+    imagePath: "images/60.jpg",
     effect: function (player, AI1, AI2) {
       // If #9 (Protect Wetlands) or #11 (Urban Garden) is played, +3 progress
       [player, AI1, AI2].forEach(p => {
