@@ -14,13 +14,14 @@ const deck = [
 * Use responsive image markup and/or an image resizing API to serve images at the correct resolution.
 * Experiment with shallow depth of field, constrained palettes, and dark colours.
 * Perfect your image alt text.
-* Try tools like Shortpixel, TinyPNG, ImageOptim, and ImageAlpha to minimise image file sizes.
-* Use video sparingly if at all. Compress video with tools like Handbrake.fr.
+* Use image optimisation to reduce file sizes without compromising quality.
+* Limit video use where possible, and compress any video files.
 * YouTube or Vimeo embeds might not be optimal. Search for greener platforms.
 * WebM and MP4 formats sometimes have the edge on MOV and AVI. But it really all depends on resolution and compression.
 `,
     tooltip: "Action: Optimise!",
-    links: `* To minimise image file sizes on your website, try tools like Shortpixel, TinyPNG, ImageOptim, and ImageAlpha.
+    links: `* <a href="https://sas-dhrh.github.io/dhcc-toolkit/toolkit/minimal-computing.html#tips">Tips for sustainable websites</a> in the DHCC toolkit. 
+* To minimise image file sizes on your website, try tools like Shortpixel, TinyPNG, ImageOptim, and ImageAlpha.
 * Use video sparingly on your website (if at all). Compress video with tools like Handbrake.fr.
 * YouTube or Vimeo embeds might not be optimal. Try platforms like Mave.io.`,
     imagePath: "images/1.jpg",
