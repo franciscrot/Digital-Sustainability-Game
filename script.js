@@ -139,8 +139,13 @@ function updatePlayedLists() {
   const yourActionIds = Array.from(player.actionsPlayed).sort((a, b) => a - b);
   const yourEventIds = Array.from(player.eventsPlayed).sort((a, b) => a - b);
 
-  const rivalsActionIds = Array.from(new Set([...AI1.actionsPlayed, ...AI2.actionsPlayed])).sort((a, b) => a - b);
-  const rivalsEventIds = Array.from(new Set([...AI1.eventsPlayed, ...AI2.eventsPlayed])).sort((a, b) => a - b);
+  const rivalsActionIds = Array.from(new Set([...AI1.actionsPlayed, ...AI2.actionsPlayed]))
+    .filter(id => !player.actionsPlayed.has(id))
+    .sort((a, b) => a - b);
+
+  const rivalsEventIds = Array.from(new Set([...AI1.eventsPlayed, ...AI2.eventsPlayed]))
+    .filter(id => !player.eventsPlayed.has(id))
+    .sort((a, b) => a - b);
 
   actionsDiv.innerHTML = `
     <strong>Your actions played:</strong><br>
