@@ -9,8 +9,8 @@ let player = {
   eventsPlayed: new Set()
 };
 
-let AI1 = { hand: [], progress: 0, sustainability: 0, actionsPlayed: new Set() };
-let AI2 = { hand: [], progress: 0, sustainability: 0, actionsPlayed: new Set() };
+let AI1 = { hand: [], progress: 0, sustainability: 0, actionsPlayed: new Set(), eventsPlayed: new Set() };
+let AI2 = { hand: [], progress: 0, sustainability: 0, actionsPlayed: new Set(), eventsPlayed: new Set() };
 
 // 2) Shuffle function
 function shuffle(array) {
@@ -45,7 +45,6 @@ for (let i = 0; i < 3; i++) {
 }
 
 // 4) Function to render player's hand (3 images)
-
 function renderPlayerHand() {
   const handDiv = document.getElementById("playerHand");
   handDiv.innerHTML = "";
@@ -87,7 +86,6 @@ function playAICard(ai) {
     if (eventIndex !== -1) {
       const chosenCard = ai.hand.splice(eventIndex, 1)[0];
       chosenCard.effect(player, AI1, AI2);
-      ai.eventsPlayed = ai.eventsPlayed || new Set();
       ai.eventsPlayed.add(chosenCard.id);
     }
   }
@@ -138,30 +136,43 @@ function updatePlayedLists() {
   const actionsDiv = document.getElementById("actionsPlayedList");
   const eventsDiv = document.getElementById("eventsPlayedList");
 
-  const actionIds = Array.from(player.actionsPlayed).sort((a, b) => a - b);
-  const eventIds = Array.from(player.eventsPlayed).sort((a, b) => a - b);
+  const yourActionIds = Array.from(player.actionsPlayed).sort((a, b) => a - b);
+  const yourEventIds = Array.from(player.eventsPlayed).sort((a, b) => a - b);
 
-  if (actionIds.length === 0) {
-    actionsDiv.textContent = "No actions played";
-  } else {
-    const actionHTML = actionIds.map(id => {
+  const rivalsActionIds = Array.from(new Set([...AI1.actionsPlayed, ...AI2.actionsPlayed])).sort((a, b) => a - b);
+  const rivalsEventIds = Array.from(new Set([...AI1.eventsPlayed, ...AI2.eventsPlayed])).sort((a, b) => a - b);
+
+  actionsDiv.innerHTML = `
+    <strong>Your actions played:</strong><br>
+    ${yourActionIds.length === 0 ? "None" : yourActionIds.map(id => {
       const card = deck.find(c => c.id === id);
       const cardName = card ? card.name : "Unknown Card";
       return `<span title="${cardName}">${id}</span>`;
-    }).join(", ");
-    actionsDiv.innerHTML = actionHTML;
-  }
-
-  if (eventIds.length === 0) {
-    eventsDiv.textContent = "No events played";
-  } else {
-    const eventHTML = eventIds.map(id => {
+    }).join(", ")}
+    <br><br>
+    <strong>Rivals' actions played:</strong><br>
+    ${rivalsActionIds.length === 0 ? "None" : rivalsActionIds.map(id => {
       const card = deck.find(c => c.id === id);
       const cardName = card ? card.name : "Unknown Card";
       return `<span title="${cardName}">${id}</span>`;
-    }).join(", ");
-    eventsDiv.innerHTML = eventHTML;
-  }
+    }).join(", ")}
+  `;
+
+  eventsDiv.innerHTML = `
+    <strong>Your events played:</strong><br>
+    ${yourEventIds.length === 0 ? "None" : yourEventIds.map(id => {
+      const card = deck.find(c => c.id === id);
+      const cardName = card ? card.name : "Unknown Card";
+      return `<span title="${cardName}">${id}</span>`;
+    }).join(", ")}
+    <br><br>
+    <strong>Rivals' events played:</strong><br>
+    ${rivalsEventIds.length === 0 ? "None" : rivalsEventIds.map(id => {
+      const card = deck.find(c => c.id === id);
+      const cardName = card ? card.name : "Unknown Card";
+      return `<span title="${cardName}">${id}</span>`;
+    }).join(", ")}
+  `;
 }
 
 // 8) On page load, render initial state
