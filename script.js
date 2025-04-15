@@ -73,25 +73,45 @@ function renderPlayerHand() {
   });
 }
 
-// AI players play action card if they have one, otherwise first event card
-function playAICard(ai) {
-  let actionIndex = ai.hand.findIndex(card => card.type === "action");
+function playAI1Card() {
+  let actionIndex = AI1.hand.findIndex(card => card.type === "action");
 
   if (actionIndex !== -1) {
-    const chosenCard = ai.hand.splice(actionIndex, 1)[0];
+    const chosenCard = AI1.hand.splice(actionIndex, 1)[0];
     chosenCard.effect(player, AI1, AI2);
-    ai.actionsPlayed.add(chosenCard.id);
+    AI1.actionsPlayed.add(chosenCard.id);
   } else {
-    let eventIndex = ai.hand.findIndex(card => card.type === "event");
+    let eventIndex = AI1.hand.findIndex(card => card.type === "event");
     if (eventIndex !== -1) {
-      const chosenCard = ai.hand.splice(eventIndex, 1)[0];
+      const chosenCard = AI1.hand.splice(eventIndex, 1)[0];
       chosenCard.effect(player, AI1, AI2);
-      ai.eventsPlayed.add(chosenCard.id);
+      AI1.eventsPlayed.add(chosenCard.id);
     }
   }
 
   if (deck.length > 0) {
-    ai.hand.push(deck.pop());
+    AI1.hand.push(deck.pop());
+  }
+}
+
+function playAI2Card() {
+  let actionIndex = AI2.hand.findIndex(card => card.type === "action");
+
+  if (actionIndex !== -1) {
+    const chosenCard = AI2.hand.splice(actionIndex, 1)[0];
+    chosenCard.effect(player, AI1, AI2);
+    AI2.actionsPlayed.add(chosenCard.id);
+  } else {
+    let eventIndex = AI2.hand.findIndex(card => card.type === "event");
+    if (eventIndex !== -1) {
+      const chosenCard = AI2.hand.splice(eventIndex, 1)[0];
+      chosenCard.effect(player, AI1, AI2);
+      AI2.eventsPlayed.add(chosenCard.id);
+    }
+  }
+
+  if (deck.length > 0) {
+    AI2.hand.push(deck.pop());
   }
 }
 
@@ -111,8 +131,8 @@ function playPlayerCard(index) {
   }
 
   // AI turn sequence
-  playAICard(AI1);
-  playAICard(AI2);
+  playAI1Card();
+  playAI2Card();
 
   renderPlayerHand();
   updateGameInfo();
@@ -139,13 +159,8 @@ function updatePlayedLists() {
   const yourActionIds = Array.from(player.actionsPlayed).sort((a, b) => a - b);
   const yourEventIds = Array.from(player.eventsPlayed).sort((a, b) => a - b);
 
-  const rivalsActionIds = Array.from(new Set([...AI1.actionsPlayed, ...AI2.actionsPlayed]))
-    .filter(id => !player.actionsPlayed.has(id))
-    .sort((a, b) => a - b);
-
-  const rivalsEventIds = Array.from(new Set([...AI1.eventsPlayed, ...AI2.eventsPlayed]))
-    .filter(id => !player.eventsPlayed.has(id))
-    .sort((a, b) => a - b);
+  const aiActionIds = Array.from(new Set([...AI1.actionsPlayed, ...AI2.actionsPlayed])).sort((a, b) => a - b);
+  const aiEventIds = Array.from(new Set([...AI1.eventsPlayed, ...AI2.eventsPlayed])).sort((a, b) => a - b);
 
   actionsDiv.innerHTML = `
     <strong>Your actions played:</strong><br>
@@ -155,8 +170,8 @@ function updatePlayedLists() {
       return `<span title="${cardName}">${id}</span>`;
     }).join(", ")}
     <br><br>
-    <strong>Rivals' actions played:</strong><br>
-    ${rivalsActionIds.length === 0 ? "None" : rivalsActionIds.map(id => {
+    <strong>AI actions played:</strong><br>
+    ${aiActionIds.length === 0 ? "None" : aiActionIds.map(id => {
       const card = deck.find(c => c.id === id);
       const cardName = card ? card.name : "Unknown Card";
       return `<span title="${cardName}">${id}</span>`;
@@ -171,8 +186,8 @@ function updatePlayedLists() {
       return `<span title="${cardName}">${id}</span>`;
     }).join(", ")}
     <br><br>
-    <strong>Rivals' events played:</strong><br>
-    ${rivalsEventIds.length === 0 ? "None" : rivalsEventIds.map(id => {
+    <strong>AI events played:</strong><br>
+    ${aiEventIds.length === 0 ? "None" : aiEventIds.map(id => {
       const card = deck.find(c => c.id === id);
       const cardName = card ? card.name : "Unknown Card";
       return `<span title="${cardName}">${id}</span>`;
