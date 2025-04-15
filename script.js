@@ -24,18 +24,14 @@ function shuffle(array) {
 // Stack the deck slightly - move a web themed event card to not too late, not too soon
 let index32 = deck.findIndex(card => card.id === 32);
 if (index32 !== -1) {
-  // Remove card ID 32 from its current position
   let card32 = deck.splice(index32, 1)[0];
-  // Insert it at position 20 (index 19)
   deck.splice(19, 0, card32);
 }
 
 // Stack the deck slightly - move a web themed action card to pretty early on
 let index1 = deck.findIndex(card => card.id === 1);
 if (index1 !== -1) {
-  // Remove card ID 1 from its current position
   let card1 = deck.splice(index1, 1)[0];
-  // Generate a random index among 2, 3, or 4 (positions 3, 4, or 5 if counting from 1)
   let randomIndex = 2 + Math.floor(Math.random() * 3);
   deck.splice(randomIndex, 0, card1);
 }
@@ -54,7 +50,6 @@ function renderPlayerHand() {
   const handDiv = document.getElementById("playerHand");
   handDiv.innerHTML = "";
 
-  // Get a reference to the description title and box
   const descriptionTitle = document.getElementById("descriptionTitle");
   const descriptionDiv = document.getElementById("descriptionBox");
 
@@ -68,36 +63,59 @@ function renderPlayerHand() {
     img.style.height = "auto";
     img.style.marginRight = "10px";
 
-    // When mouse is over the card, update both the title and the description box
     img.addEventListener("mouseover", () => {
       cardTitle.textContent = card.name;
       descriptionDiv.textContent = card.description;
     });
 
-    // Clicking the card plays it
     img.addEventListener("click", () => playPlayerCard(index));
 
     handDiv.appendChild(img);
   });
 }
 
+// AI players play action card if they have one, otherwise first event card
+function playAICard(ai) {
+  let actionIndex = ai.hand.findIndex(card => card.type === "action");
+
+  if (actionIndex !== -1) {
+    const chosenCard = ai.hand.splice(actionIndex, 1)[0];
+    chosenCard.effect(player, AI1, AI2);
+    ai.actionsPlayed.add(chosenCard.id);
+  } else {
+    let eventIndex = ai.hand.findIndex(card => card.type === "event");
+    if (eventIndex !== -1) {
+      const chosenCard = ai.hand.splice(eventIndex, 1)[0];
+      chosenCard.effect(player, AI1, AI2);
+      ai.eventsPlayed = ai.eventsPlayed || new Set();
+      ai.eventsPlayed.add(chosenCard.id);
+    }
+  }
+
+  if (deck.length > 0) {
+    ai.hand.push(deck.pop());
+  }
+}
 
 // 5) Function to play a card
 function playPlayerCard(index) {
   const chosenCard = player.hand.splice(index, 1)[0];
-  // Apply card effect
   chosenCard.effect(player, AI1, AI2);
-  // Record it in the correct set
+
   if (chosenCard.type === "action") {
     player.actionsPlayed.add(chosenCard.id);
   } else if (chosenCard.type === "event") {
     player.eventsPlayed.add(chosenCard.id);
   }
-  // Draw a new card
+
   if (deck.length > 0) {
     player.hand.push(deck.pop());
   }
-  // Re-render and update info
+
+  // AI turn sequence
+  playAICard(AI1);
+  playAICard(AI2);
+
   renderPlayerHand();
   updateGameInfo();
   updatePlayedLists();
@@ -123,11 +141,9 @@ function updatePlayedLists() {
   const actionIds = Array.from(player.actionsPlayed).sort((a, b) => a - b);
   const eventIds = Array.from(player.eventsPlayed).sort((a, b) => a - b);
 
-  // If no actions have been played yet, show "No actions played".
   if (actionIds.length === 0) {
     actionsDiv.textContent = "No actions played";
   } else {
-    // Otherwise, map them into a comma-separated list (with tooltips, etc.)
     const actionHTML = actionIds.map(id => {
       const card = deck.find(c => c.id === id);
       const cardName = card ? card.name : "Unknown Card";
@@ -136,7 +152,6 @@ function updatePlayedLists() {
     actionsDiv.innerHTML = actionHTML;
   }
 
-  // Do the same for events
   if (eventIds.length === 0) {
     eventsDiv.textContent = "No events played";
   } else {
@@ -149,10 +164,9 @@ function updatePlayedLists() {
   }
 }
 
-
 // 8) On page load, render initial state
 window.onload = () => {
   renderPlayerHand();
   updateGameInfo();
-  updatePlayedLists(); // in case sets start empty
+  updatePlayedLists();
 };
