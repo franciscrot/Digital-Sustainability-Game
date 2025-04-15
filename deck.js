@@ -456,16 +456,13 @@ effect: function (player, AI1, AI2) {
     name: "35: Attitudes shift",
     type: "event",
     description: `Attitudes are shifting. More people embrace solarpunk, wabi sabi digital design, permacomputing, slow media, digital minimalism, decomputing, and unplugging.`,
-    tooltip: "Event: Awards or deducts sustainability based on certain actions.",
+    tooltip: "Event: Convert progress points into sustainability points.",
     imagePath: "images/35.jpg",
     effect: function (player, AI1, AI2) {
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(2) || p.actionsPlayed.has(4)) {
-          p.sustainability += 2;
-        } else {
-          p.sustainability -= 1;
-        }
-      });
+    [player, AI1, AI2].forEach(p => {
+      p.sustainability += p.progress;
+      p.progress = 0;
+    });
     }
   },
   {
@@ -505,14 +502,13 @@ effect: function (player, AI1, AI2) {
     name: "38: Boycott",
     type: "event",
     description: `An NGO leads a successful boycott campaign targeting digital sustainability practices that hinder progress.`,
-    tooltip: "Event: Penalizes those who disrupt corporate interests.",
+    tooltip: "Event: Penalizes those who disrupt corporate interests. Convert prog to sus.",
     imagePath: "images/38.jpg",
     effect: function (player, AI1, AI2) {
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(8) || p.actionsPlayed.has(12)) {
-          p.sustainability -= 2;
-        }
-      });
+    [player, AI1, AI2].forEach(p => {
+      p.sustainability += p.progress;
+      p.progress = 0;
+    });
     }
   },
   {
@@ -580,14 +576,13 @@ effect: function (player, AI1, AI2) {
     name: "43: Shareholder activism",
     type: "event",
     description: `Shareholders mobilise, using their financial influence to push companies toward more sustainable practices.`,
-    tooltip: "Play this event card now?",
+    tooltip: "Convert prog to sus",
     imagePath: "images/43.jpg",
     effect: function (player, AI1, AI2) {
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
+    [player, AI1, AI2].forEach(p => {
+      p.sustainability += p.progress;
+      p.progress = 0;
+    });
     }
   },
   {
@@ -700,14 +695,13 @@ effect: function (player, AI1, AI2) {
     name: "51: Technological breakthrough",
     type: "event",
     description: `A technological breakthrough propels digital sustainability forward, opening up new pathways for progress.`,
-    tooltip: "Play this event card now?",
+    tooltip: "Play this event card now? Prog to sus",
     imagePath: "images/51.jpg",
     effect: function (player, AI1, AI2) {
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
+    [player, AI1, AI2].forEach(p => {
+      p.sustainability += p.progress;
+      p.progress = 0;
+    });
     }
   },
   {
@@ -745,14 +739,13 @@ effect: function (player, AI1, AI2) {
     name: "54: Global South Green New Deal",
     type: "event",
     description: `Global South Green New Deal: Ambitious policy initiatives empower emerging markets to drive sustainable growth.`,
-    tooltip: "Play this event card now?",
+    tooltip: "Play this event card now? Prog to sus",
     imagePath: "images/54.jpg",
-    effect: function (player, AI1, AI2) {
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
+  effect: function (player, AI1, AI2) {
+    [player, AI1, AI2].forEach(p => {
+      p.sustainability += p.progress;
+      p.progress = 0;
+    });
     }
   },
   {
@@ -835,14 +828,13 @@ effect: function (player, AI1, AI2) {
     name: "60: Big policy shift",
     type: "event",
     description: `Big policy shift: Landmark changes in regulations reshape sustainability standards across industries.`,
-    tooltip: "Play this event card now?",
+    tooltip: "Play this event card now? Prog to sus",
     imagePath: "images/60.jpg",
     effect: function (player, AI1, AI2) {
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
+    [player, AI1, AI2].forEach(p => {
+      p.sustainability += p.progress;
+      p.progress = 0;
+    });
     }
   },
 ];
