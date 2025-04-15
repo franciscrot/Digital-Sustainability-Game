@@ -25,9 +25,7 @@ const deck = [
 * Use video sparingly on your website (if at all). Compress video with tools like Handbrake.fr.
 * YouTube or Vimeo embeds might not be optimal. Try platforms like Mave.io.`,
     imagePath: "images/1.jpg",
-    effect: function (player, AI1, AI2) {
-      player.actionsPlayed.add(this.id);
-    }
+    effect() {}
   },
   {
     id: 2,
@@ -38,9 +36,7 @@ Many text editors have plug-ins or packages to minify code.
 `,
     tooltip: "Action: Minify!",
     imagePath: "images/2.jpg",
-    effect: function (player, AI1, AI2) {
-      player.actionsPlayed.add(this.id);
-    }
+    effect() {}
   },
   {
     id: 3,
@@ -55,9 +51,7 @@ Play this card to review your website, and only load what you really need!
 `,
     tooltip: "If you want, describe some of the weird unnecessary stuff you decided to remove.",
     imagePath: "images/3.jpg",
-    effect: function (player, AI1, AI2) {
-      player.actionsPlayed.add(this.id);
-    }
+    effect() {}
   },
   {
     id: 4,
@@ -71,9 +65,7 @@ Play this card to review your website, and only load what you really need!
 `,
     tooltip: "Action: Mark this card as played.",
     imagePath: "images/4.jpg",
-    effect: function (player, AI1, AI2) {
-      player.actionsPlayed.add(this.id);
-    }
+    effect() {}
   },
   {
     id: 5,
@@ -85,9 +77,7 @@ Play this card to review your website, and only load what you really need!
 `,
     tooltip: "Action: Mark this card as played.",
     imagePath: "images/5.jpg",
-    effect: function (player, AI1, AI2) {
-      player.actionsPlayed.add(this.id);
-    }
+    effect() {}
   },
   {
     id: 6,
@@ -100,9 +90,7 @@ Play this card to review your website, and only load what you really need!
 `,
     tooltip: "Play this card to simplify user journeys on your website. If you like, describe how terrible it was before, and how amazing it is now.",
     imagePath: "images/6.jpg",
-    effect: function (player, AI1, AI2) {
-      player.actionsPlayed.add(this.id);
-    }
+    effect() {}
   },
   {
     id: 7,
@@ -114,9 +102,7 @@ Play this card to review your website, and only load what you really need!
 `,
     tooltip: "If you like, describe how your attitudes and habits to videoconferencing shift.",
     imagePath: "images/7.jpg",
-    effect: function (player, AI1, AI2) {
-      player.actionsPlayed.add(this.id);
-    }
+    effect() {}
   },
   {
     id: 8,
@@ -125,9 +111,7 @@ Play this card to review your website, and only load what you really need!
     description: `Identify which everyday activities on your site or in your processes are low impact.`,
     tooltip: "Action: Mark this card as played.",
     imagePath: "images/8.jpg",
-    effect: function (player, AI1, AI2) {
-      player.actionsPlayed.add(this.id);
-    }
+    effect() {}
   },
   {
     id: 9,
@@ -136,9 +120,7 @@ Play this card to review your website, and only load what you really need!
     description: `Use efficient internet connections that consume less energy and improve performance.`,
     tooltip: "Action: Mark this card as played.",
     imagePath: "images/9.jpg",
-    effect: function (player, AI1, AI2) {
-      player.actionsPlayed.add(this.id);
-    }
+    effect() {}
   },
   {
     id: 10,
@@ -147,9 +129,7 @@ Play this card to review your website, and only load what you really need!
     description: `Optimise our WiFi network for better speed and energy efficiency.`,
     tooltip: "Action: Mark this card as played.",
     imagePath: "images/10.jpg",
-    effect: function (player, AI1, AI2) {
-      player.actionsPlayed.add(this.id);
-    }
+    effect() {}
   },
   {
     id: 11,
@@ -158,9 +138,7 @@ Play this card to review your website, and only load what you really need!
     description: `Avoid storing redundant data to reduce energy and storage costs.`,
     tooltip: "Action: Mark this card as played.",
     imagePath: "images/11.jpg",
-    effect: function (player, AI1, AI2) {
-      player.actionsPlayed.add(this.id);
-    }
+    effect() {}
   },
   {
     id: 12,
@@ -169,9 +147,7 @@ Play this card to review your website, and only load what you really need!
     description: `Utilise near-line and off-line storage solutions for data that doesn't need instant access.`,
     tooltip: "Action: Mark this card as played.",
     imagePath: "images/12.jpg",
-    effect: function (player, AI1, AI2) {
-      player.actionsPlayed.add(this.id);
-    }
+    effect() {}
   },
   {
     id: 13,
@@ -180,9 +156,7 @@ Play this card to review your website, and only load what you really need!
     description: `Benchmark our digital activities by measuring key performance metrics and identifying areas for improvement.`,
     tooltip: "Set a benchmark so we can improve in the future",
     imagePath: "images/13.jpg",
-    effect: function (player, AI1, AI2) {
-      player.actionsPlayed.add(this.id);
-    }
+    effect() {}
   },
   {
     id: 14,
@@ -191,9 +165,7 @@ Play this card to review your website, and only load what you really need!
     description: `Extend our devices' life spans through repair, maintenance, and upgrades to reduce waste and cost.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/14.jpg",
-    effect: function (player, AI1, AI2) {
-      player.actionsPlayed.add(this.id);
-    }
+    effect() {}
   },
   {
     id: 15,
@@ -202,9 +174,7 @@ Play this card to review your website, and only load what you really need!
     description: `Apply Life Cycle Analysis (LCA) to understand the environmental impact of your digital operations from start to finish.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/15.jpg",
-    effect: function (player, AI1, AI2) {
-      player.actionsPlayed.add(this.id);
-    }
+    effect() {}
   },
   {
     id: 16,
@@ -213,9 +183,7 @@ Play this card to review your website, and only load what you really need!
     description: `Advocate for the right to repair by supporting policies and practices that allow consumers to fix and extend the life of their devices.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/16.jpg",
-    effect: function (player, AI1, AI2) {
-      player.actionsPlayed.add(this.id);
-    }
+    effect() {}
   },
   {
     id: 17,
@@ -224,9 +192,7 @@ Play this card to review your website, and only load what you really need!
     description: `Implement improved e-waste recycling processes to ensure responsible disposal and reuse of electronic components.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/17.jpg",
-    effect: function (player, AI1, AI2) {
-      player.actionsPlayed.add(this.id);
-    }
+    effect() {}
   },
   {
     id: 18,
@@ -235,9 +201,7 @@ Play this card to review your website, and only load what you really need!
     description: `Design interfaces and experiences that are optimised for human use—efficient, intuitive, and user-friendly.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/18.jpg",
-    effect: function (player, AI1, AI2) {
-      player.actionsPlayed.add(this.id);
-    }
+    effect() {}
   },
   {
     id: 19,
@@ -246,9 +210,7 @@ Play this card to review your website, and only load what you really need!
     description: `Evaluate and verify suppliers to ensure they truly adhere to sustainable and environmentally friendly practices.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/19.jpg",
-    effect: function (player, AI1, AI2) {
-      player.actionsPlayed.add(this.id);
-    }
+    effect() {}
   },
   {
     id: 20,
@@ -257,9 +219,7 @@ Play this card to review your website, and only load what you really need!
     description: `Shift your focus to policy advocacy, using this card to drive change in regulatory frameworks for sustainability.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/20.jpg",
-    effect: function (player, AI1, AI2) {
-      player.actionsPlayed.add(this.id);
-    }
+    effect() {}
   },
   {
     id: 21,
@@ -268,9 +228,7 @@ Play this card to review your website, and only load what you really need!
     description: `Mobilise public and stakeholder support with protest actions that highlight unsustainable practices.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/21.jpg",
-    effect: function (player, AI1, AI2) {
-      player.actionsPlayed.add(this.id);
-    }
+    effect() {}
   },
   {
     id: 22,
@@ -279,9 +237,7 @@ Play this card to review your website, and only load what you really need!
     description: `Learn how to procure green energy effectively and integrate renewable sources into your operations.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/22.jpg",
-    effect: function (player, AI1, AI2) {
-      player.actionsPlayed.add(this.id);
-    }
+    effect() {}
   },
   {
     id: 23,
@@ -290,9 +246,7 @@ Play this card to review your website, and only load what you really need!
     description: `Measure the carbon footprint of your digital activities, especially those related to AI workloads and cloud services.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/23.jpg",
-    effect: function (player, AI1, AI2) {
-      player.actionsPlayed.add(this.id);
-    }
+    effect() {}
   },
   {
     id: 24,
@@ -301,9 +255,7 @@ Play this card to review your website, and only load what you really need!
     description: `Implement grid-aware demand management strategies to optimise energy usage in accordance with peak times and grid conditions.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/24.jpg",
-    effect: function (player, AI1, AI2) {
-      player.actionsPlayed.add(this.id);
-    }
+    effect() {}
   },
   {
     id: 25,
@@ -312,9 +264,7 @@ Play this card to review your website, and only load what you really need!
     description: `Identify scenarios where manual processes are more energy-efficient than relying on AI-based solutions.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/25.jpg",
-    effect: function (player, AI1, AI2) {
-      player.actionsPlayed.add(this.id);
-    }
+    effect() {}
   },
   {
     id: 26,
@@ -323,9 +273,7 @@ Play this card to review your website, and only load what you really need!
     description: `Examine the various types of AI technologies and evaluate their respective environmental impacts.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/26.jpg",
-    effect: function (player, AI1, AI2) {
-      player.actionsPlayed.add(this.id);
-    }
+    effect() {}
   },
   {
     id: 27,
@@ -334,9 +282,7 @@ Play this card to review your website, and only load what you really need!
     description: `Tailor your sustainability metrics and measurements to the current maturity level of your organisation.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/27.jpg",
-    effect: function (player, AI1, AI2) {
-      player.actionsPlayed.add(this.id);
-    }
+    effect() {}
   },
   {
     id: 28,
@@ -345,9 +291,7 @@ Play this card to review your website, and only load what you really need!
     description: `Prepare your organisation for rising carbon costs by adjusting strategies and operational priorities.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/28.jpg",
-    effect: function (player, AI1, AI2) {
-      player.actionsPlayed.add(this.id);
-    }
+    effect() {}
   },
   {
     id: 29,
@@ -356,9 +300,7 @@ Play this card to review your website, and only load what you really need!
     description: `Strategically evaluate and position your organisation within the evolving energy transition landscape.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/29.jpg",
-    effect: function (player, AI1, AI2) {
-      player.actionsPlayed.add(this.id);
-    }
+    effect() {}
   },
   {
     id: 30,
@@ -367,9 +309,7 @@ Play this card to review your website, and only load what you really need!
     description: `Review and revise procurement policies to prioritise sustainability and responsible sourcing.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/30.jpg",
-    effect: function (player, AI1, AI2) {
-      player.actionsPlayed.add(this.id);
-    }
+    effect() {}
   },
 
   // ================================
