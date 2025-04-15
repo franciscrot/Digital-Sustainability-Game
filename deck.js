@@ -375,121 +375,114 @@ Play this card to review your website, and only load what you really need!
   // ================================
   // 30 EVENT CARDS
   // ================================
-  {
-    id: 31,
-    name: "31: Web traffic increases",
-    type: "event",
-    description: `Web traffic increases: Your website experiences a surge in visitors, highlighting both increased engagement and energy usage. Gain a Progress Point for each of these actions: 1, 2, 3, 4, 5, 6.`,
-    tooltip: "Event: Awards progress if certain actions have been played.",
-    imagePath: "images/31.jpg",
-    effect: function (player, AI1, AI2) {
-      [player, AI1, AI2].forEach(p => {
-        let bonus = 0;
-        if (p.actionsPlayed.has(1)) bonus += 1;
-        if (p.actionsPlayed.has(2)) bonus += 1;
-        if (p.actionsPlayed.has(3)) bonus += 1;
-        if (p.actionsPlayed.has(4)) bonus += 1;
-        if (p.actionsPlayed.has(5)) bonus += 1;
-        if (p.actionsPlayed.has(6)) bonus += 1;
-        p.progress += bonus;
+// Event cards 31–60
+{
+  id: 31,
+  name: "31: Web traffic increases",
+  type: "event",
+  description: `Web traffic increases: Your website experiences a surge in visitors, highlighting both increased engagement and energy usage. Gain a Progress Point for each of these actions: 1, 2, 3, 4, 5, 6.`,
+  tooltip: "Event: Awards progress if certain actions have been played.",
+  imagePath: "images/31.jpg",
+  effect: function (player, AI1, AI2) {
+    [player, AI1, AI2].forEach(p => {
+      let bonus = 0;
+      [1, 2, 3, 4, 5, 6].forEach(id => {
+        if (p.actionsPlayed.has(id)) bonus += 1;
       });
-    }
-  },
-  {
-    id: 32,
-    name: "32: Search engine results favour green web design",
-    type: "event",
-    description: `Search engine results favour green web design: Sustainable practices improve your site's rankings, rewarding your green efforts.`,
-    tooltip: "Event: Players with no actions played lose sustainability.",
-    imagePath: "images/32.jpg",
-effect: function (player, AI1, AI2) {
-      [player, AI1, AI2].forEach(p => {
-        let bonus = 0;
-        if (p.actionsPlayed.has(1)) bonus += 1;
-        if (p.actionsPlayed.has(2)) bonus += 1;
-        if (p.actionsPlayed.has(3)) bonus += 1;
-        if (p.actionsPlayed.has(4)) bonus += 1;
-        if (p.actionsPlayed.has(5)) bonus += 1;
-        if (p.actionsPlayed.has(6)) bonus += 1;
-        p.progress += bonus;
+      p.progress += bonus;
+    });
+  }
+},
+{
+  id: 32,
+  name: "32: Search engine results favour green web design",
+  type: "event",
+  description: `Search engine results favour green web design: Sustainable practices improve your site's rankings, rewarding your green efforts.`,
+  tooltip: "Event: Awards progress if certain actions have been played.",
+  imagePath: "images/32.jpg",
+  effect: function (player, AI1, AI2) {
+    [player, AI1, AI2].forEach(p => {
+      let bonus = 0;
+      [1, 2, 3, 4, 5, 6].forEach(id => {
+        if (p.actionsPlayed.has(id)) bonus += 1;
       });
-    }
-  },
-  {
-    id: 33,
-    name: "33: Subsidies support digital sustainability",
-    type: "event",
-    description: `Subsidies support digital sustainability: Benefit as funding and incentives promote environmentally friendly practices.`,
-    tooltip: "Event: Rewards those with multiple specific actions completed.",
-    imagePath: "images/33.jpg",
-    effect: function (player, AI1, AI2) {
-      [player, AI1, AI2].forEach(p => {
-        let count = 0;
-        [1, 4, 6, 7].forEach(id => {
-          if (p.actionsPlayed.has(id)) count++;
-        });
-        if (count >= 2) {
-          p.progress += 3;
-        }
+      p.progress += bonus;
+    });
+  }
+},
+{
+  id: 33,
+  name: "33: Subsidies support digital sustainability",
+  type: "event",
+  description: `Subsidies support digital sustainability: Benefit as funding and incentives promote environmentally friendly practices.`,
+  tooltip: "Event: Rewards progress for specific actions.",
+  imagePath: "images/33.jpg",
+  effect: function (player, AI1, AI2) {
+    [player, AI1, AI2].forEach(p => {
+      let bonus = 0;
+      [8, 9, 12, 13].forEach(id => {
+        if (p.actionsPlayed.has(id)) bonus += 1;
       });
-    }
-  },
-  {
-    id: 34,
-    name: "34: Digital sustainability leadership is attracting and retaining the best talent",
-    type: "event",
-    description: `Digital sustainability leadership is attracting and retaining the best talent: Your green initiatives create a competitive advantage in recruitment.`,
-    tooltip: "Event: Boosts sustainability if players did relevant actions.",
-    imagePath: "images/34.jpg",
-    effect: function (player, AI1, AI2) {
-      [player, AI1, AI2].forEach(p => {
-        let bonus = 0;
-        if (p.actionsPlayed.has(5)) bonus += 2;
-        if (p.actionsPlayed.has(6)) bonus += 2;
-        if (p.actionsPlayed.has(7)) bonus += 2;
-        p.sustainability += bonus;
+      p.progress += bonus;
+    });
+  }
+},
+{
+  id: 34,
+  name: "34: Digital sustainability leadership is attracting and retaining the best talent",
+  type: "event",
+  description: `Digital sustainability leadership is attracting and retaining the best talent: Your green initiatives create a competitive advantage in recruitment.`,
+  tooltip: "Event: Rewards progress for specific actions.",
+  imagePath: "images/34.jpg",
+  effect: function (player, AI1, AI2) {
+    [player, AI1, AI2].forEach(p => {
+      let bonus = 0;
+      [8, 9, 11, 18].forEach(id => {
+        if (p.actionsPlayed.has(id)) bonus += 1;
       });
-    }
-  },
-  {
-    id: 35,
-    name: "35: Attitudes shift",
-    type: "event",
-    description: `Attitudes are shifting. More people embrace solarpunk, wabi sabi digital design, permacomputing, slow media, digital minimalism, decomputing, and unplugging.`,
-    tooltip: "Event: Convert progress points into sustainability points.",
-    imagePath: "images/35.jpg",
-    effect: function (player, AI1, AI2) {
+      p.progress += bonus;
+    });
+  }
+},
+{
+  id: 35,
+  name: "35: Attitudes shift",
+  type: "event",
+  description: `Attitudes are shifting. More people embrace solarpunk, wabi sabi digital design, permacomputing, slow media, digital minimalism, decomputing, and unplugging.`,
+  tooltip: "Event: Convert progress points into sustainability points.",
+  imagePath: "images/35.jpg",
+  effect: function (player, AI1, AI2) {
     [player, AI1, AI2].forEach(p => {
       p.sustainability += p.progress;
       p.progress = 0;
     });
-    }
-  },
-  {
-    id: 36,
-    name: "36: Climate activism is making an impact",
-    type: "event",
-    description: `Climate activists are significantly disrupting polluters, leading to tangible environmental benefits.`,
-    tooltip: "Event: Rewards alternative energy actions or penalizes unprepared.",
-    imagePath: "images/36.jpg",
-    effect: function (player, AI1, AI2) {
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(4) || p.actionsPlayed.has(10)) {
-          p.progress += 2;
-        } else {
-          p.progress -= 1;
-        }
+  }
+},
+{
+  id: 36,
+  name: "36: Climate activism is making an impact",
+  type: "event",
+  description: `Climate activists are significantly disrupting polluters, leading to tangible environmental benefits.`,
+  tooltip: "Event: Gain progress for actions 19, 21, 24, 25.",
+  imagePath: "images/36.jpg",
+  effect: function (player, AI1, AI2) {
+    [player, AI1, AI2].forEach(p => {
+      let bonus = 0;
+      [19, 21, 24, 25].forEach(id => {
+        if (p.actionsPlayed.has(id)) bonus += 1;
       });
-    }
-  },
-  {
-    id: 37,
-    name: "37: Listing rules change",
-    type: "event",
-    description: `Listing rules change: New regulatory criteria alter market dynamics for companies that fail to meet sustainability standards.`,
-    tooltip: "Event: Stock markets stop listing unsustainable companies.",
-    imagePath: "images/37.jpg",
- effect: function (player, AI1, AI2) {
+      p.progress += bonus;
+    });
+  }
+},
+{
+  id: 37,
+  name: "37: Listing rules change",
+  type: "event",
+  description: `Listing rules change: New regulatory criteria alter market dynamics for companies that fail to meet sustainability standards.`,
+  tooltip: "Event: Players without any of the required actions lose all progress.",
+  imagePath: "images/37.jpg",
+  effect: function (player, AI1, AI2) {
     [player, AI1, AI2].forEach(p => {
       if (!p.actionsPlayed.has(17) && !p.actionsPlayed.has(22) && !p.actionsPlayed.has(23)) {
         p.progress = 0;
@@ -497,6 +490,7 @@ effect: function (player, AI1, AI2) {
     });
   }
 },
+  
   {
     id: 38,
     name: "38: Boycott",
@@ -526,314 +520,340 @@ effect: function (player, AI1, AI2) {
     });
     }
   },
-  {
-    id: 40,
-    name: "40: Price of carbon rises",
-    type: "event",
-    description: `Policymakers impose a price on carbon emissions, reflecting the true environmental cost of digital operations.`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/40.jpg",
-    effect: function (player, AI1, AI2) {
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
-    }
-  },
-  {
-    id: 41,
-    name: "41: New data storage medium",
-    type: "event",
-    description: `New data storage medium: Leverage emerging technologies to store data more efficiently and sustainably.`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/41.jpg",
-    effect: function (player, AI1, AI2) {
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
-    }
-  },
-  {
-    id: 42,
-    name: "42: New e-waste laws",
-    type: "event",
-    description: `A new law allocates responsibility for e-waste among producers, retailers, and corporate customers, driving greener practices.`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/42.jpg",
-    effect: function (player, AI1, AI2) {
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
-    }
-  },
-  {
-    id: 43,
-    name: "43: Shareholder activism",
-    type: "event",
-    description: `Shareholders mobilise, using their financial influence to push companies toward more sustainable practices.`,
-    tooltip: "Convert prog to sus",
-    imagePath: "images/43.jpg",
-    effect: function (player, AI1, AI2) {
+
+{
+  id: 40,
+  name: "40: Price of carbon rises",
+  type: "event",
+  description: `Policymakers impose a price on carbon emissions, reflecting the true environmental cost of digital operations.`,
+  tooltip: "Event: Gain progress for actions 19, 28, 23, 27.",
+  imagePath: "images/40.jpg",
+  effect: function (player, AI1, AI2) {
     [player, AI1, AI2].forEach(p => {
-      p.sustainability += p.progress;
-      p.progress = 0;
-    });
-    }
-  },
-  {
-    id: 44,
-    name: "44: ESG gets a make-over",
-    type: "event",
-    description: `ESG gets a make-over: Modernise your environmental, social, and governance practices for better sustainability results.`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/44.jpg",
-    effect: function (player, AI1, AI2) {
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
+      let bonus = 0;
+      [19, 28, 23, 27].forEach(id => {
+        if (p.actionsPlayed.has(id)) bonus += 1;
       });
-    }
-  },
-  {
-    id: 45,
-    name: "45: Low carbon tech disruptions",
-    type: "event",
-    description: `Low carbon tech disruptions: Breakthroughs in low carbon technology create both opportunities and challenges.`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/45.jpg",
-    effect: function (player, AI1, AI2) {
+      p.progress += bonus;
+    });
+  }
+},
+{
+  id: 41,
+  name: "41: New data storage medium",
+  type: "event",
+  description: `New data storage medium: Leverage emerging technologies to store data more efficiently and sustainably.`,
+  tooltip: "Event: Gain progress for actions 11, 12, 30, 27.",
+  imagePath: "images/41.jpg",
+  effect: function (player, AI1, AI2) {
     [player, AI1, AI2].forEach(p => {
-      if (!p.actionsPlayed.has(10) && !p.actionsPlayed.has(12) && !p.actionsPlayed.has(23)) {
-        p.progress = 0;
-      }
+      let bonus = 0;
+      [11, 12, 30, 27].forEach(id => {
+        if (p.actionsPlayed.has(id)) bonus += 1;
+      });
+      p.progress += bonus;
     });
-    }
-  },
-  {
-    id: 46,
-    name: "46: Reporting requirements tighten",
-    type: "event",
-    description: `Your organisation is now legally mandated to provide real-time reports on climate-related risks and opportunities.`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/46.jpg",
-    effect: function (player, AI1, AI2) {
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
-    }
-  },
-  {
-    id: 47,
-    name: "47: Impairment law gets a reboot",
-    type: "event",
-    description: `Organisations must now disclose when an asset becomes stranded, triggering a swift revaluation of its worth.`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/47.jpg",
-    effect: function (player, AI1, AI2) {
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
-    }
-  },
-  {
-    id: 48,
-    name: "48: Climate impacts disrupt supply chains",
-    type: "event",
-    description: `Climate impacts disrupt supply chains: Global events interfere with production and logistics, challenging sustainable practices.`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/48.jpg",
-    effect: function (player, AI1, AI2) {
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
-    }
-  },
-  {
-    id: 49,
-    name: "49: Global carbon price",
-    type: "event",
-    description: `Global carbon price: As governments adjust policies, the true cost of carbon emissions becomes a market reality.`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/49.jpg",
-    effect: function (player, AI1, AI2) {
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
-    }
-  },
-  {
-    id: 50,
-    name: "50: Digital divide closes",
-    type: "event",
-    description: `Digital divide closes: Increased digital access narrows socioeconomic gaps while accelerating progress.`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/50.jpg",
-    effect: function (player, AI1, AI2) {
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
-    }
-  },
-  {
-    id: 51,
-    name: "51: Technological breakthrough",
-    type: "event",
-    description: `A technological breakthrough propels digital sustainability forward, opening up new pathways for progress.`,
-    tooltip: "Play this event card now? Prog to sus",
-    imagePath: "images/51.jpg",
-    effect: function (player, AI1, AI2) {
+  }
+},
+{
+  id: 42,
+  name: "42: New e-waste laws",
+  type: "event",
+  description: `A new law allocates responsibility for e-waste among producers, retailers, and corporate customers, driving greener practices.`,
+  tooltip: "Event: Gain progress for actions 14, 15, 16, 17.",
+  imagePath: "images/42.jpg",
+  effect: function (player, AI1, AI2) {
     [player, AI1, AI2].forEach(p => {
-      p.sustainability += p.progress;
-      p.progress = 0;
+      let bonus = 0;
+      [14, 15, 16, 17].forEach(id => {
+        if (p.actionsPlayed.has(id)) bonus += 1;
+      });
+      p.progress += bonus;
     });
-    }
-  },
-  {
-    id: 52,
-    name: "52: Geopolitical disruption",
-    type: "event",
-    description: `Geopolitical disruption: Global political shifts and conflicts influence sustainability policies and practices.`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/52.jpg",
-    effect: function (player, AI1, AI2) {
-    [player, AI1, AI2].forEach(p => {
-      if (!p.actionsPlayed.has(10) && !p.actionsPlayed.has(18) && !p.actionsPlayed.has(29)) {
-        p.progress = 0;
-      }
-    });
-    }
-  },
-  {
-    id: 53,
-    name: "53: Vaporware",
-    type: "event",
-    description: `Event: xSpice's data center on the Moon is a flop, exemplifying overhyped technology failures.`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/53.jpg",
-    effect: function (player, AI1, AI2) {
-    [player, AI1, AI2].forEach(p => {
-      if (!p.actionsPlayed.has(8) && !p.actionsPlayed.has(20) && !p.actionsPlayed.has(26)) {
-        p.progress = 0;
-      }
-    });
-    }
-  },
-  {
-    id: 54,
-    name: "54: Global South Green New Deal",
-    type: "event",
-    description: `Global South Green New Deal: Ambitious policy initiatives empower emerging markets to drive sustainable growth.`,
-    tooltip: "Play this event card now? Prog to sus",
-    imagePath: "images/54.jpg",
+  }
+},
+{
+  id: 43,
+  name: "43: Shareholder activism",
+  type: "event",
+  description: `Shareholders mobilise, using their financial influence to push companies toward more sustainable practices.`,
+  tooltip: "Event: Convert all progress into sustainability.",
+  imagePath: "images/43.jpg",
   effect: function (player, AI1, AI2) {
     [player, AI1, AI2].forEach(p => {
       p.sustainability += p.progress;
       p.progress = 0;
     });
-    }
-  },
-  {
-    id: 55,
-    name: "55: Tech giant fails to deliver",
-    type: "event",
-    description: `Tech giant Giggle fails to meet its decarbonisation pledges, undermining public trust in corporate sustainability promises.`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/55.jpg",
-    effect: function (player, AI1, AI2) {
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
-    }
-  },
-  {
-    id: 56,
-    name: "56: Negative emissions technologies are not scaling up",
-    type: "event",
-    description: `Negative emissions technologies are not scaling up as expected, highlighting challenges in removing carbon effectively.`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/56.jpg",
-    effect: function (player, AI1, AI2) {
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
-    }
-  },
-  {
-    id: 57,
-    name: "57: Geoengineering efforts are deferring carbon reduction",
-    type: "event",
-    description: `Geoengineering efforts are deferring carbon reduction by creating temporary fixes rather than addressing root causes.`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/57.jpg",
-    effect: function (player, AI1, AI2) {
+  }
+},
+{
+  id: 44,
+  name: "44: ESG gets a make-over",
+  type: "event",
+  description: `ESG gets a make-over: Modernise your environmental, social, and governance practices for better sustainability results.`,
+  tooltip: "Event: Gain progress for actions 7, 17, 20, 22.",
+  imagePath: "images/44.jpg",
+  effect: function (player, AI1, AI2) {
     [player, AI1, AI2].forEach(p => {
-      if (!p.actionsPlayed.has(21) && !p.actionsPlayed.has(25) && !p.actionsPlayed.has(28)) {
-        p.progress = 0;
-      }
-    });    }
-  },
-  {
-    id: 58,
-    name: "58: Carbon leakage",
-    type: "event",
-    description: `Carbon leakage: Unintended shifts in emissions occur when production moves to regions with lax regulations.`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/58.jpg",
-    effect: function (player, AI1, AI2) {
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
+      let bonus = 0;
+      [7, 17, 20, 22].forEach(id => {
+        if (p.actionsPlayed.has(id)) bonus += 1;
       });
-    }
-  },
-  {
-    id: 59,
-    name: "59: Major climate impact",
-    type: "event",
-    description: `Major climate impact: Extreme weather events and systemic changes drive rapid and noticeable shifts in the environment.`,
-    tooltip: "Play this event card now?",
-    imagePath: "images/59.jpg",
-    effect: function (player, AI1, AI2) {
+      p.progress += bonus;
+    });
+  }
+},
+{
+  id: 45,
+  name: "45: Low carbon tech disruptions",
+  type: "event",
+  description: `Low carbon tech disruptions: Breakthroughs in low carbon technology create both opportunities and challenges.`,
+  tooltip: "Event: Players without actions 10, 12, or 23 lose all progress.",
+  imagePath: "images/45.jpg",
+  effect: function (player, AI1, AI2) {
     [player, AI1, AI2].forEach(p => {
-      if (!p.actionsPlayed.has(10) && !p.actionsPlayed.has(15) && !p.actionsPlayed.has(30)) {
+      if (![10, 12, 23].some(id => p.actionsPlayed.has(id))) {
         p.progress = 0;
       }
     });
-    }
-  },
-  {
-    id: 60,
-    name: "60: Big policy shift",
-    type: "event",
-    description: `Big policy shift: Landmark changes in regulations reshape sustainability standards across industries.`,
-    tooltip: "Play this event card now? Prog to sus",
-    imagePath: "images/60.jpg",
-    effect: function (player, AI1, AI2) {
+  }
+},
+{
+  id: 46,
+  name: "46: Reporting requirements tighten",
+  type: "event",
+  description: `Your organisation is now legally mandated to provide real-time reports on climate-related risks and opportunities.`,
+  tooltip: "Event: Gain progress for actions 7, 13, 15, 19.",
+  imagePath: "images/46.jpg",
+  effect: function (player, AI1, AI2) {
+    [player, AI1, AI2].forEach(p => {
+      let bonus = 0;
+      [7, 13, 15, 19].forEach(id => {
+        if (p.actionsPlayed.has(id)) bonus += 1;
+      });
+      p.progress += bonus;
+    });
+  }
+},
+{
+  id: 47,
+  name: "47: Impairment law gets a reboot",
+  type: "event",
+  description: `Organisations must now disclose when an asset becomes stranded, triggering a swift revaluation of its worth.`,
+  tooltip: "Event: Gain progress for actions 14, 16, 30, 18.",
+  imagePath: "images/47.jpg",
+  effect: function (player, AI1, AI2) {
+    [player, AI1, AI2].forEach(p => {
+      let bonus = 0;
+      [14, 16, 30, 18].forEach(id => {
+        if (p.actionsPlayed.has(id)) bonus += 1;
+      });
+      p.progress += bonus;
+    });
+  }
+},
+{
+  id: 48,
+  name: "48: Climate impacts disrupt supply chains",
+  type: "event",
+  description: `Global events interfere with production and logistics, challenging sustainable practices.`,
+  tooltip: "Event: Gain progress for actions 19, 25, 16, 10.",
+  imagePath: "images/48.jpg",
+  effect: function (player, AI1, AI2) {
+    [player, AI1, AI2].forEach(p => {
+      let bonus = 0;
+      [19, 25, 16, 10].forEach(id => {
+        if (p.actionsPlayed.has(id)) bonus += 1;
+      });
+      p.progress += bonus;
+    });
+  }
+},
+{
+  id: 49,
+  name: "49: Global carbon price",
+  type: "event",
+  description: `As governments adjust policies, the true cost of carbon emissions becomes a market reality.`,
+  tooltip: "Event: Gain progress for actions 28, 23, 24, 13.",
+  imagePath: "images/49.jpg",
+  effect: function (player, AI1, AI2) {
+    [player, AI1, AI2].forEach(p => {
+      let bonus = 0;
+      [28, 23, 24, 13].forEach(id => {
+        if (p.actionsPlayed.has(id)) bonus += 1;
+      });
+      p.progress += bonus;
+    });
+  }
+},
+{
+  id: 50,
+  name: "50: Digital divide closes",
+  type: "event",
+  description: `Digital divide closes: Increased digital access narrows socioeconomic gaps while accelerating progress.`,
+  tooltip: "Event: Gain progress for actions 18, 26, 29, 14.",
+  imagePath: "images/50.jpg",
+  effect: function (player, AI1, AI2) {
+    [player, AI1, AI2].forEach(p => {
+      let bonus = 0;
+      [18, 26, 29, 14].forEach(id => {
+        if (p.actionsPlayed.has(id)) bonus += 1;
+      });
+      p.progress += bonus;
+    });
+  }
+},
+
+{
+  id: 51,
+  name: "51: Technological breakthrough",
+  type: "event",
+  description: `A technological breakthrough propels digital sustainability forward, opening up new pathways for progress.`,
+  tooltip: "Event: Convert all progress into sustainability.",
+  imagePath: "images/51.jpg",
+  effect: function (player, AI1, AI2) {
     [player, AI1, AI2].forEach(p => {
       p.sustainability += p.progress;
       p.progress = 0;
     });
-    }
-  },
-];
+  }
+},
+{
+  id: 52,
+  name: "52: Geopolitical disruption",
+  type: "event",
+  description: `Global political shifts and conflicts influence sustainability policies and practices.`,
+  tooltip: "Event: Players without actions 10, 18, or 29 lose all progress.",
+  imagePath: "images/52.jpg",
+  effect: function (player, AI1, AI2) {
+    [player, AI1, AI2].forEach(p => {
+      if (![10, 18, 29].some(id => p.actionsPlayed.has(id))) {
+        p.progress = 0;
+      }
+    });
+  }
+},
+{
+  id: 53,
+  name: "53: Vaporware",
+  type: "event",
+  description: `xSpice's data center on the Moon is a flop, exemplifying overhyped technology failures.`,
+  tooltip: "Event: Players without actions 8, 20, or 26 lose all progress.",
+  imagePath: "images/53.jpg",
+  effect: function (player, AI1, AI2) {
+    [player, AI1, AI2].forEach(p => {
+      if (![8, 20, 26].some(id => p.actionsPlayed.has(id))) {
+        p.progress = 0;
+      }
+    });
+  }
+},
+{
+  id: 54,
+  name: "54: Global South Green New Deal",
+  type: "event",
+  description: `Ambitious policy initiatives empower emerging markets to drive sustainable growth.`,
+  tooltip: "Event: Convert all progress into sustainability.",
+  imagePath: "images/54.jpg",
+  effect: function (player, AI1, AI2) {
+    [player, AI1, AI2].forEach(p => {
+      p.sustainability += p.progress;
+      p.progress = 0;
+    });
+  }
+},
+{
+  id: 55,
+  name: "55: Tech giant fails to deliver",
+  type: "event",
+  description: `Tech giant Giggle fails to meet its decarbonisation pledges, undermining public trust in corporate sustainability promises.`,
+  tooltip: "Event: Gain progress for actions 20, 21, 25, 30.",
+  imagePath: "images/55.jpg",
+  effect: function (player, AI1, AI2) {
+    [player, AI1, AI2].forEach(p => {
+      let bonus = 0;
+      [20, 21, 25, 30].forEach(id => {
+        if (p.actionsPlayed.has(id)) bonus += 1;
+      });
+      p.progress += bonus;
+    });
+  }
+},
+{
+  id: 56,
+  name: "56: Negative emissions technologies are not scaling up",
+  type: "event",
+  description: `Negative emissions technologies struggle to deliver, spotlighting the need for fundamental carbon reductions.`,
+  tooltip: "Event: Gain progress for actions 20, 21, 29, 24.",
+  imagePath: "images/56.jpg",
+  effect: function (player, AI1, AI2) {
+    [player, AI1, AI2].forEach(p => {
+      let bonus = 0;
+      [20, 21, 29, 24].forEach(id => {
+        if (p.actionsPlayed.has(id)) bonus += 1;
+      });
+      p.progress += bonus;
+    });
+  }
+},
+{
+  id: 57,
+  name: "57: Geoengineering efforts are deferring carbon reduction",
+  type: "event",
+  description: `Geoengineering creates temporary fixes but delays meaningful carbon reductions.`,
+  tooltip: "Event: Players without actions 21, 25, or 28 lose all progress.",
+  imagePath: "images/57.jpg",
+  effect: function (player, AI1, AI2) {
+    [player, AI1, AI2].forEach(p => {
+      if (![21, 25, 28].some(id => p.actionsPlayed.has(id))) {
+        p.progress = 0;
+      }
+    });
+  }
+},
+{
+  id: 58,
+  name: "58: Carbon leakage",
+  type: "event",
+  description: `Carbon leakage: Emissions shift across borders due to uneven regulatory environments.`,
+  tooltip: "Event: Gain progress for actions 22, 28, 26, 29.",
+  imagePath: "images/58.jpg",
+  effect: function (player, AI1, AI2) {
+    [player, AI1, AI2].forEach(p => {
+      let bonus = 0;
+      [22, 28, 26, 29].forEach(id => {
+        if (p.actionsPlayed.has(id)) bonus += 1;
+      });
+      p.progress += bonus;
+    });
+  }
+},
+{
+  id: 59,
+  name: "59: Major climate impact",
+  type: "event",
+  description: `Extreme weather events and systemic disruptions drive a sense of urgency in climate response.`,
+  tooltip: "Event: Players without actions 10, 15, or 30 lose all progress.",
+  imagePath: "images/59.jpg",
+  effect: function (player, AI1, AI2) {
+    [player, AI1, AI2].forEach(p => {
+      if (![10, 15, 30].some(id => p.actionsPlayed.has(id))) {
+        p.progress = 0;
+      }
+    });
+  }
+},
+{
+  id: 60,
+  name: "60: Big policy shift",
+  type: "event",
+  description: `Landmark changes in policy reshape global approaches to sustainability.`,
+  tooltip: "Event: Convert all progress into sustainability.",
+  imagePath: "images/60.jpg",
+  effect: function (player, AI1, AI2) {
+    [player, AI1, AI2].forEach(p => {
+      p.sustainability += p.progress;
+      p.progress = 0;
+    });
+  }
+}
