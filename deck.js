@@ -857,3 +857,4 @@ Play this card to review your website, and only load what you really need!
     });
   }
 }
+];
