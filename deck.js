@@ -379,7 +379,7 @@ Play this card to review your website, and only load what you really need!
     id: 31,
     name: "31: Web traffic increases",
     type: "event",
-    description: `Web traffic increases: Your website experiences a surge in visitors, highlighting both increased engagement and energy usage.`,
+    description: `Web traffic increases: Your website experiences a surge in visitors, highlighting both increased engagement and energy usage. Gain a Progress Point for each of these actions: 1, 2, 3, 4, 5, 6.`,
     tooltip: "Event: Awards progress if certain actions have been played.",
     imagePath: "images/31.jpg",
     effect: function (player, AI1, AI2) {
@@ -388,6 +388,9 @@ Play this card to review your website, and only load what you really need!
         if (p.actionsPlayed.has(1)) bonus += 1;
         if (p.actionsPlayed.has(2)) bonus += 1;
         if (p.actionsPlayed.has(3)) bonus += 1;
+        if (p.actionsPlayed.has(4)) bonus += 1;
+        if (p.actionsPlayed.has(5)) bonus += 1;
+        if (p.actionsPlayed.has(6)) bonus += 1;
         p.progress += bonus;
       });
     }
@@ -399,11 +402,16 @@ Play this card to review your website, and only load what you really need!
     description: `Search engine results favour green web design: Sustainable practices improve your site's rankings, rewarding your green efforts.`,
     tooltip: "Event: Players with no actions played lose sustainability.",
     imagePath: "images/32.jpg",
-    effect: function (player, AI1, AI2) {
+effect: function (player, AI1, AI2) {
       [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.size === 0) {
-          p.sustainability -= 3;
-        }
+        let bonus = 0;
+        if (p.actionsPlayed.has(1)) bonus += 1;
+        if (p.actionsPlayed.has(2)) bonus += 1;
+        if (p.actionsPlayed.has(3)) bonus += 1;
+        if (p.actionsPlayed.has(4)) bonus += 1;
+        if (p.actionsPlayed.has(5)) bonus += 1;
+        if (p.actionsPlayed.has(6)) bonus += 1;
+        p.progress += bonus;
       });
     }
   },
