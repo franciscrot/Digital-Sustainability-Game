@@ -490,11 +490,13 @@ effect: function (player, AI1, AI2) {
     tooltip: "Event: Stock markets stop listing unsustainable companies.",
     imagePath: "images/37.jpg",
     effect: function (player, AI1, AI2) {
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
+    [player, AI1, AI2].forEach(p => {
+      if (!p.actionsPlayed.has(17) && !p.actionsPlayed.has(22) && !p.actionsPlayed.has(23)) {
+        p.progress = 0;
+      }
+    });
+  }
+}
     }
   },
   {
@@ -513,17 +515,17 @@ effect: function (player, AI1, AI2) {
   },
   {
     id: 39,
-    name: "39: Water scarcity",
+    name: "39: Resource scarcity",
     type: "event",
     description: `Water scarcity: This card highlights challenges arising from limited water resources impacting digital infrastructure.`,
     tooltip: "Play this event card now?",
     imagePath: "images/39.jpg",
     effect: function (player, AI1, AI2) {
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
+    [player, AI1, AI2].forEach(p => {
+      if (!p.actionsPlayed.has(11) && !p.actionsPlayed.has(12) && !p.actionsPlayed.has(27)) {
+        p.progress = 0;
+      }
+    });
     }
   },
   {
@@ -608,11 +610,11 @@ effect: function (player, AI1, AI2) {
     tooltip: "Play this event card now?",
     imagePath: "images/45.jpg",
     effect: function (player, AI1, AI2) {
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
+    [player, AI1, AI2].forEach(p => {
+      if (!p.actionsPlayed.has(10) && !p.actionsPlayed.has(12) && !p.actionsPlayed.has(23)) {
+        p.progress = 0;
+      }
+    });
     }
   },
   {
@@ -712,11 +714,11 @@ effect: function (player, AI1, AI2) {
     tooltip: "Play this event card now?",
     imagePath: "images/52.jpg",
     effect: function (player, AI1, AI2) {
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
+    [player, AI1, AI2].forEach(p => {
+      if (!p.actionsPlayed.has(10) && !p.actionsPlayed.has(18) && !p.actionsPlayed.has(29)) {
+        p.progress = 0;
+      }
+    });
     }
   },
   {
@@ -727,11 +729,11 @@ effect: function (player, AI1, AI2) {
     tooltip: "Play this event card now?",
     imagePath: "images/53.jpg",
     effect: function (player, AI1, AI2) {
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
+    [player, AI1, AI2].forEach(p => {
+      if (!p.actionsPlayed.has(8) && !p.actionsPlayed.has(20) && !p.actionsPlayed.has(26)) {
+        p.progress = 0;
+      }
+    });
     }
   },
   {
@@ -786,12 +788,11 @@ effect: function (player, AI1, AI2) {
     tooltip: "Play this event card now?",
     imagePath: "images/57.jpg",
     effect: function (player, AI1, AI2) {
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
-    }
+    [player, AI1, AI2].forEach(p => {
+      if (!p.actionsPlayed.has(21) && !p.actionsPlayed.has(25) && !p.actionsPlayed.has(28)) {
+        p.progress = 0;
+      }
+    });    }
   },
   {
     id: 58,
@@ -816,11 +817,11 @@ effect: function (player, AI1, AI2) {
     tooltip: "Play this event card now?",
     imagePath: "images/59.jpg",
     effect: function (player, AI1, AI2) {
-      [player, AI1, AI2].forEach(p => {
-        if (p.actionsPlayed.has(9) || p.actionsPlayed.has(11)) {
-          p.progress += 3;
-        }
-      });
+    [player, AI1, AI2].forEach(p => {
+      if (!p.actionsPlayed.has(10) && !p.actionsPlayed.has(15) && !p.actionsPlayed.has(30)) {
+        p.progress = 0;
+      }
+    });
     }
   },
   {
