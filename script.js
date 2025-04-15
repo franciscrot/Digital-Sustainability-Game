@@ -151,7 +151,6 @@ function updateGameInfo() {
   `;
 }
 
-// 7) Update the lists of played actions/events
 function updatePlayedLists() {
   const yourActionsDiv = document.getElementById("yourActionsPlayed");
   const yourEventsDiv = document.getElementById("yourEventsPlayed");
@@ -160,45 +159,43 @@ function updatePlayedLists() {
 
   const yourActionIds = Array.from(player.actionsPlayed).sort((a, b) => a - b);
   const yourEventIds = Array.from(player.eventsPlayed).sort((a, b) => a - b);
+
   const aiActionIds = Array.from(new Set([...AI1.actionsPlayed, ...AI2.actionsPlayed])).sort((a, b) => a - b);
   const aiEventIds = Array.from(new Set([...AI1.eventsPlayed, ...AI2.eventsPlayed])).sort((a, b) => a - b);
 
-  yourActionsDiv.innerHTML =
-    yourActionIds.length === 0
-      ? "None"
-      : yourActionIds.map(id => {
-          const card = deck.find(c => c.id === id);
-          const cardName = card ? card.name : "Unknown Card";
-          return `<span title="${cardName}">${id}</span>`;
-        }).join(", ");
+  yourActionsDiv.innerHTML = yourActionIds.length === 0
+    ? "None"
+    : yourActionIds.map(id => {
+        const card = deck.find(c => c.id === id);
+        const cardName = card ? card.name : "Unknown Card";
+        return `<span title="${cardName}">${id}</span>`;
+      }).join(", ");
 
-  yourEventsDiv.innerHTML =
-    yourEventIds.length === 0
-      ? "None"
-      : yourEventIds.map(id => {
-          const card = deck.find(c => c.id === id);
-          const cardName = card ? card.name : "Unknown Card";
-          return `<span title="${cardName}">${id}</span>`;
-        }).join(", ");
+  yourEventsDiv.innerHTML = yourEventIds.length === 0
+    ? "None"
+    : yourEventIds.map(id => {
+        const card = deck.find(c => c.id === id);
+        const cardName = card ? card.name : "Unknown Card";
+        return `<span title="${cardName}">${id}</span>`;
+      }).join(", ");
 
-  aiActionsDiv.innerHTML =
-    aiActionIds.length === 0
-      ? "None"
-      : aiActionIds.map(id => {
-          const card = deck.find(c => c.id === id);
-          const cardName = card ? card.name : "Unknown Card";
-          return `<span title="${cardName}">${id}</span>`;
-        }).join(", ");
+  aiActionsDiv.innerHTML = aiActionIds.length === 0
+    ? "None"
+    : aiActionIds.map(id => {
+        const card = deck.find(c => c.id === id);
+        const cardName = card ? card.name : "Unknown Card";
+        return `<span title="${cardName}">${id}</span>`;
+      }).join(", ");
 
-  aiEventsDiv.innerHTML =
-    aiEventIds.length === 0
-      ? "None"
-      : aiEventIds.map(id => {
-          const card = deck.find(c => c.id === id);
-          const cardName = card ? card.name : "Unknown Card";
-          return `<span title="${cardName}">${id}</span>`;
-        }).join(", ");
+  aiEventsDiv.innerHTML = aiEventIds.length === 0
+    ? "None"
+    : aiEventIds.map(id => {
+        const card = deck.find(c => c.id === id);
+        const cardName = card ? card.name : "Unknown Card";
+        return `<span title="${cardName}">${id}</span>`;
+      }).join(", ");
 }
+
 
 // 8) On page load, render initial state
 window.onload = () => {
