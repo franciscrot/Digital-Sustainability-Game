@@ -21,7 +21,26 @@ function shuffle(array) {
   return array;
 }
 
-// 3) Initialize the game
+// Stack the deck slightly - move a web themed event card to not too late, not too soon
+let index32 = deck.findIndex(card => card.id === 32);
+if (index32 !== -1) {
+  // Remove card ID 32 from its current position
+  let card32 = deck.splice(index32, 1)[0];
+  // Insert it at position 20 (index 19)
+  deck.splice(19, 0, card32);
+}
+
+// Stack the deck slightly - move a web themed action card to pretty early on
+let index1 = deck.findIndex(card => card.id === 1);
+if (index1 !== -1) {
+  // Remove card ID 1 from its current position
+  let card1 = deck.splice(index1, 1)[0];
+  // Generate a random index among 2, 3, or 4 (positions 3, 4, or 5 if counting from 1)
+  let randomIndex = 2 + Math.floor(Math.random() * 3);
+  deck.splice(randomIndex, 0, card1);
+}
+
+// 3) Deal the cards to the players
 shuffle(deck);
 for (let i = 0; i < 3; i++) {
   if (deck.length > 0) player.hand.push(deck.pop());
@@ -129,7 +148,6 @@ function updatePlayedLists() {
     eventsDiv.innerHTML = eventHTML;
   }
 }
-
 
 
 // 8) On page load, render initial state
