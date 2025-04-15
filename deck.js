@@ -489,16 +489,14 @@ effect: function (player, AI1, AI2) {
     description: `Listing rules change: New regulatory criteria alter market dynamics for companies that fail to meet sustainability standards.`,
     tooltip: "Event: Stock markets stop listing unsustainable companies.",
     imagePath: "images/37.jpg",
-    effect: function (player, AI1, AI2) {
+ effect: function (player, AI1, AI2) {
     [player, AI1, AI2].forEach(p => {
       if (!p.actionsPlayed.has(17) && !p.actionsPlayed.has(22) && !p.actionsPlayed.has(23)) {
         p.progress = 0;
       }
     });
   }
-}
-    }
-  },
+},
   {
     id: 38,
     name: "38: Boycott",
