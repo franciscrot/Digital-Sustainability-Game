@@ -153,8 +153,10 @@ function updateGameInfo() {
 
 // 7) Update the lists of played actions/events
 function updatePlayedLists() {
-  const actionsDiv = document.getElementById("actionsPlayedList");
-  const eventsDiv = document.getElementById("eventsPlayedList");
+const yourActionsDiv = document.getElementById("yourActionsPlayed");
+const yourEventsDiv = document.getElementById("yourEventsPlayed");
+const aiActionsDiv = document.getElementById("aiActionsPlayed");
+const aiEventsDiv = document.getElementById("aiEventsPlayed");
 
   const yourActionIds = Array.from(player.actionsPlayed).sort((a, b) => a - b);
   const yourEventIds = Array.from(player.eventsPlayed).sort((a, b) => a - b);
