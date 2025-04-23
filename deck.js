@@ -29,12 +29,12 @@ const deck = [
   },
   {
     id: 2,
-    name: "2: Minify our code",
+    name: "2: Use green developer tools",
     type: "action",
-    description: `‘Minifying’ is a process of removing unnecessary whitespace and line breaks in HTML, CSS and JavaScript to reduce the file size.
-Many text editors have plug-ins or packages to minify code.
+    description: `CodeCarbon is a lightweight Python package for tracking and reducing CO2 emissions from computing. Easily integrate it into your projects and explore ways to support this open source tool. Electricity Maps offers a global carbon intensity API, and ClimateTriage connects developers to open source climate tech projects—empowering contributions to sustainability through code. ‘Minifying’ is a process of removing unnecessary whitespace and line breaks in HTML, CSS and JavaScript to reduce the file size.
+Many text editors have plug-ins or packages to minify code. 
 `,
-    tooltip: "Action: Minify!",
+    tooltip: "Action: Develop greenly!",
     imagePath: "images/2.jpg",
     effect() {}
   },
