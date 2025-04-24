@@ -2,6 +2,7 @@
 
 // 1) Define players with sets for actionsPlayed and eventsPlayed
 let player = {
+  name: playerName,
   hand: [],
   progress: 0,
   sustainability: 0,
@@ -9,8 +10,23 @@ let player = {
   eventsPlayed: new Set()
 };
 
-let AI1 = { hand: [], progress: 0, sustainability: 0, actionsPlayed: new Set(), eventsPlayed: new Set() };
-let AI2 = { hand: [], progress: 0, sustainability: 0, actionsPlayed: new Set(), eventsPlayed: new Set() };
+let AI1 = {
+  name: AI1Name,
+  hand: [],
+  progress: 0,
+  sustainability: 0,
+  actionsPlayed: new Set(),
+  eventsPlayed: new Set()
+};
+
+let AI2 = {
+  name: AI2Name,
+  hand: [],
+  progress: 0,
+  sustainability: 0,
+  actionsPlayed: new Set(),
+  eventsPlayed: new Set()
+};
 
 // 2) Name the companies
 
