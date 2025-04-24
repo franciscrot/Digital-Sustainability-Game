@@ -209,4 +209,11 @@ window.onload = () => {
   renderPlayerHand();
   updateGameInfo();
   updatePlayedLists();
+
+  // Update AI section headings with their generated names
+  document.getElementById("ai1ActionsHeader").textContent = `${AI1.name} Actions Played`;
+  document.getElementById("ai1EventsHeader").textContent = `${AI1.name} Events Played`;
+  document.getElementById("ai2ActionsHeader").textContent = `${AI2.name} Actions Played`;
+  document.getElementById("ai2EventsHeader").textContent = `${AI2.name} Events Played`;
 };
+
