@@ -1,34 +1,6 @@
 // script.js
 
-// 1) Define players with sets for actionsPlayed and eventsPlayed
-let player = {
-  name: playerName,
-  hand: [],
-  progress: 0,
-  sustainability: 0,
-  actionsPlayed: new Set(),
-  eventsPlayed: new Set()
-};
-
-let AI1 = {
-  name: AI1Name,
-  hand: [],
-  progress: 0,
-  sustainability: 0,
-  actionsPlayed: new Set(),
-  eventsPlayed: new Set()
-};
-
-let AI2 = {
-  name: AI2Name,
-  hand: [],
-  progress: 0,
-  sustainability: 0,
-  actionsPlayed: new Set(),
-  eventsPlayed: new Set()
-};
-
-// 2) Name the companies
+// 1) Name the companies
 
 const playerNames = [
   "The Von Spigot Gallery",
@@ -83,6 +55,36 @@ function generateAI2Name() {
 const playerName = pickRandom(playerNames);
 const AI1Name = pickRandom(ai1Names);
 const AI2Name = generateAI2Name();
+
+// 2) Define players with sets for actionsPlayed and eventsPlayed
+let player = {
+  name: playerName,
+  hand: [],
+  progress: 0,
+  sustainability: 0,
+  actionsPlayed: new Set(),
+  eventsPlayed: new Set()
+};
+
+let AI1 = {
+  name: AI1Name,
+  hand: [],
+  progress: 0,
+  sustainability: 0,
+  actionsPlayed: new Set(),
+  eventsPlayed: new Set()
+};
+
+let AI2 = {
+  name: AI2Name,
+  hand: [],
+  progress: 0,
+  sustainability: 0,
+  actionsPlayed: new Set(),
+  eventsPlayed: new Set()
+};
+
+
 
 // 3) Shuffle function
 function shuffle(array) {
