@@ -21,7 +21,7 @@ const ai1Names = [
   "Adjaye Jones & Cronk LLP",
   "Distributed Fusion Inc",
   "B.Well",
-  "total Cashflow Solutions",
+  "Total Cashflow Solutions",
   "The Data Doulas"
 ];
 
@@ -279,4 +279,9 @@ window.onload = () => {
   renderPlayerHand();
   updateGameInfo();
   updatePlayedLists();
+document.getElementById("ai1ActionsLabel").textContent = `${AI1.name} actions played`;
+document.getElementById("ai1EventsLabel").textContent = `${AI1.name} events played`;
+document.getElementById("ai2ActionsLabel").textContent = `${AI2.name} actions played`;
+document.getElementById("ai2EventsLabel").textContent = `${AI2.name} events played`;
+
 };
