@@ -337,7 +337,7 @@ Play this card to review your website, and only load what you really need!
   id: 32,
   name: "32: Search engine results favour green web design",
   type: "event",
-  description: `Search engine results favour green web design: Sustainable practices improve your site's rankings, rewarding your green efforts.`,
+  description: `Search engine results favour green web design: Sustainable practices improve your site's rankings, rewarding your green efforts. Gain a Progress Point for each of these actions: 1, 2, 3, 4, 5, 6.`,
   tooltip: "Event: Awards progress if certain actions have been played.",
   imagePath: "images/32.jpg",
   effect: function (player, AI1, AI2) {
@@ -354,7 +354,7 @@ Play this card to review your website, and only load what you really need!
   id: 33,
   name: "33: Subsidies support digital sustainability",
   type: "event",
-  description: `Subsidies support digital sustainability: Benefit as funding and incentives promote environmentally friendly practices.`,
+  description: `Subsidies support digital sustainability: Benefit as funding and incentives promote environmentally friendly practices. Gain a Progress Point for each of these actions: 8, 9, 12, 13.`,
   tooltip: "Event: Rewards progress for specific actions.",
   imagePath: "images/33.jpg",
   effect: function (player, AI1, AI2) {
@@ -371,7 +371,7 @@ Play this card to review your website, and only load what you really need!
   id: 34,
   name: "34: Digital sustainability leadership is attracting and retaining the best talent",
   type: "event",
-  description: `Digital sustainability leadership is attracting and retaining the best talent: Your green initiatives create a competitive advantage in recruitment.`,
+  description: `Digital sustainability leadership is attracting and retaining the best talent: Your green initiatives create a competitive advantage in recruitment. Gain a Progress Point for each of these actions: 8, 9, 11, 18.`,
   tooltip: "Event: Rewards progress for specific actions.",
   imagePath: "images/34.jpg",
   effect: function (player, AI1, AI2) {
@@ -388,7 +388,7 @@ Play this card to review your website, and only load what you really need!
   id: 35,
   name: "35: Attitudes shift",
   type: "event",
-  description: `Attitudes are shifting. More people embrace solarpunk, wabi sabi digital design, permacomputing, slow media, digital minimalism, decomputing, and unplugging.`,
+  description: `Attitudes are shifting. More people embrace solarpunk, wabi sabi digital design, permacomputing, slow media, digital minimalism, unplugging, convivial technology, and decomputing. Convert Progress Points into Sustainability Points.`,
   tooltip: "Event: Convert progress points into sustainability points.",
   imagePath: "images/35.jpg",
   effect: function (player, AI1, AI2) {
@@ -402,7 +402,7 @@ Play this card to review your website, and only load what you really need!
   id: 36,
   name: "36: Climate activism is making an impact",
   type: "event",
-  description: `Climate activists are significantly disrupting polluters, leading to tangible environmental benefits.`,
+  description: `Climate activists are significantly disrupting polluters, leading to tangible environmental benefits. Gain a Progress Point for each of these actions: 19, 21, 24, 25.`,
   tooltip: "Event: Gain progress for actions 19, 21, 24, 25.",
   imagePath: "images/36.jpg",
   effect: function (player, AI1, AI2) {
@@ -419,7 +419,7 @@ Play this card to review your website, and only load what you really need!
   id: 37,
   name: "37: Listing rules change",
   type: "event",
-  description: `Listing rules change: New regulatory criteria alter market dynamics for companies that fail to meet sustainability standards.`,
+  description: `Listing rules change: New regulatory criteria alter market dynamics for companies that fail to meet sustainability standards. Everyone loses all Progress Points unless they have played 17, 22, or 23.`,
   tooltip: "Event: Players without any of the required actions lose all progress.",
   imagePath: "images/37.jpg",
   effect: function (player, AI1, AI2) {
@@ -435,8 +435,8 @@ Play this card to review your website, and only load what you really need!
     id: 38,
     name: "38: Boycott",
     type: "event",
-    description: `An NGO leads a successful boycott campaign targeting digital sustainability practices that hinder progress.`,
-    tooltip: "Event: Penalizes those who disrupt corporate interests. Convert prog to sus.",
+    description: `An NGO leads a successful boycott campaign targeting digital sustainability practices that hinder progress. Convert all Progress Points to Sustainability Points.`,
+    tooltip: "Event:  Convert prog to sus.",
     imagePath: "images/38.jpg",
     effect: function (player, AI1, AI2) {
     [player, AI1, AI2].forEach(p => {
@@ -449,7 +449,7 @@ Play this card to review your website, and only load what you really need!
     id: 39,
     name: "39: Resource scarcity",
     type: "event",
-    description: `Water scarcity: This card highlights challenges arising from limited water resources impacting digital infrastructure.`,
+    description: `Water scarcity: This card highlights challenges arising from limited water resources impacting digital infrastructure. All players lose all Progress Points unless they have played 11, 12, or 27.`,
     tooltip: "Play this event card now?",
     imagePath: "images/39.jpg",
     effect: function (player, AI1, AI2) {
@@ -465,8 +465,8 @@ Play this card to review your website, and only load what you really need!
   id: 40,
   name: "40: Price of carbon rises",
   type: "event",
-  description: `Policymakers impose a price on carbon emissions, reflecting the true environmental cost of digital operations.`,
-  tooltip: "Event: Gain progress for actions 19, 28, 23, 27.",
+  description: `Policymakers impose a price on carbon emissions, reflecting the true environmental cost of digital operations. Gain a Progress Point for each of these actions: 19, 23, 27, 28.`,
+  tooltip: "Event: Gain progress for actions 19, 23, 27, 28.",
   imagePath: "images/40.jpg",
   effect: function (player, AI1, AI2) {
     [player, AI1, AI2].forEach(p => {
@@ -482,8 +482,8 @@ Play this card to review your website, and only load what you really need!
   id: 41,
   name: "41: New data storage medium",
   type: "event",
-  description: `New data storage medium: Leverage emerging technologies to store data more efficiently and sustainably.`,
-  tooltip: "Event: Gain progress for actions 11, 12, 30, 27.",
+  description: `New data storage medium: Leverage emerging technologies to store data more efficiently and sustainably. Gain a Progress Point for each of these actions: 11, 12, 27, 30.`,
+  tooltip: "Event: Gain progress for actions 11, 12, 27, 30.",
   imagePath: "images/41.jpg",
   effect: function (player, AI1, AI2) {
     [player, AI1, AI2].forEach(p => {
@@ -499,7 +499,7 @@ Play this card to review your website, and only load what you really need!
   id: 42,
   name: "42: New e-waste laws",
   type: "event",
-  description: `A new law allocates responsibility for e-waste among producers, retailers, and corporate customers, driving greener practices.`,
+  description: `A new law allocates responsibility for e-waste among producers, retailers, and corporate customers, driving greener practices. Gain a progress point for each of these actions: 24, 15, 16, 17.`,
   tooltip: "Event: Gain progress for actions 14, 15, 16, 17.",
   imagePath: "images/42.jpg",
   effect: function (player, AI1, AI2) {
@@ -516,7 +516,7 @@ Play this card to review your website, and only load what you really need!
   id: 43,
   name: "43: Shareholder activism",
   type: "event",
-  description: `Shareholders mobilise, using their financial influence to push companies toward more sustainable practices.`,
+  description: `Shareholders mobilise, using their financial influence to push companies toward more sustainable practices. Convert all Progress Points into Sustainability Points.`,
   tooltip: "Event: Convert all progress into sustainability.",
   imagePath: "images/43.jpg",
   effect: function (player, AI1, AI2) {
@@ -530,7 +530,7 @@ Play this card to review your website, and only load what you really need!
   id: 44,
   name: "44: ESG gets a make-over",
   type: "event",
-  description: `ESG gets a make-over: Modernise your environmental, social, and governance practices for better sustainability results.`,
+  description: `ESG gets a make-over: Modernise your environmental, social, and governance practices for better sustainability results. Gain a Progress Point for each of these actions: 7, 17, 20, 22.`,
   tooltip: "Event: Gain progress for actions 7, 17, 20, 22.",
   imagePath: "images/44.jpg",
   effect: function (player, AI1, AI2) {
@@ -547,7 +547,7 @@ Play this card to review your website, and only load what you really need!
   id: 45,
   name: "45: Low carbon tech disruptions",
   type: "event",
-  description: `Low carbon tech disruptions: Breakthroughs in low carbon technology create both opportunities and challenges.`,
+  description: `Low carbon tech disruptions: Breakthroughs in low carbon technology create both opportunities and challenges. Lose all Progress Points unless you have played one of these actions: 10, 12, or 23.`,
   tooltip: "Event: Players without actions 10, 12, or 23 lose all progress.",
   imagePath: "images/45.jpg",
   effect: function (player, AI1, AI2) {
@@ -562,7 +562,7 @@ Play this card to review your website, and only load what you really need!
   id: 46,
   name: "46: Reporting requirements tighten",
   type: "event",
-  description: `Your organisation is now legally mandated to provide real-time reports on climate-related risks and opportunities.`,
+  description: `Your organisation is now legally mandated to provide real-time reports on climate-related risks and opportunities. Gain a Progress Point for each of these actions: 7, 13, 15, 19.`,
   tooltip: "Event: Gain progress for actions 7, 13, 15, 19.",
   imagePath: "images/46.jpg",
   effect: function (player, AI1, AI2) {
@@ -579,7 +579,7 @@ Play this card to review your website, and only load what you really need!
   id: 47,
   name: "47: Impairment law gets a reboot",
   type: "event",
-  description: `Organisations must now disclose when an asset becomes stranded, triggering a swift revaluation of its worth.`,
+  description: `Organisations must now disclose when an asset becomes stranded, triggering a swift revaluation of its worth. Gain a Progress Point for each of these actions: 14, 16, 18, 30.`,
   tooltip: "Event: Gain progress for actions 14, 16, 30, 18.",
   imagePath: "images/47.jpg",
   effect: function (player, AI1, AI2) {
@@ -596,8 +596,8 @@ Play this card to review your website, and only load what you really need!
   id: 48,
   name: "48: Climate impacts disrupt supply chains",
   type: "event",
-  description: `Global events interfere with production and logistics, challenging sustainable practices.`,
-  tooltip: "Event: Gain progress for actions 19, 25, 16, 10.",
+  description: `Global events interfere with production and logistics, challenging sustainable practices. Gain a Progress Point for each of these actions: 10, 16, 19, 25.`,
+  tooltip: "Event: Gain progress for actions.",
   imagePath: "images/48.jpg",
   effect: function (player, AI1, AI2) {
     [player, AI1, AI2].forEach(p => {
@@ -613,8 +613,8 @@ Play this card to review your website, and only load what you really need!
   id: 49,
   name: "49: Global carbon price",
   type: "event",
-  description: `As governments adjust policies, the true cost of carbon emissions becomes a market reality.`,
-  tooltip: "Event: Gain progress for actions 28, 23, 24, 13.",
+  description: `As governments adjust policies, the true cost of carbon emissions becomes a market reality. Gain a Progress Point for each of these actions: 13, 23, 24, 28.`,
+  tooltip: "Event: Gain progress for actions.",
   imagePath: "images/49.jpg",
   effect: function (player, AI1, AI2) {
     [player, AI1, AI2].forEach(p => {
@@ -630,8 +630,8 @@ Play this card to review your website, and only load what you really need!
   id: 50,
   name: "50: Digital divide closes",
   type: "event",
-  description: `Digital divide closes: Increased digital access narrows socioeconomic gaps while accelerating progress.`,
-  tooltip: "Event: Gain progress for actions 18, 26, 29, 14.",
+  description: `Digital divide closes: Increased digital access narrows socioeconomic gaps while accelerating progress. Gain a progress point for each of these actions: 14, 18, 26, 29.`,
+  tooltip: "Event: Gain progress for actions.",
   imagePath: "images/50.jpg",
   effect: function (player, AI1, AI2) {
     [player, AI1, AI2].forEach(p => {
@@ -648,7 +648,7 @@ Play this card to review your website, and only load what you really need!
   id: 51,
   name: "51: Technological breakthrough",
   type: "event",
-  description: `A technological breakthrough propels digital sustainability forward, opening up new pathways for progress.`,
+  description: `A technological breakthrough propels digital sustainability forward, opening up new pathways for progress. All players convert all Progress Points into Sustainability Points.`,
   tooltip: "Event: Convert all progress into sustainability.",
   imagePath: "images/51.jpg",
   effect: function (player, AI1, AI2) {
@@ -662,7 +662,7 @@ Play this card to review your website, and only load what you really need!
   id: 52,
   name: "52: Geopolitical disruption",
   type: "event",
-  description: `Global political shifts and conflicts influence sustainability policies and practices.`,
+  description: `Global political shifts and conflicts influence sustainability policies and practices. Players who have not played actions 10, 18, or 29 lose all Progress Points.`,
   tooltip: "Event: Players without actions 10, 18, or 29 lose all progress.",
   imagePath: "images/52.jpg",
   effect: function (player, AI1, AI2) {
@@ -677,7 +677,7 @@ Play this card to review your website, and only load what you really need!
   id: 53,
   name: "53: Vaporware",
   type: "event",
-  description: `xSpice's data center on the Moon is a flop, exemplifying overhyped technology failures.`,
+  description: `xSpice's data center on the Moon is a flop, exemplifying overhyped technology failures. Players who have not played actions 8, 20, or 26 lose all Progress Points.`,
   tooltip: "Event: Players without actions 8, 20, or 26 lose all progress.",
   imagePath: "images/53.jpg",
   effect: function (player, AI1, AI2) {
@@ -692,7 +692,7 @@ Play this card to review your website, and only load what you really need!
   id: 54,
   name: "54: Global South Green New Deal",
   type: "event",
-  description: `Ambitious policy initiatives empower emerging markets to drive sustainable growth.`,
+  description: `Ambitious policy initiatives empower emerging markets to drive sustainable growth. All players convert all Progress Points into Sustainability Points.`,
   tooltip: "Event: Convert all progress into sustainability.",
   imagePath: "images/54.jpg",
   effect: function (player, AI1, AI2) {
@@ -706,7 +706,7 @@ Play this card to review your website, and only load what you really need!
   id: 55,
   name: "55: Tech giant fails to deliver",
   type: "event",
-  description: `Tech giant Giggle fails to meet its decarbonisation pledges, undermining public trust in corporate sustainability promises.`,
+  description: `Tech giant Giggle fails to meet its decarbonisation pledges, undermining public trust in corporate sustainability promises. Gain a Progress Point for each of these actions you have played: 20, 21, 25, 30.`,
   tooltip: "Event: Gain progress for actions 20, 21, 25, 30.",
   imagePath: "images/55.jpg",
   effect: function (player, AI1, AI2) {
@@ -723,8 +723,8 @@ Play this card to review your website, and only load what you really need!
   id: 56,
   name: "56: Negative emissions technologies are not scaling up",
   type: "event",
-  description: `Negative emissions technologies struggle to deliver, spotlighting the need for fundamental carbon reductions.`,
-  tooltip: "Event: Gain progress for actions 20, 21, 29, 24.",
+  description: `Negative emissions technologies struggle to deliver, spotlighting the need for fundamental carbon reductions. Gain a Progress Point for each of these actions you have played: 20, 21, 24, 29`,
+  tooltip: "Event: Gain progress for actions.",
   imagePath: "images/56.jpg",
   effect: function (player, AI1, AI2) {
     [player, AI1, AI2].forEach(p => {
@@ -740,7 +740,7 @@ Play this card to review your website, and only load what you really need!
   id: 57,
   name: "57: Geoengineering efforts are deferring carbon reduction",
   type: "event",
-  description: `Geoengineering creates temporary fixes but delays meaningful carbon reductions.`,
+  description: `Geoengineering creates temporary fixes but delays meaningful carbon reductions. Lose all Progress Points unless you have played actions 21, 25, or 28.`,
   tooltip: "Event: Players without actions 21, 25, or 28 lose all progress.",
   imagePath: "images/57.jpg",
   effect: function (player, AI1, AI2) {
@@ -755,7 +755,7 @@ Play this card to review your website, and only load what you really need!
   id: 58,
   name: "58: Carbon leakage",
   type: "event",
-  description: `Carbon leakage: Emissions shift across borders due to uneven regulatory environments.`,
+  description: `Carbon leakage: Emissions shift across borders due to uneven regulatory environments. Gain a Progress Point for each of these actions you have played: 22, 26, 28, 29.`,
   tooltip: "Event: Gain progress for actions 22, 28, 26, 29.",
   imagePath: "images/58.jpg",
   effect: function (player, AI1, AI2) {
@@ -772,7 +772,7 @@ Play this card to review your website, and only load what you really need!
   id: 59,
   name: "59: Major climate impact",
   type: "event",
-  description: `Extreme weather events and systemic disruptions drive a sense of urgency in climate response.`,
+  description: `Extreme weather events and systemic disruptions drive a sense of urgency in climate response. Lose all Progress Points unless you have played 10, 15, or 30.`,
   tooltip: "Event: Players without actions 10, 15, or 30 lose all progress.",
   imagePath: "images/59.jpg",
   effect: function (player, AI1, AI2) {
@@ -787,7 +787,7 @@ Play this card to review your website, and only load what you really need!
   id: 60,
   name: "60: Big policy shift",
   type: "event",
-  description: `Landmark changes in policy reshape global approaches to sustainability.`,
+  description: `Landmark changes in policy reshape global approaches to sustainability. All players convert all Progress Points into Sustainability Points.`,
   tooltip: "Event: Convert all progress into sustainability.",
   imagePath: "images/60.jpg",
   effect: function (player, AI1, AI2) {
