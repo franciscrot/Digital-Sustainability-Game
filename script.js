@@ -12,7 +12,63 @@ let player = {
 let AI1 = { hand: [], progress: 0, sustainability: 0, actionsPlayed: new Set(), eventsPlayed: new Set() };
 let AI2 = { hand: [], progress: 0, sustainability: 0, actionsPlayed: new Set(), eventsPlayed: new Set() };
 
-// 2) Shuffle function
+// 2) Name the companies
+
+const playerNames = [
+  "The Von Spigot Gallery",
+  "LEAF Consulting",
+  "Haunted History Tours Inc.",
+  "First City Bank",
+  "Baker Baker & McKenzie LLP",
+  "The Museum of Lost Socks",
+  "The World Wrestling Consortium"
+];
+
+const ai1Names = [
+  "Business Systems Systems",
+  "Lozenge AI",
+  "Digital Sales Insight",
+  "Hypercircle",
+  "Noxio Box Toxic Storage Solutions",
+  "Adjaye Jones & Cronk LLP",
+  "Distributed Fusion Inc",
+  "B.Well",
+  "total Cashflow Solutions",
+  "The Data Doulas"
+];
+
+// Helper to pick random element
+function pickRandom(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
+// Procedural AI2 name generator
+function generateAI2Name() {
+  const buzzwords = ["Synergy", "Quantum", "Hyper", "Total", "Future", "Ultra", "Virtual", "Dynamic", "Cloud", "Carbon", "Crypto", "Green"];
+  const techTerms = ["Solutions", "Systems", "Analytics", "Intelligence", "Optimization", "Flow", "Interface", "Blockchain", "Fusion", "Comms", "Matrix", "Ops"];
+  const suffixes = ["Inc.", "LLP", "LLC", "Group", "Holdings", "Consortium", "Syndicate", "Unlimited", "Worldwide", "Partners"];
+  const wildcard = ["Lozenge", "Entropy", "Biscuit", "Tapioca", "Sludge", "Algorithm", "Gunk", "Echo", "Vapor", "Goblin"];
+
+  const pattern = Math.random();
+  let name;
+
+  if (pattern < 0.33) {
+    name = `${pickRandom(buzzwords)} ${pickRandom(techTerms)} ${pickRandom(suffixes)}`;
+  } else if (pattern < 0.66) {
+    name = `${pickRandom(wildcard)} ${pickRandom(buzzwords)} ${pickRandom(suffixes)}`;
+  } else {
+    name = `${pickRandom(buzzwords)} ${pickRandom(wildcard)} ${pickRandom(techTerms)} ${pickRandom(suffixes)}`;
+  }
+
+  return name;
+}
+
+// Assign random names
+const playerName = pickRandom(playerNames);
+const AI1Name = pickRandom(ai1Names);
+const AI2Name = generateAI2Name();
+
+// 3) Shuffle function
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -36,7 +92,7 @@ if (index1 !== -1) {
   deck.splice(randomIndex, 0, card1);
 }
 
-// 3) Deal the cards to the players
+// 4) Deal the cards to the players
 shuffle(deck);
 for (let i = 0; i < 3; i++) {
   if (deck.length > 0) player.hand.push(deck.pop());
@@ -44,7 +100,7 @@ for (let i = 0; i < 3; i++) {
   if (deck.length > 0) AI2.hand.push(deck.pop());
 }
 
-// 4) Function to render player's hand (3 images)
+// 5) Function to render player's hand (3 images)
 function renderPlayerHand() {
   const handDiv = document.getElementById("playerHand");
   handDiv.innerHTML = "";
@@ -115,7 +171,7 @@ function playAI2Card() {
   }
 }
 
-// 5) Function to play a card
+// 6) Function to play a card
 function playPlayerCard(index) {
   const chosenCard = player.hand.splice(index, 1)[0];
   chosenCard.effect(player, AI1, AI2);
@@ -139,7 +195,7 @@ function playPlayerCard(index) {
   updatePlayedLists();
 }
 
-// 6) Update scoreboard or other info
+// 7) Update scoreboard or other info
 function updateGameInfo() {
   const infoDiv = document.getElementById("gameInfo");
   infoDiv.innerHTML = `
