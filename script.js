@@ -215,11 +215,14 @@ function playPlayerCard(index) {
 function updateGameInfo() {
   const infoDiv = document.getElementById("gameInfo");
   infoDiv.innerHTML = `
-    Player - Progress: ${player.progress}, Sustainability: ${player.sustainability}
-    <br>
-    AI1 - Progress: ${AI1.progress}, Sustainability: ${AI1.sustainability}
-    <br>
-    AI2 - Progress: ${AI2.progress}, Sustainability: ${AI2.sustainability}
+    <strong>${player.name}</strong><br>
+    Progress: ${player.progress}, Sustainability: ${player.sustainability}
+    <br><br>
+    <strong>${AI1.name}</strong><br>
+    Progress: ${AI1.progress}, Sustainability: ${AI1.sustainability}
+    <br><br>
+    <strong>${AI2.name}</strong><br>
+    Progress: ${AI2.progress}, Sustainability: ${AI2.sustainability}
   `;
 }
 
