@@ -86,25 +86,38 @@ h1, h2, h3 {
   </div>
 
   <!-- Show the scoreboard -->
-  <div id="gameInfo"></div>
+<!-- Flex container for scoreboard + AI activity log -->
+<div id="infoArea" style="display: flex; align-items: flex-start; gap: 40px; margin-bottom: 20px;">
+  
+  <div id="leftInfo">
+    <div id="gameInfo"></div>
 
-  <h2>Your Actions Played</h2>
-<div id="yourActionsPlayed"></div>
+    <h2>Your Actions Played</h2>
+    <div id="yourActionsPlayed"></div>
 
-  <h2>Your Events Played</h2>
-<div id="yourEventsPlayed"></div>
+    <h2>Your Events Played</h2>
+    <div id="yourEventsPlayed"></div>
 
-<h2 id="ai1ActionsLabel"></h2>
-<div id="ai1ActionsPlayed"></div>
+    <h2 id="ai1ActionsHeader"></h2>
+    <div id="ai1ActionsPlayed"></div>
 
-<h2 id="ai1EventsLabel"></h2>
-<div id="ai1EventsPlayed"></div>
+    <h2 id="ai1EventsHeader"></h2>
+    <div id="ai1EventsPlayed"></div>
 
-<h2 id="ai2ActionsLabel"></h2>
-<div id="ai2ActionsPlayed"></div>
+    <h2 id="ai2ActionsHeader"></h2>
+    <div id="ai2ActionsPlayed"></div>
 
-<h2 id="ai2EventsLabel"></h2>
-<div id="ai2EventsPlayed"></div>
+    <h2 id="ai2EventsHeader"></h2>
+    <div id="ai2EventsPlayed"></div>
+  </div>
+
+  <div id="rightLog">
+    <h2>AI Activity Log</h2>
+    <div id="aiLog" style="border:1px solid #ccc; padding:10px; width:300px; height:400px; overflow-y:auto; background-color: #f9f9f9;"></div>
+  </div>
+
+</div>
+
 
   
   <!-- Your deck data -->
