@@ -124,6 +124,14 @@ function renderPlayerHand() {
   });
 }
 
+function logAIPlay(aiName, card) {
+  const aiLogDiv = document.getElementById("aiLog");
+  const entry = document.createElement("div");
+  entry.innerHTML = `<strong>${aiName}</strong> played <em>${card.name}</em>: ${card.tooltip || "Effect applied."}`;
+  aiLogDiv.appendChild(entry);
+  aiLogDiv.scrollTop = aiLogDiv.scrollHeight; // Scroll to bottom automatically
+}
+
 function playAI1Card() {
   let actionIndex = AI1.hand.findIndex(card => card.type === "action");
   if (actionIndex !== -1) {
