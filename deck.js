@@ -321,7 +321,7 @@ Play this card to review your website, and only load what you really need!
   name: "31: Web traffic increases",
   type: "event",
   description: `Web traffic increases: Your website experiences a surge in visitors, highlighting both increased engagement and energy usage. Gain a Progress Point for each of these actions: 1, 2, 3, 4, 5, 6.`,
-  tooltip: "Event: Awards progress if certain actions have been played.",
+  tooltip: "Progress Points for Actions 1, 2, 3, 4, 5, 6.",
   imagePath: "images/31.jpg",
   effect: function (player, AI1, AI2) {
     [player, AI1, AI2].forEach(p => {
@@ -338,7 +338,7 @@ Play this card to review your website, and only load what you really need!
   name: "32: Search engine results favour green web design",
   type: "event",
   description: `Search engine results favour green web design: Sustainable practices improve your site's rankings, rewarding your green efforts. Gain a Progress Point for each of these actions: 1, 2, 3, 4, 5, 6.`,
-  tooltip: "Event: Awards progress if certain actions have been played.",
+  tooltip: "Progress Points for Actions 1, 2, 3, 4, 5, 6.",
   imagePath: "images/32.jpg",
   effect: function (player, AI1, AI2) {
     [player, AI1, AI2].forEach(p => {
@@ -355,7 +355,7 @@ Play this card to review your website, and only load what you really need!
   name: "33: Subsidies support digital sustainability",
   type: "event",
   description: `Subsidies support digital sustainability: Benefit as funding and incentives promote environmentally friendly practices. Gain a Progress Point for each of these actions: 8, 9, 12, 13.`,
-  tooltip: "Event: Rewards progress for specific actions.",
+  tooltip: "Progress Points for Actions 8, 9, 12, 13.",
   imagePath: "images/33.jpg",
   effect: function (player, AI1, AI2) {
     [player, AI1, AI2].forEach(p => {
@@ -372,7 +372,7 @@ Play this card to review your website, and only load what you really need!
   name: "34: Digital sustainability leadership is attracting and retaining the best talent",
   type: "event",
   description: `Digital sustainability leadership is attracting and retaining the best talent: Your green initiatives create a competitive advantage in recruitment. Gain a Progress Point for each of these actions: 8, 9, 11, 18.`,
-  tooltip: "Event: Rewards progress for specific actions.",
+  tooltip: "Progress Points for Actions 8, 9, 11, 18.",
   imagePath: "images/34.jpg",
   effect: function (player, AI1, AI2) {
     [player, AI1, AI2].forEach(p => {
@@ -389,7 +389,7 @@ Play this card to review your website, and only load what you really need!
   name: "35: Attitudes shift",
   type: "event",
   description: `Attitudes are shifting. More people embrace solarpunk, wabi sabi digital design, permacomputing, slow media, digital minimalism, unplugging, convivial technology, and decomputing. Convert Progress Points into Sustainability Points.`,
-  tooltip: "Event: Convert progress points into sustainability points.",
+  tooltip: "Progress Points converted into Sustainability Points!",
   imagePath: "images/35.jpg",
   effect: function (player, AI1, AI2) {
     [player, AI1, AI2].forEach(p => {
@@ -403,7 +403,7 @@ Play this card to review your website, and only load what you really need!
   name: "36: Climate activism is making an impact",
   type: "event",
   description: `Climate activists are significantly disrupting polluters, leading to tangible environmental benefits. Gain a Progress Point for each of these actions: 19, 21, 24, 25.`,
-  tooltip: "Event: Gain progress for actions 19, 21, 24, 25.",
+  tooltip: "Progress Points for Actions 19, 21, 24, 25.",
   imagePath: "images/36.jpg",
   effect: function (player, AI1, AI2) {
     [player, AI1, AI2].forEach(p => {
@@ -420,7 +420,7 @@ Play this card to review your website, and only load what you really need!
   name: "37: Listing rules change",
   type: "event",
   description: `Listing rules change: New regulatory criteria alter market dynamics for companies that fail to meet sustainability standards. Everyone loses all Progress Points unless they have played 17, 22, or 23.`,
-  tooltip: "Event: Players without any of the required actions lose all progress.",
+  tooltip: "Lose Progress Points unless you've played 17, 22, 23!",
   imagePath: "images/37.jpg",
   effect: function (player, AI1, AI2) {
     [player, AI1, AI2].forEach(p => {
@@ -436,7 +436,7 @@ Play this card to review your website, and only load what you really need!
     name: "38: Boycott",
     type: "event",
     description: `An NGO leads a successful boycott campaign targeting digital sustainability practices that hinder progress. Convert all Progress Points to Sustainability Points.`,
-    tooltip: "Event:  Convert prog to sus.",
+    tooltip: "Convert Progress Points to Sustainability Points!",
     imagePath: "images/38.jpg",
     effect: function (player, AI1, AI2) {
     [player, AI1, AI2].forEach(p => {
@@ -450,7 +450,7 @@ Play this card to review your website, and only load what you really need!
     name: "39: Resource scarcity",
     type: "event",
     description: `Water scarcity: This card highlights challenges arising from limited water resources impacting digital infrastructure. All players lose all Progress Points unless they have played 11, 12, or 27.`,
-    tooltip: "Play this event card now?",
+    tooltip: "Lose Progress Points unless you've played 11, 12, or 27.",
     imagePath: "images/39.jpg",
     effect: function (player, AI1, AI2) {
     [player, AI1, AI2].forEach(p => {
@@ -466,7 +466,7 @@ Play this card to review your website, and only load what you really need!
   name: "40: Price of carbon rises",
   type: "event",
   description: `Policymakers impose a price on carbon emissions, reflecting the true environmental cost of digital operations. Gain a Progress Point for each of these actions: 19, 23, 27, 28.`,
-  tooltip: "Event: Gain progress for actions 19, 23, 27, 28.",
+  tooltip: "Gain Progress Points for Actions 19, 23, 27, 28.",
   imagePath: "images/40.jpg",
   effect: function (player, AI1, AI2) {
     [player, AI1, AI2].forEach(p => {
