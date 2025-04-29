@@ -133,38 +133,45 @@ function logAIPlay(aiName, card) {
 }
 
 function playAI1Card() {
-  let actionIndex = AI1.hand.findIndex(card => card.type === "action");
-  if (actionIndex !== -1) {
-    const chosenCard = AI1.hand.splice(actionIndex, 1)[0];
-    chosenCard.effect(player, AI1, AI2);
-    AI1.actionsPlayed.add(chosenCard.id);
+  let card = null;
+  let index = AI1.hand.findIndex(c => c.type === "action");
+  if (index !== -1) {
+    card = AI1.hand.splice(index, 1)[0];
+    AI1.actionsPlayed.add(card.id);
   } else {
-    let eventIndex = AI1.hand.findIndex(card => card.type === "event");
-    if (eventIndex !== -1) {
-      const chosenCard = AI1.hand.splice(eventIndex, 1)[0];
-      chosenCard.effect(player, AI1, AI2);
-      AI1.eventsPlayed.add(chosenCard.id);
+    index = AI1.hand.findIndex(c => c.type === "event");
+    if (index !== -1) {
+      card = AI1.hand.splice(index, 1)[0];
+      AI1.eventsPlayed.add(card.id);
     }
+  }
+  if (card) {
+    card.effect(player, AI1, AI2);
+    logAIPlay(AI1.name, card);
   }
   if (deck.length > 0) AI1.hand.push(deck.pop());
 }
 
 function playAI2Card() {
-  let actionIndex = AI2.hand.findIndex(card => card.type === "action");
-  if (actionIndex !== -1) {
-    const chosenCard = AI2.hand.splice(actionIndex, 1)[0];
-    chosenCard.effect(player, AI1, AI2);
-    AI2.actionsPlayed.add(chosenCard.id);
+  let card = null;
+  let index = AI2.hand.findIndex(c => c.type === "action");
+  if (index !== -1) {
+    card = AI2.hand.splice(index, 1)[0];
+    AI2.actionsPlayed.add(card.id);
   } else {
-    let eventIndex = AI2.hand.findIndex(card => card.type === "event");
-    if (eventIndex !== -1) {
-      const chosenCard = AI2.hand.splice(eventIndex, 1)[0];
-      chosenCard.effect(player, AI1, AI2);
-      AI2.eventsPlayed.add(chosenCard.id);
+    index = AI2.hand.findIndex(c => c.type === "event");
+    if (index !== -1) {
+      card = AI2.hand.splice(eventIndex, 1)[0];
+      AI2.eventsPlayed.add(card.id);
     }
+  }
+  if (card) {
+    card.effect(player, AI1, AI2);
+    logAIPlay(AI2.name, card);
   }
   if (deck.length > 0) AI2.hand.push(deck.pop());
 }
+
 
 function playPlayerCard(index) {
   const chosenCard = player.hand.splice(index, 1)[0];
