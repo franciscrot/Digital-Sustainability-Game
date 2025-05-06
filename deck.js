@@ -2,105 +2,111 @@ const deck = [
   // ================================
   // 30 ACTION CARDS
   // ================================
+  const sustainabilityActions = [
   {
     id: 1,
-    name: "1: Optimise our visuals and video",
+    name: "1: Optimise visuals, video, and media",
     type: "action",
-    description: `* Use fewer images.
-* Compress images (try ShortPixel).
-* Use SVG or GIF for logos and icons.
-* Use WEBP or AVIF, not JPG or PNG.
-* Enable lazy loading.
-* Use responsive image markup and/or an image resizing API to serve images at the correct resolution.
-* Experiment with shallow depth of field, constrained palettes, and dark colours.
-* Perfect your image alt text.
-* Use image optimisation to reduce file sizes without compromising quality.
-* Limit video use where possible, and compress any video files.
-* YouTube or Vimeo embeds might not be optimal. Search for greener platforms.
-* WebM and MP4 formats sometimes have the edge on MOV and AVI. But it really all depends on resolution and compression.
-`,
-    tooltip: "Action: Optimise!",
-    links: `* Sustainable Website Tips in the DHCC Toolkit
-* To minimise image file sizes on your website, try tools like Shortpixel, TinyPNG, ImageOptim, and ImageAlpha.
-* Use video sparingly on your website (if at all). Compress video with tools like Handbrake.fr.
-* YouTube or Vimeo embeds might not be optimal. Try platforms like Mave.io.`,
+    description: `* Use fewer images where possible.
+* Compress images using tools like ShortPixel, TinyPNG, or ImageOptim.
+* Prefer efficient formats: SVG for icons, WEBP or AVIF over JPG or PNG.
+* Enable lazy loading to defer offscreen media.
+* Use responsive image markup or an image resizing API to serve the right resolution for each device.
+* Experiment with shallow depth of field, constrained colour palettes, and dark mode styling.
+* Write good alt text to enhance accessibility and SEO.
+* Optimise video: limit autoplay, compress with Handbrake.fr, and avoid high-resolution defaults.
+* Choose green video platforms—YouTube and Vimeo may not be optimal; explore Mave.io.
+* Prefer WebM and MP4 over MOV and AVI, depending on compression and resolution needs.`,
+    tooltip: "Optimise visuals, video, and media",
+    links: `* Sustainable Website Tips in the DHCC Toolkit  
+* Try Shortpixel, TinyPNG, ImageOptim, or ImageAlpha for image compression.  
+* Use Handbrake.fr to compress video.  
+* Explore greener video platforms like Mave.io.`,
     imagePath: "images/1.jpg",
     effect() {}
   },
   {
     id: 2,
-    name: "2: Use green developer tools",
+    name: "2: Use green web development practices",
     type: "action",
-    description: `CodeCarbon is a lightweight Python package for tracking and reducing CO2 emissions from computing. Easily integrate it into your projects and explore ways to support this open source tool. Electricity Maps offers a global carbon intensity API, and ClimateTriage connects developers to open source climate tech projects—empowering contributions to sustainability through code. ‘Minifying’ is a process of removing unnecessary whitespace and line breaks in HTML, CSS and JavaScript to reduce the file size.
-Many text editors have plug-ins or packages to minify code. 
-`,
+    description: `* Minify HTML, CSS, and JavaScript to reduce page size and energy use.
+* Use clean, efficient code—avoid unnecessary complexity or outdated libraries.
+* Cache assets effectively with proper headers and a CDN.
+* Benchmark page performance with tools like Lighthouse or EcoGrader.
+* Prefer static site generators or server-side rendering where appropriate.
+* Use lightweight fonts, limit custom animations, and avoid oversized frameworks.
+* Electricity Maps offers a global carbon intensity API to make your front end carbon-aware.`,
     tooltip: "Action: Develop greenly!",
     imagePath: "images/2.jpg",
     effect() {}
   },
   {
     id: 3,
-    name: "3: Audit third-party plug-ins and dependencies",
+    name: "3: Streamline user journeys",
     type: "action",
-    description: `Evaluate how your website uses third-party plugins and tools.
-How much “weight” do they add to your website? What features do you really need?
-Code libraries (like jQuery) and frameworks (like Bootstrap) are collections of pre-written code that developers use to save time.
-Use modular libraries that let you import only the parts you need. 
-Some functionalities that once needed external libraries can now be done with plain vanilla CSS and JavaScript.
-Play this card to review your website, and only load what you really need!
-`,
-    tooltip: "If you want, describe some of the weird unnecessary stuff you decided to remove.",
-    imagePath: "images/3.jpg",
-    effect() {}
-  },
-  {
-    id: 4,
-    name: "4: Benchmark web presence",
-    type: "action",
-    description: `* Estimate the carbon impact of your web presence.
-* 'Page weight' is the transfer size of a page in kilobytes, typically on a first visit.
-* Check out www.websitecarbon.com from Wholegrain Digital.
-* And EcoGrader.com from Mightybytes.
-* CO2.js from the Green Web Foundation is a JavaScript library to help web developers estimate their emissions.
-`,
-    tooltip: "Action: Mark this card as played.",
-    imagePath: "images/4.jpg",
-    effect() {}
-  },
-  {
-    id: 5,
-    name: "5: Use caching",
-    type: "action",
-    description: `* Moving data over a network uses energy -- probably. Caching is here to help!
-* When a user visits your website, some data such as images, CSS, and JavaScript files can be stored (“cached”) on the user’s device, or on a Content Delivery Network (CDN). 
-* If they return, the browser can load these resources from the user’s device or a nearby CDN datacentre, instead of fetching them from the server again.
-`,
-    tooltip: "Action: Mark this card as played.",
-    imagePath: "images/5.jpg",
-    effect() {}
-  },
-  {
-    id: 6,
-    name: "6: Simplify user journeys",
-    type: "action",
-    description: `* Use consistent visual conventions and a clear visual hierarchy. Employ prominent call-to-action buttons.
-* Think about including a search function.
-* Delete old content.
-* Test your website.
-`,
+    description: `* Simplify site structure—reduce the number of clicks to reach important content.
+* Delete outdated or redundant content to reduce load and confusion.
+* Use a clear visual hierarchy with consistent design elements and obvious calls to action.
+* Add a search function to help users find content directly.
+* Minimise energy-intensive interactions (e.g. unnecessary reloads or live updates).
+* Test your website’s usability and fix inefficient navigation flows.`,
     tooltip: "Play this card to simplify user journeys on your website. If you like, describe how terrible it was before, and how amazing it is now.",
     imagePath: "images/6.jpg",
     effect() {}
   },
   {
-    id: 7,
-    name: "7: Optimise videoconferencing",
+    id: 4,
+    name: "4: Audit your digital dependencies",
     type: "action",
-    description: `* Check for recent comparisons of the sustainability of different videoconferencing softwares, and choose one that works for you.
-* Features like “turn off incoming video” can save bandwidth.
-* While it's important to see each other sometimes, sometimes it's best to just rely on audio.
-`,
-    tooltip: "If you like, describe how your attitudes and habits to videoconferencing shift.",
+    description: `* Review all third-party plugins, libraries, and trackers on your site.
+* Ask: what functionality is truly needed? What’s redundant?
+* Consider replacing heavyweight frameworks (like full Bootstrap) with lighter or modular alternatives.
+* Use only the parts of libraries you need—avoid default imports that load unused code.
+* Replace library functionality with plain CSS or JavaScript if possible.
+* Audit cookies, analytics scripts, and embedded services that may load external resources.`,
+    tooltip: "If you want, describe some of the weird unnecessary stuff you decided to remove.",
+    imagePath: "images/3.jpg",
+    effect() {}
+  },
+  {
+    id: 5,
+    name: "5: Build green CI/CD pipelines",
+    type: "action",
+    description: `* Optimise CI/CD pipelines: remove redundant builds, cache dependencies, and reduce test duplication.
+* Use carbon-aware scheduling—trigger builds during periods of low grid carbon intensity (Electricity Maps can help).
+* Explore GreenOps or Sustainable DevOps (SusDevOps) practices.
+* Use infrastructure-as-code to modularise deployments, right-size instances, and enable auto-shutdown defaults.
+* Prefer serverless or event-based architectures for reduced idle time.`,
+    tooltip: "Build green CI/CD pipelines.",
+    imagePath: "images/5.jpg",
+    effect() {}
+  },
+  {
+    id: 6,
+    name: "6: Choose sustainable tools, languages, and architectures",
+    type: "action",
+    description: `* Write efficient code—avoid bloated logic, excessive loops, or unnecessary calls.
+* Be very, very cautious of any AI-generated code.
+* Consider low-energy languages like Rust and Go.
+* Avoid overprovisioning infrastructure; right-size your deployments.
+* Explore serverless, container-based, or autoscaling architectures to reduce waste.`,
+    tooltip: "Choose sustainable tools, languages, and architectures",
+    imagePath: "images/4.jpg",
+    effect() {}
+  },
+  {
+    id: 7,
+    name: "7: Avoid wasteful or disproportionate methods in data science / ML",
+    type: "action",
+    description: `* Use CodeCarbon to estimate the carbon footprint of model training and inference.
+* Track emissions with Intel RAPL or integrate with OpenTelemetry for service-level visualisation.
+* Engage with the AI Energy Score project: https://huggingface.co/spaces/AIEnergyScore/Leaderboard.
+* Don’t retrain unnecessarily: explore reusing or fine-tuning existing models when possible.
+* BUT consider that a smaller, specialist model might be better in the long-term than a more general purpose one.
+* Use model distillation to reduce size and energy cost.
+* Optimise training cycles: reduce search space, limit tuning passes, and choose efficient architectures.
+* Streamline data movement by cleaning ETL pipelines and avoiding dataset over-fetching.`,
+    tooltip: "If you're training models, describe how you’re making them leaner and greener.",
     imagePath: "images/7.jpg",
     effect() {}
   },
