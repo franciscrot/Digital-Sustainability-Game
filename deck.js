@@ -1,8 +1,8 @@
-const deck = [
+// deck.js
+window.deck = [
   // ================================
   // 30 ACTION CARDS
   // ================================
-  const sustainabilityActions = [
   {
     id: 1,
     name: "1: Optimise visuals, video, and media",
@@ -23,7 +23,7 @@ const deck = [
 * Use Handbrake.fr to compress video.  
 * Explore greener video platforms like Mave.io.`,
     imagePath: "images/1.jpg",
-    effect() {}
+    effect(player, AI1, AI2) { /* optional */ }
   },
   {
     id: 2,
@@ -38,7 +38,7 @@ const deck = [
 * Electricity Maps offers a global carbon intensity API to make your front end carbon-aware.`,
     tooltip: "Action: Develop greenly!",
     imagePath: "images/2.jpg",
-    effect() {}
+    effect(player, AI1, AI2) {}
   },
   {
     id: 3,
@@ -322,23 +322,21 @@ const deck = [
   // 30 EVENT CARDS
   // ================================
 // Event cards 31–60
-{
-  id: 31,
-  name: "31: Web traffic increases",
-  type: "event",
-  description: `Web traffic increases: Your website experiences a surge in visitors, highlighting both increased engagement and energy usage. Gain a Progress Point for each of these actions: 1, 2, 3, 4, 5, 6.`,
-  tooltip: "Progress Points for Actions 1, 2, 3, 4, 5, 6.",
-  imagePath: "images/31.jpg",
-  effect: function (player, AI1, AI2) {
-    [player, AI1, AI2].forEach(p => {
-      let bonus = 0;
-      [1, 2, 3, 4, 5, 6].forEach(id => {
-        if (p.actionsPlayed.has(id)) bonus += 1;
+ {
+    id: 31,
+    name: "31: Web traffic increases",
+    type: "event",
+    description: `Web traffic increases: ...`,
+    tooltip: "Progress Points for Actions 1, 2, 3, 4, 5, 6.",
+    imagePath: "images/31.jpg",
+    effect: function (player, AI1, AI2) {
+      [player, AI1, AI2].forEach(p => {
+        let bonus = 0;
+        [1,2,3,4,5,6].forEach(id => { if (p.actionsPlayed.has(id)) bonus += 1; });
+        p.progress += bonus;
       });
-      p.progress += bonus;
-    });
-  }
-},
+    }
+  },
 {
   id: 32,
   name: "32: Search engine results favour green web design",
@@ -804,3 +802,4 @@ const deck = [
   }
 }
 ];
+
