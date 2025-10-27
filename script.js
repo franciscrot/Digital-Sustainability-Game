@@ -32,7 +32,7 @@ function generateAI2Name() {
   const buzzwords = ["Synergy", "Quantum", "Hyper", "Total", "Future", "Ultra", "Virtual", "Dynamic", "Cloud", "Carbon", "Crypto", "Green"];
   const techTerms = ["Solutions", "Systems", "Analytics", "Intelligence", "Optimisation", "Flow", "Interface", "Blockchain", "Fusion", "Comms", "Matrix", "Ops"];
   const suffixes = ["Inc.", "LLP", "LLC", "Group", "Associates", "Holdings", "Consortium", "Syndicate", "Unlimited", "Worldwide", "Partners"];
-  const wildcard = ["Lozenge", "Entropy", "Biscuit", "Tapioca", "Algo", "Flavour", "Mince", "Pigment", "Pentimento", "Pimento", "Taramasalata", "Hummus", "Sludge", "Algorithm", "Gunk", "Echo", "Vapor", "Goblin"];
+  const wildcard = ["Lozenge", "Entropy", "Biscuit", "Tapioca", "Algo", "Flavour", "Shmarbon", "Marble", "Cat", "Quilt", "Moss", "Mince", "Pigment", "Pentimento", "Pimento", "Wink", "Walrus", "Zauzage", "Ghoul", "Fungus", "Clown", "Grace", "Taramasalata", "Hummus", "Sludge", "Algorithm", "Gunk", "Echo", "Vapor", "Goblin"];
 
   const pattern = Math.random();
   if (pattern < 0.33) {
@@ -107,22 +107,25 @@ function renderPlayerHand() {
   const handDiv = document.getElementById("playerHand");
   handDiv.innerHTML = "";
   const descriptionDiv = document.getElementById("descriptionBox");
+  const cardTitle = document.getElementById("cardTitle"); // <-- added this, let's try ...
 
   player.hand.forEach((card, index) => {
     const img = document.createElement("img");
     img.src = card.imagePath;
     img.alt = card.name;
-    img.title = card.tooltip;
+    img.title = card.tooltip || "";
     img.style.width = "200px";
     img.style.marginRight = "10px";
+    img.style.cursor = "pointer";
     img.addEventListener("mouseover", () => {
-      cardTitle.textContent = card.name;
-      descriptionDiv.textContent = card.description;
+      if (cardTitle) cardTitle.textContent = card.name;
+      if (descriptionDiv) descriptionDiv.textContent = card.description || "";
     });
     img.addEventListener("click", () => playPlayerCard(index));
     handDiv.appendChild(img);
   });
 }
+
 
 function logAIPlay(aiName, card) {
   const aiLogDiv = document.getElementById("aiLog");
@@ -161,16 +164,18 @@ function playAI2Card() {
   } else {
     index = AI2.hand.findIndex(c => c.type === "event");
     if (index !== -1) {
-      card = AI2.hand.splice(eventIndex, 1)[0];
+      // not sure if this is right - was: AI2.hand.splice(eventIndex, 1)[0];
+      card = AI2.hand.splice(index, 1)[0];
       AI2.eventsPlayed.add(card.id);
     }
   }
   if (card) {
-    card.effect(player, AI1, AI2);
+    card.effect?.(player, AI1, AI2);
     logAIPlay(AI2.name, card);
   }
   if (deck.length > 0) AI2.hand.push(deck.pop());
 }
+
 
 
 function playPlayerCard(index) {
@@ -231,4 +236,5 @@ window.onload = () => {
   document.getElementById("ai2ActionsLabel").textContent = `${AI2.name} Actions Played`;
   document.getElementById("ai2EventsLabel").textContent = `${AI2.name} Events Played`;
 };
+
 
