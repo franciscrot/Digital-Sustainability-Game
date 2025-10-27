@@ -86,10 +86,11 @@ window.deck = [
     name: "6: Choose sustainable tools, languages, and architectures",
     type: "action",
     description: `* Write efficient code—avoid bloated logic, excessive loops, or unnecessary calls.
-* Be very, very cautious of any AI-generated code.
+* Be very cautious of any AI-generated code.
 * Consider low-energy languages like Rust and Go.
 * Avoid overprovisioning infrastructure; right-size your deployments.
-* Explore serverless, container-based, or autoscaling architectures to reduce waste.`,
+* Explore serverless, container-based, or autoscaling architectures to reduce waste.
+* Explore sustainable software resources from Green Software Foundation, Green Web Foundation, and Green Coding Solutions.`,
     tooltip: "Choose sustainable tools, languages, and architectures",
     imagePath: "images/4.jpg",
     effect() {}
@@ -114,7 +115,11 @@ window.deck = [
     id: 8,
     name: "8: Know which everyday activities are fine",
     type: "action",
-    description: `Identify which everyday activities on your site or in your processes are low impact.`,
+    description: `* Try to foster a rough awareness of big, medium, small, and teeny-tiny impacts.
+* Then we can pick our battles. People’s attention and energy is limited, and nobody likes being guilt-tripped—let’s focus on the behaviour changes that really matter.
+* You may have heard the advice not to send ‘thank you’ emails, to save carbon. But a typical short text email has a completely miniscule impact compared to a single Google search or a ChatGPT query.
+* This advice is really a way to individualise responsibility, and a distraction from working together to drive real change.
+`,
     tooltip: "Action: Mark this card as played.",
     imagePath: "images/8.jpg",
     effect() {}
@@ -123,7 +128,9 @@ window.deck = [
     id: 9,
     name: "9: Use efficient internet connections",
     type: "action",
-    description: `Use efficient internet connections that consume less energy and improve performance.`,
+    description: `* Cellular data connections (like 4G and 5G) use more energy than WiFi
+* WiFi uses more energy than ethernet connections (plugging your device in).
+* Plug in when you can!`,
     tooltip: "Action: Mark this card as played.",
     imagePath: "images/9.jpg",
     effect() {}
@@ -802,4 +809,5 @@ window.deck = [
   }
 }
 ];
+
 
