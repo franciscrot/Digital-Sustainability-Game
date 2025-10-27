@@ -1,8 +1,8 @@
-// ===============================
-// script.js (consolidated & fixed)
-// ===============================
+// ===========================================
+// script.js — diagnostics + robust rendering
+// ===========================================
 
-// --- Random name pools (from your spec) ---
+// --- Random name pools ---
 const playerNames = [
   "The Von Spigot Gallery",
   "LEAF Consulting",
@@ -26,60 +26,12 @@ const ai1Names = [
   "The Data Doulas"
 ];
 
-// --- Helpers for names ---
+// --- Helpers ---
 function pickRandom(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
+function el(id) { return document.getElementById(id); }
 
-function generateAI2Name() {
-  const buzzwords = ["Synergy", "Quantum", "Hyper", "Total", "Future", "Ultra", "Virtual", "Dynamic", "Cloud", "Carbon", "Crypto", "Green"];
-  const techTerms = ["Solutions", "Systems", "Analytics", "Intelligence", "Optimisation", "Flow", "Interface", "Blockchain", "Fusion", "Comms", "Matrix", "Ops"];
-  const suffixes = ["Inc.", "LLP", "LLC", "Group", "Associates", "Holdings", "Consortium", "Syndicate", "Unlimited", "Worldwide", "Partners"];
-  const wildcard = ["Lozenge", "Entropy", "Biscuit", "Tapioca", "Algo", "Flavour", "Mince", "Pigment", "Pentimento", "Pimento", "Taramasalata", "Hummus", "Sludge", "Algorithm", "Gunk", "Echo", "Vapor", "Goblin"];
-
-  const pattern = Math.random();
-  if (pattern < 0.33) {
-    return `${pickRandom(buzzwords)} ${pickRandom(techTerms)} ${pickRandom(suffixes)}`;
-  } else if (pattern < 0.66) {
-    return `${pickRandom(wildcard)} ${pickRandom(buzzwords)} ${pickRandom(suffixes)}`;
-  } else {
-    return `${pickRandom(buzzwords)} ${pickRandom(wildcard)} ${pickRandom(techTerms)} ${pickRandom(suffixes)}`;
-  }
-}
-
-// --- Player objects ---
-const playerName = pickRandom(playerNames);
-const AI1Name = pickRandom(ai1Names);
-const AI2Name = generateAI2Name();
-
-let player = {
-  name: playerName,
-  hand: [],
-  progress: 0,
-  sustainability: 0,
-  actionsPlayed: new Set(),
-  eventsPlayed: new Set()
-};
-
-let AI1 = {
-  name: AI1Name,
-  hand: [],
-  progress: 0,
-  sustainability: 0,
-  actionsPlayed: new Set(),
-  eventsPlayed: new Set()
-};
-
-let AI2 = {
-  name: AI2Name,
-  hand: [],
-  progress: 0,
-  sustainability: 0,
-  actionsPlayed: new Set(),
-  eventsPlayed: new Set()
-};
-
-// --- Utilities ---
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -88,34 +40,53 @@ function shuffle(array) {
   return array;
 }
 
-// Lookup table to keep card names even after deck mutations
-let CARD_BY_ID = {};
-function initCardLookup() {
-  if (!Array.isArray(deck)) return;
-  const ALL_CARDS = deck.slice(); // snapshot before we splice/shuffle
-  CARD_BY_ID = Object.fromEntries(ALL_CARDS.map(c => [c.id, c]));
+function generateAI2Name() {
+  const buzzwords = ["Synergy", "Quantum", "Hyper", "Total", "Future", "Ultra", "Virtual", "Dynamic", "Cloud", "Carbon", "Crypto", "Green"];
+  const techTerms = ["Solutions", "Systems", "Analytics", "Intelligence", "Optimisation", "Flow", "Interface", "Blockchain", "Fusion", "Comms", "Matrix", "Ops"];
+  const suffixes = ["Inc.", "LLP", "LLC", "Group", "Associates", "Holdings", "Consortium", "Syndicate", "Unlimited", "Worldwide", "Partners"];
+  const wildcard = ["Lozenge", "Entropy", "Biscuit", "Tapioca", "Algo", "Flavour", "Mince", "Pigment", "Pentimento", "Pimento", "Taramasalata", "Hummus", "Sludge", "Algorithm", "Gunk", "Echo", "Vapor", "Goblin"];
+  const p = Math.random();
+  if (p < 0.33) return `${pickRandom(buzzwords)} ${pickRandom(techTerms)} ${pickRandom(suffixes)}`;
+  if (p < 0.66) return `${pickRandom(wildcard)} ${pickRandom(buzzwords)} ${pickRandom(suffixes)}`;
+  return `${pickRandom(buzzwords)} ${pickRandom(wildcard)} ${pickRandom(techTerms)} ${pickRandom(suffixes)}`;
 }
 
-// Move special cards before shuffling
-function positionSpecialCards() {
-  if (!Array.isArray(deck)) return;
+// --- Players ---
+const playerName = pickRandom(playerNames);
+const AI1Name = pickRandom(ai1Names);
+const AI2Name = generateAI2Name();
 
-  const index32 = deck.findIndex(card => card.id === 32);
-  if (index32 !== -1) {
-    const card32 = deck.splice(index32, 1)[0];
-    deck.splice(19, 0, card32); // if deck shorter than 20, this just appends
+let player = { name: playerName, hand: [], progress: 0, sustainability: 0, actionsPlayed: new Set(), eventsPlayed: new Set() };
+let AI1    = { name: AI1Name,   hand: [], progress: 0, sustainability: 0, actionsPlayed: new Set(), eventsPlayed: new Set() };
+let AI2    = { name: AI2Name,   hand: [], progress: 0, sustainability: 0, actionsPlayed: new Set(), eventsPlayed: new Set() };
+
+// Keep card metadata even after deck mutations
+let CARD_BY_ID = {};
+function initCardLookup() {
+  if (!Array.isArray(window.deck)) return;
+  const snapshot = deck.slice();
+  CARD_BY_ID = Object.fromEntries(snapshot.map(c => [c.id, c]));
+}
+
+function positionSpecialCards() {
+  if (!Array.isArray(window.deck)) return;
+
+  const i32 = deck.findIndex(card => card.id === 32);
+  if (i32 !== -1) {
+    const card32 = deck.splice(i32, 1)[0];
+    deck.splice(19, 0, card32);
   }
 
-  const index1 = deck.findIndex(card => card.id === 1);
-  if (index1 !== -1) {
-    const card1 = deck.splice(index1, 1)[0];
-    const randomIndex = 2 + Math.floor(Math.random() * 3); // 2–4 inclusive
-    deck.splice(randomIndex, 0, card1);
+  const i1 = deck.findIndex(card => card.id === 1);
+  if (i1 !== -1) {
+    const card1 = deck.splice(i1, 1)[0];
+    const r = 2 + Math.floor(Math.random() * 3); // 2..4
+    deck.splice(r, 0, card1);
   }
 }
 
 function dealOpeningHands() {
-  if (!Array.isArray(deck)) return;
+  if (!Array.isArray(window.deck)) return;
   for (let i = 0; i < 3; i++) {
     if (deck.length) player.hand.push(deck.pop());
     if (deck.length) AI1.hand.push(deck.pop());
@@ -123,23 +94,41 @@ function dealOpeningHands() {
   }
 }
 
-// --- Rendering & UI ---
+// --- Rendering ---
 function renderPlayerHand() {
-  const handDiv = document.getElementById("playerHand");
+  const handDiv = el("playerHand");
   if (!handDiv) return;
-
   handDiv.innerHTML = "";
-  const descriptionDiv = document.getElementById("descriptionBox");
-  const cardTitle = document.getElementById("cardTitle");
+
+  const descriptionDiv = el("descriptionBox");
+  const cardTitle = el("cardTitle");
 
   player.hand.forEach((card, index) => {
     const img = document.createElement("img");
-    img.src = card.imagePath;
-    img.alt = card.name;
+    img.src = card.imagePath || "";     // if bad/blank, we swap to placeholder
+    img.alt = card.name || "Card";
     img.title = card.tooltip || "";
     img.style.width = "200px";
     img.style.marginRight = "10px";
     img.style.cursor = "pointer";
+
+    // If image fails, show labelled placeholder
+    img.onerror = () => {
+      const ph = document.createElement("div");
+      ph.style.width = "200px";
+      ph.style.height = "280px";
+      ph.style.border = "1px solid #ccc";
+      ph.style.display = "flex";
+      ph.style.alignItems = "center";
+      ph.style.justifyContent = "center";
+      ph.style.textAlign = "center";
+      ph.style.padding = "8px";
+      ph.style.boxSizing = "border-box";
+      ph.style.background = "#f5f5f5";
+      ph.innerText = card.name || "Card";
+      img.replaceWith(ph);
+    };
+
     img.addEventListener("mouseover", () => {
       if (cardTitle) cardTitle.textContent = card.name || "";
       if (descriptionDiv) descriptionDiv.textContent = card.description || "";
@@ -150,17 +139,16 @@ function renderPlayerHand() {
 }
 
 function logAIPlay(aiName, card) {
-  const aiLogDiv = document.getElementById("aiLog");
+  const aiLogDiv = el("aiLog");
   if (!aiLogDiv) return;
   const entry = document.createElement("div");
-  const safeTooltip = card.tooltip || "Effect applied.";
-  entry.innerHTML = `<strong>${aiName}</strong> played <em>${card.name}</em>: ${safeTooltip}`;
+  entry.innerHTML = `<strong>${aiName}</strong> played <em>${card.name}</em>: ${card.tooltip || "Effect applied."}`;
   aiLogDiv.appendChild(entry);
-  aiLogDiv.scrollTop = aiLogDiv.scrollHeight; // Scroll to bottom automatically
+  aiLogDiv.scrollTop = aiLogDiv.scrollHeight;
 }
 
 function updateGameInfo() {
-  const infoDiv = document.getElementById("gameInfo");
+  const infoDiv = el("gameInfo");
   if (!infoDiv) return;
   infoDiv.innerHTML = `
     <strong>${player.name}</strong><br>
@@ -184,21 +172,30 @@ function renderCards(idArray) {
         .join(", ");
 }
 
-function setHTMLById(id, html) {
-  const el = document.getElementById(id);
-  if (el) el.innerHTML = html;
-}
+function setHTMLById(id, html) { const node = el(id); if (node) node.innerHTML = html; }
 
 function updatePlayedLists() {
-  setHTMLById("yourActionsPlayed", renderCards(Array.from(player.actionsPlayed).sort((a, b) => a - b)));
-  setHTMLById("yourEventsPlayed", renderCards(Array.from(player.eventsPlayed).sort((a, b) => a - b)));
-  setHTMLById("ai1ActionsPlayed", renderCards(Array.from(AI1.actionsPlayed).sort((a, b) => a - b)));
-  setHTMLById("ai1EventsPlayed", renderCards(Array.from(AI1.eventsPlayed).sort((a, b) => a - b)));
-  setHTMLById("ai2ActionsPlayed", renderCards(Array.from(AI2.actionsPlayed).sort((a, b) => a - b)));
-  setHTMLById("ai2EventsPlayed", renderCards(Array.from(AI2.eventsPlayed).sort((a, b) => a - b)));
+  setHTMLById("yourActionsPlayed", renderCards([...player.actionsPlayed].sort((a,b)=>a-b)));
+  setHTMLById("yourEventsPlayed", renderCards([...player.eventsPlayed].sort((a,b)=>a-b)));
+  setHTMLById("ai1ActionsPlayed", renderCards([...AI1.actionsPlayed].sort((a,b)=>a-b)));
+  setHTMLById("ai1EventsPlayed", renderCards([...AI1.eventsPlayed].sort((a,b)=>a-b)));
+  setHTMLById("ai2ActionsPlayed", renderCards([...AI2.actionsPlayed].sort((a,b)=>a-b)));
+  setHTMLById("ai2EventsPlayed", renderCards([...AI2.eventsPlayed].sort((a,b)=>a-b)));
 }
 
-// --- Gameplay: AI turns & player plays ---
+// --- Turn logic with error guards ---
+function safeEffectInvoke(card, P, A1, A2) {
+  if (typeof card.effect !== "function") {
+    console.warn("[DSG] Card has no effect function:", card);
+    return;
+  }
+  try {
+    card.effect(P, A1, A2);
+  } catch (e) {
+    console.error("[DSG] Error in card.effect for", card, e);
+  }
+}
+
 function playAI1Card() {
   let card = null;
   let index = AI1.hand.findIndex(c => c.type === "action");
@@ -213,10 +210,10 @@ function playAI1Card() {
     }
   }
   if (card) {
-    card.effect?.(player, AI1, AI2);
+    safeEffectInvoke(card, player, AI1, AI2);
     logAIPlay(AI1.name, card);
   }
-  if (Array.isArray(deck) && deck.length > 0) AI1.hand.push(deck.pop());
+  if (Array.isArray(window.deck) && deck.length) AI1.hand.push(deck.pop());
 }
 
 function playAI2Card() {
@@ -228,33 +225,28 @@ function playAI2Card() {
   } else {
     index = AI2.hand.findIndex(c => c.type === "event");
     if (index !== -1) {
-      // fixed: use 'index' (eventIndex did not exist)
       card = AI2.hand.splice(index, 1)[0];
       AI2.eventsPlayed.add(card.id);
     }
   }
   if (card) {
-    card.effect?.(player, AI1, AI2);
+    safeEffectInvoke(card, player, AI1, AI2);
     logAIPlay(AI2.name, card);
   }
-  if (Array.isArray(deck) && deck.length > 0) AI2.hand.push(deck.pop());
+  if (Array.isArray(window.deck) && deck.length) AI2.hand.push(deck.pop());
 }
 
 function playPlayerCard(index) {
   const chosenCard = player.hand.splice(index, 1)[0];
   if (!chosenCard) return;
 
-  chosenCard.effect?.(player, AI1, AI2);
+  safeEffectInvoke(chosenCard, player, AI1, AI2);
 
-  if (chosenCard.type === "action") {
-    player.actionsPlayed.add(chosenCard.id);
-  } else if (chosenCard.type === "event") {
-    player.eventsPlayed.add(chosenCard.id);
-  }
+  if (chosenCard.type === "action") player.actionsPlayed.add(chosenCard.id);
+  else if (chosenCard.type === "event") player.eventsPlayed.add(chosenCard.id);
 
-  if (Array.isArray(deck) && deck.length > 0) player.hand.push(deck.pop());
+  if (Array.isArray(window.deck) && deck.length) player.hand.push(deck.pop());
 
-  // AI responses
   playAI1Card();
   playAI2Card();
 
@@ -263,29 +255,44 @@ function playPlayerCard(index) {
   updatePlayedLists();
 }
 
-// --- Bootstrapping ---
+// --- Bootstrapping with diagnostics ---
 window.onload = () => {
-  // If the deck is defined in another file, ensure that file loads BEFORE this one (use 'defer' on both).
+  console.log("[DSG] Boot start");
+  console.log("[DSG] deck present?", typeof window.deck, "isArray?", Array.isArray(window.deck), "length:", window.deck && window.deck.length);
+
   if (!Array.isArray(window.deck)) {
-    console.warn("deck is not defined or not an array. Skipping deck setup.");
+    console.error("[DSG] deck.js did not define window.deck as an array. In deck.js use: window.deck = [ /* cards */ ];");
+  } else if (window.deck.length === 0) {
+    console.error("[DSG] deck is an empty array. Add cards to deck.js.");
   } else {
+    console.log("[DSG] first 3 cards sample:", window.deck.slice(0, 3));
+  }
+
+  if (Array.isArray(window.deck) && window.deck.length > 0) {
     initCardLookup();
     positionSpecialCards();
     shuffle(deck);
     dealOpeningHands();
+    console.log("[DSG] Dealt hands — player:", player.hand.length, "AI1:", AI1.hand.length, "AI2:", AI2.hand.length);
+    console.log("[DSG] Top of deck after deal:", deck.slice(-3));
+  } else {
+    console.warn("[DSG] Skipping deal because deck is missing/empty.");
   }
 
   renderPlayerHand();
   updateGameInfo();
   updatePlayedLists();
 
-  const ai1ActionsLabel = document.getElementById("ai1ActionsLabel");
-  const ai1EventsLabel  = document.getElementById("ai1EventsLabel");
-  const ai2ActionsLabel = document.getElementById("ai2ActionsLabel");
-  const ai2EventsLabel  = document.getElementById("ai2EventsLabel");
+  // Set AI labels (matches YOUR HTML IDs). Falls back to alternative IDs if present.
+  const a1Header = el("ai1ActionsHeader") || el("ai1ActionsLabel");
+  const a1EHeader = el("ai1EventsHeader") || el("ai1EventsLabel");
+  const a2Header = el("ai2ActionsHeader") || el("ai2ActionsLabel");
+  const a2EHeader = el("ai2EventsHeader") || el("ai2EventsLabel");
 
-  if (ai1ActionsLabel) ai1ActionsLabel.textContent = `${AI1.name} Actions Played`;
-  if (ai1EventsLabel)  ai1EventsLabel.textContent  = `${AI1.name} Events Played`;
-  if (ai2ActionsLabel) ai2ActionsLabel.textContent = `${AI2.name} Actions Played`;
-  if (ai2EventsLabel)  ai2EventsLabel.textContent  = `${AI2.name} Events Played`;
+  if (a1Header) a1Header.textContent = `${AI1.name} Actions Played`;
+  if (a1EHeader) a1EHeader.textContent = `${AI1.name} Events Played`;
+  if (a2Header) a2Header.textContent = `${AI2.name} Actions Played`;
+  if (a2EHeader) a2EHeader.textContent = `${AI2.name} Events Played`;
+
+  console.log("[DSG] Boot end");
 };
