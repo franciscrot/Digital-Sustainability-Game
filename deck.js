@@ -36,7 +36,7 @@ window.deck = [
 * Prefer static site generators or server-side rendering where appropriate.
 * Use lightweight fonts, limit custom animations, and avoid oversized frameworks.
 * Electricity Maps offers a global carbon intensity API to make your front end carbon-aware.`,
-    tooltip: "Action: Develop greenly!",
+    tooltip: "Develop greenly!",
     imagePath: "images/2.jpg",
     effect(player, AI1, AI2) {}
   },
@@ -50,7 +50,7 @@ window.deck = [
 * Add a search function to help users find content directly.
 * Minimise energy-intensive interactions (e.g. unnecessary reloads or live updates).
 * Test your website’s usability and fix inefficient navigation flows.`,
-    tooltip: "Play this card to simplify user journeys on your website. If you like, describe how terrible it was before, and how amazing it is now.",
+    tooltip: "Simplify user journeys! If you like, describe how terrible it was before, and how amazing it is now.",
     imagePath: "images/6.jpg",
     effect() {}
   },
@@ -64,7 +64,7 @@ window.deck = [
 * Use only the parts of libraries you need—avoid default imports that load unused code.
 * Replace library functionality with plain CSS or JavaScript if possible.
 * Audit cookies, analytics scripts, and embedded services that may load external resources.`,
-    tooltip: "If you want, describe some of the weird unnecessary stuff you decided to remove.",
+    tooltip: "Audit those dependencies! If you want, describe some of the weird unnecessary stuff you decided to remove.",
     imagePath: "images/3.jpg",
     effect() {}
   },
@@ -74,10 +74,10 @@ window.deck = [
     type: "action",
     description: `* Optimise CI/CD pipelines: remove redundant builds, cache dependencies, and reduce test duplication.
 * Use carbon-aware scheduling—trigger builds during periods of low grid carbon intensity (Electricity Maps can help).
-* Explore GreenOps or Sustainable DevOps (SusDevOps) practices.
+* Explore GreenOps or Sustainable DevOps (SusDevOps) practices to track and control your carbon 'spend.'
 * Use infrastructure-as-code to modularise deployments, right-size instances, and enable auto-shutdown defaults.
 * Prefer serverless or event-based architectures for reduced idle time.`,
-    tooltip: "Build green CI/CD pipelines.",
+    tooltip: "Build those CI/CD pipelines!",
     imagePath: "images/5.jpg",
     effect() {}
   },
@@ -86,12 +86,12 @@ window.deck = [
     name: "6: Choose sustainable tools, languages, and architectures",
     type: "action",
     description: `* Write efficient code—avoid bloated logic, excessive loops, or unnecessary calls.
-* Be very cautious of any AI-generated code.
+* Be cautious of vibe coding and any AI-generated code.
 * Consider low-energy languages like Rust and Go.
 * Avoid overprovisioning infrastructure; right-size your deployments.
 * Explore serverless, container-based, or autoscaling architectures to reduce waste.
 * Explore sustainable software resources from Green Software Foundation, Green Web Foundation, and Green Coding Solutions.`,
-    tooltip: "Choose sustainable tools, languages, and architectures",
+    tooltip: "Choose sustainable tools, languages, and architectures!",
     imagePath: "images/4.jpg",
     effect() {}
   },
@@ -99,14 +99,15 @@ window.deck = [
     id: 7,
     name: "7: Avoid wasteful or disproportionate methods in data science / ML",
     type: "action",
-    description: `* Use CodeCarbon to estimate the carbon footprint of model training and inference.
-* Track emissions with Intel RAPL or integrate with OpenTelemetry for service-level visualisation.
-* Engage with the AI Energy Score project: https://huggingface.co/spaces/AIEnergyScore/Leaderboard.
-* Don’t retrain unnecessarily: explore reusing or fine-tuning existing models when possible.
+    description: `* Measure emissions with tools like CodeCarbon (directional) and GPU/DCGM telemetry at the cluster level.
+* Check out the AI Energy Score project: https://huggingface.co/spaces/AIEnergyScore/Leaderboard.
+* Track energy at service-tier granularity (OpenTelemetry, power meters).
+* Prefer reuse to retraining: PEFT, LoRA, RAG, retrieval pipelines, prompt engineering.
 * BUT consider that a smaller, specialist model might be better in the long-term than a more general purpose one.
 * Use model distillation to reduce size and energy cost.
 * Optimise training cycles: reduce search space, limit tuning passes, and choose efficient architectures.
-* Streamline data movement by cleaning ETL pipelines and avoiding dataset over-fetching.`,
+* Streamline data movement by cleaning ETL pipelines and avoiding dataset over-fetching.
+* Try out GSF's Software Carbon Intensity (SCI) to define emissions relative to a task.`,
     tooltip: "If you're training models, describe how you’re making them leaner and greener.",
     imagePath: "images/7.jpg",
     effect() {}
@@ -116,11 +117,11 @@ window.deck = [
     name: "8: Know which everyday activities are fine",
     type: "action",
     description: `* Try to foster a rough awareness of big, medium, small, and teeny-tiny impacts.
-* Then we can pick our battles. People’s attention and energy is limited, and nobody likes being guilt-tripped—let’s focus on the behaviour changes that really matter.
+* Then we can pick our battles. People’s attention and energy is limited, and nobody likes being guilt-tripped: let’s focus on the behaviour changes that really matter.
 * You may have heard the advice not to send ‘thank you’ emails, to save carbon. But a typical short text email has a completely miniscule impact compared to a single Google search or a ChatGPT query.
 * This advice is really a way to individualise responsibility, and a distraction from working together to drive real change.
 `,
-    tooltip: "Action: Mark this card as played.",
+    tooltip: "Sweat the servers, but don't sweat the small stuff!",
     imagePath: "images/8.jpg",
     effect() {}
   },
@@ -128,10 +129,10 @@ window.deck = [
     id: 9,
     name: "9: Use efficient internet connections",
     type: "action",
-    description: `* Cellular data connections (like 4G and 5G) use more energy than WiFi
+    description: `* Cellular data connections (like 4G and 5G) use more energy than WiFi.
 * WiFi uses more energy than ethernet connections (plugging your device in).
 * Plug in when you can!`,
-    tooltip: "Action: Mark this card as played.",
+    tooltip: "Plug in!",
     imagePath: "images/9.jpg",
     effect() {}
   },
@@ -139,8 +140,12 @@ window.deck = [
     id: 10,
     name: "10: Optimise our WiFi network",
     type: "action",
-    description: `Optimise our WiFi network for better speed and energy efficiency.`,
-    tooltip: "Action: Mark this card as played.",
+    description: `* We use off-peak profiles (e.g. reduced transmit power, narrower channels, scaled PoE), so the network can run in a lighter mode when usage is low.
+* We enable seamless roaming and channel optimisation (e.g. 802.11r/k/v, automatic channel selection) to help reduce retries, interference, and redundant coverage.
+* We treat switching and PoE as managed power systems—set realistic per-port budgets, avoid 'always-on high,' and adjust using telemetry (e.g. retry rates, RF noise, client counts, coverage).
+* For small labs, home offices etc., we experiment with predictable low-power / sleep schedules, enable beamforming and dynamic channels, and experiment with Energy Efficient Ethernet (802.3az) and PoE right-sizing.
+`,
+    tooltip: "Optimise that WiFi network!",
     imagePath: "images/10.jpg",
     effect() {}
   },
@@ -148,8 +153,12 @@ window.deck = [
     id: 11,
     name: "11: Don't store data we don't need",
     type: "action",
-    description: `Avoid storing redundant data to reduce energy and storage costs.`,
-    tooltip: "Action: Mark this card as played.",
+    description: `* We define what 'needed' means and delete or archive everything else — we mostly avoid 'just in case' storage.
+* We use automated lifecycle rules (e.g. 30/90/180-day expiry) on temp folders, staging buckets, caches, logs, and model outputs, so unused files don’t accumulate.
+* We run regular clean-ups with visual tools (e.g. WinDirStat, TreeSize, Baobab, ncdu) to surface '“dark data' such as duplicates, abandoned exports, and old checkpoints.
+* We are so good at naming conventions and metadata. We actually know what most things are.
+* We prioritise the biggest storage consumers first — large media, datasets, experiments, and exports. We don't spend ages manually reading and deleting text files.`,
+    tooltip: "Does this data spark joy?",
     imagePath: "images/11.jpg",
     effect() {}
   },
@@ -157,8 +166,12 @@ window.deck = [
     id: 12,
     name: "12: Use near-line and off-line storage",
     type: "action",
-    description: `Utilise near-line and off-line storage solutions for data that doesn't need instant access.`,
-    tooltip: "Action: Mark this card as played.",
+    description: `* We keep long-term data we rarely access in near-line or offline “cold” storage (e.g. archive cloud tiers, magnetic tape, offline drives), instead of leaving it on hot, always-available systems.
+* We classify data by how often we actually use it — active data stays online; legacy research, past projects, and compliance archives move to slower, cheaper, lower-energy tiers.
+* We automate the move: after a set period (e.g. 90/180/365 days), data shifts from hot storage to archival tiers, so we don’t manually drag it around forever.
+* We document where it lives and how to retrieve it, so archives don’t turn into digital attics full of mystery folders.
+* You wouldn’t keep a kettle constantly boiling just in case you want tea.`,
+    tooltip: "Fancy a cuppa? It'll be done in 20 ticks!",
     imagePath: "images/12.jpg",
     effect() {}
   },
@@ -166,8 +179,12 @@ window.deck = [
     id: 13,
     name: "13: Benchmark our digital activities",
     type: "action",
-    description: `Benchmark our digital activities by measuring key performance metrics and identifying areas for improvement.`,
-    tooltip: "Set a benchmark so we can improve in the future",
+    description: `* We benchmark our digital footprint — we learn about the environmental impacts of the digital tools, cloud services, and workflows we rely on.
+* We use tools such as Digital Carbon Footprint (digitalemissions.org/dcf) and DIMPACT (dimpact.org) to estimate emissions from websites, streaming, cloud use, and online services.
+* For software and ML workloads, we experiment with estimators like CodeCarbon and Green Algorithms; for cloud platforms we try Cloud Carbon Footprint, provider dashboards (e.g. AWS, Azure, GCP sustainability reports), third party providers like Greenpixie.
+* We treat estimates as indicative: enough to reveal hotspots and guide sensible changes.
+* We re-run benchmarks when our tools, workloads, or hosting setups change, so improvements are not one-off.`,
+    tooltip: "Mark that bench! Bench that mark!",
     imagePath: "images/13.jpg",
     effect() {}
   },
@@ -175,8 +192,15 @@ window.deck = [
     id: 14,
     name: "14: Extend our devices' life spans",
     type: "action",
-    description: `Extend our devices' life spans through repair, maintenance, and upgrades to reduce waste and cost.`,
-    tooltip: "Discuss this action. How does it apply to your organisation?",
+    description: `* We extend our devices' life spans through repair, maintenance, and upgrades to reduce waste and cost.
+    * We prioritise repair over replacement. We buy extended warranties, choose repairable devices.
+    * We work with the sector to advocate for stronger 'right to repair' legislation.
+    * We work with charities and communities to host Restart Parties and repair cafes.
+* We protect against avoidable damage with sturdy cases, bumpers, and screen protectors.
+* We look after batteries and components by using and storing devices within the recommended temperature range (cool, dry, out of direct sun) and by avoiding long periods of charging in hot environments.
+* We use built-in battery health features (e.g. charge-limit or 'optimised charging' settings) so devices don’t sit at 100% charge all the time, helping batteries last longer.
+* We invest in IT support.`,
+    tooltip: "What's the oldest most post-apocalyptic looking piece of junk in your organisation?",
     imagePath: "images/14.jpg",
     effect() {}
   },
@@ -184,8 +208,12 @@ window.deck = [
     id: 15,
     name: "15: Use Life Cycle Analysis (LCA)",
     type: "action",
-    description: `Apply Life Cycle Analysis (LCA) to understand the environmental impact of your digital operations from start to finish.`,
-    tooltip: "Discuss this action. How does it apply to your organisation?",
+    description: `* We use Life Cycle Analysis (LCA) to understand the environmental impacts of our digital systems from end to end — not just energy use, but also hardware production, infrastructure, and end-of-life.
+* LCAs work pretty well for physical products (e.g. minerals → manufacturing → shipping → use → disposal), but they are harder for software. We collaborate on developing shared methodologies and standards.
+* We use recognised frameworks such as ISO 14040/14044 and ISO 14067, and datasets like ecoinvent or the European Life Cycle Database, to estimate embodied impacts in hardware and infrastructure.
+* For the use-phase of compute, we experiment with tools such as Green Algorithms or telemetry-based methods (not as full LCAs, but to understand how runtime, GPU/CPU usage, and location can influence carbon emissions).
+`,
+    tooltip: "Analyse, analyse, as though your Life Cycle depended on it!",
     imagePath: "images/15.jpg",
     effect() {}
   },
@@ -193,8 +221,14 @@ window.deck = [
     id: 16,
     name: "16: Advocate for right to repair",
     type: "action",
-    description: `Advocate for the right to repair by supporting policies and practices that allow consumers to fix and extend the life of their devices.`,
-    tooltip: "Discuss this action. How does it apply to your organisation?",
+    description: `* Manufacturers must provide spare parts, documentation, diagnostics, and firmware access for the full realistic lifespan of devices.
+* We push to outlaw digital lock-in tactics (such as parts pairing, undocumented serialisation, and software gating that make independent repairs risky).
+* We advocate for anti-obsolescence regulation, preventing companies from bricking usable hardware through e.g. forced updates.
+* We push for incentives like repair vouchers, subsidised community repair networks, mandatory repairability indices, minimum support periods, to make repair actually cheaper and easier.
+* We work against a culture of planned obsolescence.
+* On the software side, we advocate for greater interoperability, the right to exit, and the 'end-to-end' principle, and against platform lock-in and enshittification.
+`,
+    tooltip: "More cyberpunk policy!",
     imagePath: "images/16.jpg",
     effect() {}
   },
@@ -202,8 +236,12 @@ window.deck = [
     id: 17,
     name: "17: Improve our e-waste recycling",
     type: "action",
-    description: `Implement improved e-waste recycling processes to ensure responsible disposal and reuse of electronic components.`,
-    tooltip: "Discuss this action. How does it apply to your organisation?",
+    description: `* Many electronics cannot be fully recycled, and informal channels often recover only valuable metals before dumping toxic remains.
+* We work with certified recyclers that publish transparent downstream flows (e.g. R2, e-Stewards) and comply with standards like WEEE, not dodgy brokers.
+* We prioritise reuse and repair first, because most e-waste ends up downcycled (mixed plastics, residual metals) or becomes hazardous waste even in legal facilities.
+* We acknowledge how informal e-waste work emerges as a practical response to colonial power relations, and our decision-making supports labour in the Global South.
+* We expect manufacturers to design for safe disassembly and to share end-of-life responsibility.`,
+    tooltip: "E-waste not e-want not?",
     imagePath: "images/17.jpg",
     effect() {}
   },
@@ -211,8 +249,10 @@ window.deck = [
     id: 18,
     name: "18: Design for humans, not angels",
     type: "action",
-    description: `Design interfaces and experiences that are optimised for human use—efficient, intuitive, and user-friendly.`,
-    tooltip: "Discuss this action. How does it apply to your organisation?",
+    description: `* We encourage sustainable habits, but we don’t rely on goodwill alone. People are busy, distracted, and pressured. Systems must support them rather than just guilt-trip them.
+* When employees meet obstacles in trying to work sustainably, we have credible mechanisms for capturing these obstacles and acting on them.
+* We redesign policies, tools, and defaults to make sustainable choices the path of least resistance.`,
+    tooltip: "Who are some of the humans in YOUR organisation?",
     imagePath: "images/18.jpg",
     effect() {}
   },
@@ -220,7 +260,11 @@ window.deck = [
     id: 19,
     name: "19: Check suppliers for greenwashing",
     type: "action",
-    description: `Evaluate and verify suppliers to ensure they truly adhere to sustainable and environmentally friendly practices.`,
+    description: `* Our suppliers claim to be sustainable, but we do our own detective work, drawing on resources such as Corporate Responsibility Monitor and Zero Carbon Analytics.
+* We watch out for classic greenwashing, e.g. leaving out parts of Scope 3, reporting only carbon while ignoring other greenhouse gases, picking a convenient baseline year, or publishing market-based emissions while hiding location-based emissions.
+* We scrutinise “carbon neutral” pledges and offsetting schemes — we know all about the dodgy additionality of many voluntary carbon credits and clean energy certificates.
+* Regulatory capture can also function as greenwashing. We watch out for big tech's influence on carbon accounting (GHG Protocol), the standards and certifications that signal sustainability.
+* We learn from people doing serious work in this space — Cathleen Berger, Holly and Will Alpine, Mark Butcher, Chris Adams — so we can read sustainability claims clearly instead of swallowing marketing copy.`,
     tooltip: "Discuss this action. How does it apply to your organisation?",
     imagePath: "images/19.jpg",
     effect() {}
@@ -809,5 +853,6 @@ window.deck = [
   }
 }
 ];
+
 
 
