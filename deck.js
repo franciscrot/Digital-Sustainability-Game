@@ -264,8 +264,8 @@ window.deck = [
 * We watch out for classic greenwashing, e.g. leaving out parts of Scope 3, reporting only carbon while ignoring other greenhouse gases, picking a convenient baseline year, or publishing market-based emissions while hiding location-based emissions.
 * We scrutinise “carbon neutral” pledges and offsetting schemes — we know all about the dodgy additionality of many voluntary carbon credits and clean energy certificates.
 * Regulatory capture can also function as greenwashing. We watch out for big tech's influence on carbon accounting (GHG Protocol), the standards and certifications that signal sustainability.
-* We learn from people doing serious work in this space — Cathleen Berger, Holly and Will Alpine, Mark Butcher, Chris Adams — so we can read sustainability claims clearly instead of swallowing marketing copy.`,
-    tooltip: "Discuss this action. How does it apply to your organisation?",
+* We learn from people doing serious work in this space — Cathleen Berger, Holly and Will Alpine, Mark Butcher, Chris Adams — so we can read sustainability claims clearly instead of getting bamboozled by methodological complexity.`,
+    tooltip: "Crack this case wide open!",
     imagePath: "images/19.jpg",
     effect() {}
   },
@@ -273,8 +273,12 @@ window.deck = [
     id: 20,
     name: "20: Pivot to policy",
     type: "action",
-    description: `Shift your focus to policy advocacy, using this card to drive change in regulatory frameworks for sustainability.`,
-    tooltip: "Discuss this action. How does it apply to your organisation?",
+    description: `* When we hit sustainability problems that can't be solved at the company level, we don’t stop there. We turn those experiences into evidence and push for policy changes.
+* We share what we learn with the sector, with regulators, standards bodies, trade groups, and civil society, so structural barriers (e.g. supply chains, infrastructure, pricing) can be addressed, not just patched internally.
+* Our Chief Sustainability Officer is constantly campaigning for decisions to be taken out of their hands, for more things to be made mandatory.
+* We recognise that what we want and need as humans may be different from what we need as stakeholders of our organisation. We remember that our organisation is made of people who care about the future, and we act together when private fixes are not enough.
+`,
+    tooltip: "Grab your big policymaker net and go a-huntin'!",
     imagePath: "images/20.jpg",
     effect() {}
   },
@@ -282,8 +286,11 @@ window.deck = [
     id: 21,
     name: "21: Pivot to protest",
     type: "action",
-    description: `Mobilise public and stakeholder support with protest actions that highlight unsustainable practices.`,
-    tooltip: "Discuss this action. How does it apply to your organisation?",
+    description: `* We foster real collaboration with climate and digital-rights activists.
+* We learn from movements like Artists Against AI and the Green Screen Climate Justice & Digital Rights Coalition, which expose extractive AI practices, resist unconsented training, and organise workers to protect cultural and ecological futures.
+* Grassroots environmentalists have always played a key role in fighting greenwashing and getting climate science adopted by policymakers.
+* We stand with those building alternatives rather than insisting everything must be solved inside the organisation.`,
+    tooltip: "Who in your organisation is really not on board with this?",
     imagePath: "images/21.jpg",
     effect() {}
   },
@@ -291,8 +298,13 @@ window.deck = [
     id: 22,
     name: "22: Understand green energy procurement",
     type: "action",
-    description: `Learn how to procure green energy effectively and integrate renewable sources into your operations.`,
-    tooltip: "Discuss this action. How does it apply to your organisation?",
+    description: `* We don’t treat '100% renewable' claims as proof of decarbonisation, but ask whether suppliers use RECs/REGOs, PPAs, green tariffs, etc. 
+* We want 24/7 (hourly + locational) matching, although we also know this isn't going to solve everything.
+* We want both market-based data (which includes the 'offsetting' of purchased clean energy instruments) and location-based data (which is based on estimates of actual emissions from the local grid).
+* We base our decisions on additionality: our procurement should help create new renewable capacity or displace fossil generation, not just reassign existing clean energy from someone else.
+* We know PUE isn't everything. A data centre packed inefficient idling servers with no heat recycling, replaced every six months, entirely fuelled by the dirtiest coal you've seen in your life, can still have a lovely low PUE.
+* We are aware of the politics of carbon accounting, including the role big tech are playing in initiatives like the GHG Protocol (e.g. Scope 2) and SBTi, and controversies around 24/7 matching and project-based emissions.`,
+    tooltip: "What's on your procurement questionnaire?",
     imagePath: "images/22.jpg",
     effect() {}
   },
@@ -300,8 +312,12 @@ window.deck = [
     id: 23,
     name: "23: Measure our carbon for AI and the cloud",
     type: "action",
-    description: `Measure the carbon footprint of your digital activities, especially those related to AI workloads and cloud services.`,
-    tooltip: "Discuss this action. How does it apply to your organisation?",
+    description: `* When we started our digital sustainability journey, we used IT spend and Emissions Factors to estimate emissions. How far we've come!
+    * We get good estimates of the carbon emissions of our digital work, especially AI and cloud, using tools like CodeCarbon, Green Algorithms, and Cloud Carbon Footprint.
+* The big cloud datas provide some data on the carbon implications of our cloud usage, but we're constantly on their case to improve their tools (more accurate, timely, transparent, and granular data please!).
+* We track where and when workloads run, because grid carbon intensity changes by region and hour.
+* We recognise limitations, and we model what's missing as best we can: embodied carbon in devices, data centres and network infrastructure, indirect and systemic impacts, rebound effects, demand substitutions, enabled emissions, environmental pressures and harms such as water use and biodiversity loss.`,
+    tooltip: "How big is your AI carbon footprint? And how long are the footnotes?",
     imagePath: "images/23.jpg",
     effect() {}
   },
@@ -309,8 +325,13 @@ window.deck = [
     id: 24,
     name: "24: Use grid-aware demand management",
     type: "action",
-    description: `Implement grid-aware demand management strategies to optimise energy usage in accordance with peak times and grid conditions.`,
-    tooltip: "Discuss this action. How does it apply to your organisation?",
+    description: `* We practice grid-aware computing (see also carbon-aware computing). We schedule digital workloads at environmentally optimal times and places.
+* We use greener cloud regions (spatial demand shifting).
+* When possible, we run heavy compute during periods of renewable surplus (temporal demand shifting) — when the wind is blowing, the sun is shining, and clean energy would otherwise be curtailed or wasted.
+* We explore tools like the Green Software Foundation’s Carbon Aware SDK (and services such as Carbonrunner.io) to help shift non-urgent workloads across time or region, instead of running everything immediately.
+* We are cautious not to add  more volatility to the grid, and we understand that the long-term, systemic aim is to have a predictable, smooth demand curve (sudden peaks can bring coal-fired peaking plants online).
+* We also explore demand shaping: changing the nature of what we serve, according to the carbon intensity of the grid. For example, images on our website are opt-in when the grid is not green. We've got really good at alt text descriptions too.`,
+    tooltip: "On a scale of 1 to 5, how aware are you of grid?",
     imagePath: "images/24.jpg",
     effect() {}
   },
@@ -318,8 +339,12 @@ window.deck = [
     id: 25,
     name: "25: Know when not to use AI",
     type: "action",
-    description: `Identify scenarios where manual processes are more energy-efficient than relying on AI-based solutions.`,
-    tooltip: "Discuss this action. How does it apply to your organisation?",
+    description: `* We have lots of ways of saying no to AI. It could be the outcome of an AI Impact Assessment, or of a stakeholder consultation, or a carbon footprinting tool, for example.
+    * We resist AI when it has disproportionate environmental costs, replaces human relationships, extracts labour unfairly, exploits datasets in ethically dubious ways, or expands data surveillance.
+* When the AI version and the no-AI version are evenly matched, we usually go with the no-AI version. 
+* We recognise the value of keeping traditional skills, approaches, and systems alive and kicking. We invest in people-powered, low-tech, and community-led alternatives that preserve autonomy and dignity over automation and escalation.
+ `,
+    tooltip: "Human says no!",
     imagePath: "images/25.jpg",
     effect() {}
   },
@@ -327,8 +352,13 @@ window.deck = [
     id: 26,
     name: "26: Understand different kinds of AI",
     type: "action",
-    description: `Examine the various types of AI technologies and evaluate their respective environmental impacts.`,
-    tooltip: "Discuss this action. How does it apply to your organisation?",
+    description: `* We know that different AI systems have radically different footprints.
+    * Foundation models can be thousands of times heavier than small classifiers or fine-tuned specialist models.
+* We recognise the difference between big general-purpose generative models, mid-size task-tuned models, discriminative models, and traditional ML. 
+* We choose the smallest tool that solves the problem.
+* We dismiss dubious research claiming to offset AI's environmental costs with speculative environmental benefits, and recognise that AI is not 'self-offsetting' at the global level.
+`,
+    tooltip: "Ah, the elusive lesser spotted red-crested GPT-3!",
     imagePath: "images/26.jpg",
     effect() {}
   },
@@ -336,8 +366,13 @@ window.deck = [
     id: 27,
     name: "27: Align measurement to maturity",
     type: "action",
-    description: `Tailor your sustainability metrics and measurements to the current maturity level of your organisation.`,
-    tooltip: "Discuss this action. How does it apply to your organisation?",
+    description: `* Measurement can be tough, so we start simple, by using spend-based Emissions Factors (e.g. £1 on cloud = X kg CO₂e) as a rough proxy. Factors are available from national inventories, DEFRA/BEIS, and maybe some cloud provider dashboards.
+* As time goes by, we improve our measurement methodology. We don't want to let the challenges of measurement delay taking action.
+* Spend is not the same as emissions, price signals can change (discounts, vendor deals, procurement quirks), and high-cost services can be low-carbon while low-cost services can be dirty.
+* As we mature, we move from spend-based estimates to activity-based measurements: actual energy use, grid carbon intensity by region and hour, workload footprints, embodied emissions of hardware, and lifecycle impacts.
+* We improve measurement to make good decisions, like fewer unnecessary workloads, better scheduling, greener hosting choices, longer device lifetimes, and procurement that rewards real decarbonisation.
+* Conventionally people talk about 'measurement,' although technically speaking a lot of this stuff is actually 'estimating' or 'modelling.'`,
+    tooltip: "Cut your coat according to your carbon!",
     imagePath: "images/27.jpg",
     effect() {}
   },
@@ -345,8 +380,11 @@ window.deck = [
     id: 28,
     name: "28: Get ready for more carbon tax",
     type: "action",
-    description: `Prepare your organisation for rising carbon costs by adjusting strategies and operational priorities.`,
-    tooltip: "Discuss this action. How does it apply to your organisation?",
+    description: `* To future-proof our organisation, we have introduced an internal carbon price.
+* Carbon taxes increase costs for carbon-intensive operations. They reduce emissions by making polluting options more expensive, and they also generate public revenue that can fund climate mitigation or adaptation.
+* We track border measures like the Carbon Border Adjustment Mechanism (CBAM), which aims to prevent 'carbon leakage' when production shifts to countries with weaker regulations. But we recognise serious concerns about its effects on Global South exporters and trade justice.
+* Carbon taxes are one way of trying to impose a 'price on carbon.' Other mechanisms include cap-and-trade schemes (where companies have a government-mandated carbon allocation, and heavily polluting companies can buy the surplus credits from cleaner companies.`,
+    tooltip: "How much is that carbon in the window?",
     imagePath: "images/28.jpg",
     effect() {}
   },
@@ -354,8 +392,11 @@ window.deck = [
     id: 29,
     name: "29: Understand our place in the energy transition",
     type: "action",
-    description: `Strategically evaluate and position your organisation within the evolving energy transition landscape.`,
-    tooltip: "Discuss this action. How does it apply to your organisation?",
+    description: `* We created a Net Zero Action Plan using a '5Ws' approach: What are we doing? Who benefits or bears cost? When do impacts occur? Where do emissions arise? Why are we doing this at all?
+* Where we use voluntary carbon credits, we follow a Beyond Value Chain Mitigation approach and report our footprint and our credit portfolio side by side. We don't subtract one from the other (you can't subtract apples from oranges).
+* We have begun to ask: is our core business model contributing to overconsumption or energy demand escalation? We're getting ready to change our core business.
+* Climate change is fundamentally a distributional problem. Emissions are not shared evenly. Research shows that millionaire lifestyles alone will consume around two-thirds of the remaining carbon budget by 2050.`,
+    tooltip: "Time for an organisational mid-life crisis?",
     imagePath: "images/29.jpg",
     effect() {}
   },
@@ -363,11 +404,15 @@ window.deck = [
     id: 30,
     name: "30: Update our procurement policies",
     type: "action",
-    description: `Review and revise procurement policies to prioritise sustainability and responsible sourcing.`,
-    tooltip: "Discuss this action. How does it apply to your organisation?",
-    imagePath: "images/30.jpg",
-    effect() {}
-  },
+    description: `* We use procurement as a way of making change happen. Suppliers must answer clear sustainability questions about energy use, lifecycle impacts, labour practices, and AI risks.
+* We empower procurement teams to make sustainable purchases, even if it's not the cheapest option.
+* For hardware and hosting, we favour products and services with credible ecolabels and criteria (e.g. EPEAT, TCO Certified, EU Green Public Procurement for ICT, ITU-T L.1304 and SDCA for data centres) and we look for repairability, reuse, and circularity.
+* For cloud and AI services, we expect transparency on data centres (PUE, lifecycle impacts, location-based and market-based energy data), and we ask for governance artefacts like model cards, data provenance, and alignment with frameworks such as NIST AI RMF or ISO/IEC 42001.
+* We bake these expectations into procurement policies, RFPs, questionnaires and guidance, and contracts, train procurement staff to use them. We give sustainability a real weight in scoring, and we have ambitious sustainable procurement targets.`,
+  tooltip: "What cannot be procured must be endured.",
+  imagePath: "images/30.jpg",
+  effect() {}
+},
 
   // ================================
   // 30 EVENT CARDS
@@ -853,6 +898,7 @@ window.deck = [
   }
 }
 ];
+
 
 
 
