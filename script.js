@@ -22,7 +22,7 @@ const ai1Names = [
   "Adjaye Jones & Cronk LLP",
   "Distributed Fusion Inc",
   "B.Well",
-  "total Cashflow Solutions",
+  "Total Cashflow Solutions",
   "The Data Doulas"
 ];
 
@@ -296,3 +296,4 @@ window.onload = () => {
 
   console.log("[DSG] Boot end");
 };
+
